@@ -1,0 +1,1330 @@
+Date,ID,Payee / Payer,Type,Category,Sub-Category,Memo / Note,Amount ($)
+1-Nov,TXN-4001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Nov,TXN-4002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Nov Prem.,"-14,250.00"
+1-Nov,TXN-4003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Nov,DEP-7001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1092 - Nov Base,"18,500.00"
+2-Nov,TXN-4004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-24,120.50"
+2-Nov,TXN-4005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+3-Nov,DEP-7002,Client: GreenEnergy,Deposit,Revenue,Project,Inv #1093 - Milestone 1,"35,000.00"
+3-Nov,TXN-4006,LinkedIn Ads,Card,COGS,Media Buy,,"-12,450.00"
+3-Nov,TXN-4007,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+4-Nov,TXN-4008,Upwork,Card,COGS,Contractor,Freelancer: J. Doe (Design),-650
+4-Nov,TXN-4009,Staples,Card,OpEx,Supplies,,-124.5
+5-Nov,DEP-7003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1094,"45,000.00"
+5-Nov,TXN-4010,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-15,800.00"
+6-Nov,TXN-4012,Delta Air,Card,OpEx,Travel,Conf: S. Johnson,-845.2
+6-Nov,TXN-4014,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-310
+7-Nov,TXN-4015,Zoom.us,Card,OpEx,Software,,-320
+10-Nov,DEP-7004,Client: LocalRetail,Deposit,Revenue,Consulting,Workshop Fees,"8,500.00"
+10-Nov,TXN-4019,Google Ads,Card,COGS,Media Buy,,"-5,600.00"
+10-Nov,TXN-4020,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Oct Close,"-1,250.00"
+11-Nov,TXN-4021,SEMRush,Card,OpEx,Software,,-499.95
+13-Nov,DEP-7005,Client: FinTech,Deposit,Revenue,Retainer,Inv #1095,"12,500.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+14-Nov,PAY-11A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+14-Nov,PAY-11B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+14-Nov,PAY-11C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+14-Nov,TXN-4028,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+15-Nov,TXN-4030,Upwork,Card,COGS,Contractor,,-850
+15-Nov,TXN-4031,Salesforce,Card,OpEx,Software,,"-2,500.00"
+15-Nov,TXN-4032,Verizon Fios,Card,OpEx,Utilities,,-299
+16-Nov,TXN-4033,Apple Store,Card,OpEx,Equipment,Asset: Laptop (K. Patel),"-2,400.00"
+17-Nov,DEP-7006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1096,"9,500.00"
+18-Nov,TXN-4036,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-4,500.00"
+18-Nov,TXN-4037,Law Group PC,Check,OpEx,Professional Fees,Contract Review: EduTech,-850
+19-Nov,TXN-4040,Secretary of State,Card,OpEx,Taxes & Lic.,Annual Renewal,-300
+20-Nov,TXN-4042,QuickBooks,Card,OpEx,Software,,-150
+20-Nov,DEP-7007,Client: UrbanWear,Deposit,Revenue,Project,Inv #1097,"15,000.00"
+21-Nov,TXN-4044,TikTok Ads,Card,COGS,Media Buy,,"-8,500.00"
+21-Nov,TXN-4045,Shutterstock,Card,COGS,Production,,-250
+22-Nov,TXN-4047,Asana,Card,OpEx,Software,,-800
+22-Nov,TXN-4048,Delta Air,Card,OpEx,Travel,Trip: Chicago (M. Lee),-560
+23-Nov,TXN-4050,Hyatt,Card,OpEx,Travel,Hotel: Chicago,-450
+24-Nov,TXN-4052,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-12,000.00"
+24-Nov,TXN-4053,Upwork,Card,COGS,Contractor,Freelancer: Dev Support,"-1,200.00"
+25-Nov,DEP-7008,Client: EduTech,Deposit,Revenue,Retainer,Inv #1098 - Annual,"65,000.00"
+25-Nov,TXN-4055,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,"-22,000.00"
+25-Nov,TXN-4056,Iron Mountain,Card,OpEx,Services,,-85
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+28-Nov,PAY-12A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+28-Nov,PAY-12B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+28-Nov,PAY-12C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+28-Nov,TXN-4065,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+29-Nov,TXN-4068,Bank of Amer,Fee,Financial,Bank Fees,Intl Wire Fee,-45
+29-Nov,TXN-4069,Stripe,Fee,Financial,Bank Fees,Nov Transaction Fees,"-1,250.00"
+29-Nov,TXN-4071,Va Dept Tax,ACH,OpEx,Taxes & Lic.,Est. Corp Tax,"-1,500.00"
+30-Nov,TXN-4072,Upwork,Card,COGS,Contractor,Nov True-up,-400
+30-Nov,DEP-7009,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1099,"22,000.00"
+30-Nov,TXN-4073,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-8,000.00"
+4-Nov,TXN-4074,Vimeo,Card,OpEx,Software,,-75
+5-Nov,TXN-4075,Basecamp,Card,OpEx,Software,,-99
+8-Nov,TXN-4076,ADP Fees,Fee,Financial,Bank Fees,,-180
+9-Nov,TXN-4077,Dropbox,Card,OpEx,Software,,-50
+10-Nov,TXN-4078,Grammarly,Card,OpEx,Software,,-450
+11-Nov,TXN-4079,Typeform,Card,OpEx,Software,Survey for LocalRetail,-85
+12-Nov,TXN-4080,CrazyEgg,Card,OpEx,Software,,-100
+13-Nov,TXN-4081,Moz,Card,OpEx,Software,,-149
+15-Nov,TXN-4082,Ahrefs,Card,OpEx,Software,,-199
+16-Nov,TXN-4083,Pipedrive,Card,OpEx,Software,,-150
+17-Nov,TXN-4084,Hotjar,Card,OpEx,Software,,-120
+20-Nov,TXN-4085,Waste Mgmt,ACH,OpEx,Utilities,,-120
+21-Nov,TXN-4086,Twilio,Card,OpEx,Software,,-150
+22-Nov,TXN-4087,SendGrid,Card,OpEx,Software,,-180
+23-Nov,TXN-4088,Shell Oil,Card,OpEx,Travel,,-45
+24-Nov,TXN-4089,Hertz,Card,OpEx,Travel,Ref: #882199,-120
+25-Nov,TXN-4090,Dunkin,Card,OpEx,Meals,,-65
+26-Nov,TXN-4091,Best Buy,Card,OpEx,Equipment,,-150
+27-Nov,TXN-4092,USPS,Card,OpEx,Supplies,Tracking #9921,-25
+28-Nov,TXN-4093,FedEx,Card,OpEx,Supplies,,-45
+29-Nov,TXN-4094,Target,Card,OpEx,Supplies,,-35
+30-Nov,TXN-4095,Costco,Card,OpEx,Meals,,-250
+2-Nov,TXN-4096,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+3-Nov,TXN-4097,Slack,Card,OpEx,Software,,-850
+5-Nov,TXN-4098,GitHub,Card,OpEx,Software,,-250
+12-Nov,TXN-4099,Fiverr,Card,COGS,Contractor,,-450
+16-Nov,TXN-4100,Uber Eats,Card,OpEx,Meals,,-145
+18-Nov,TXN-4101,Intercom,Card,OpEx,Software,,-350
+19-Nov,TXN-4102,Zapier,Card,OpEx,Software,,-120
+19-Nov,TXN-4103,Loom,Card,OpEx,Software,,-80
+20-Nov,TXN-4104,PandaDoc,Card,OpEx,Software,,-150
+21-Nov,TXN-4105,LastPass,Card,OpEx,Software,,-45
+22-Nov,TXN-4106,Monday.com,Card,OpEx,Software,,-400
+23-Nov,TXN-4107,Notion,Card,OpEx,Software,,-100
+24-Nov,TXN-4108,Figma,Card,OpEx,Software,,-300
+25-Nov,TXN-4109,Webflow,Card,OpEx,Software,,-250
+26-Nov,TXN-4110,Wistia,Card,OpEx,Software,,-100
+26-Nov,TXN-4111,WordPress,Card,OpEx,Software,,-120
+27-Nov,TXN-4112,Amazon,Card,OpEx,Supplies,,-140
+27-Nov,TXN-4113,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Nov,TXN-4114,Google Work.,Card,OpEx,Software,,-650
+28-Nov,TXN-4115,Cloudflare,Card,OpEx,Hosting,,-200
+1-Oct,TXN-1001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Oct,TXN-1002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Oct Prem.,"-14,250.00"
+1-Oct,TXN-1003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Oct,DEP-3001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1080 - Oct Base,"18,500.00"
+1-Oct,TXN-1004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-22,140.20"
+2-Oct,TXN-1005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Oct,TXN-1006,Slack,Card,OpEx,Software,,-850
+2-Oct,DEP-3002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1081,"12,000.00"
+3-Oct,TXN-1007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-4,500.00"
+3-Oct,TXN-1008,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+3-Oct,TXN-1009,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Oct,TXN-1010,Upwork,Card,COGS,Contractor,Freelancer: J. Doe (Design),-920
+5-Oct,DEP-3003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1082,"45,000.00"
+5-Oct,TXN-1011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-16,200.00"
+5-Oct,TXN-1012,Mailchimp,Card,OpEx,Software,,-350
+6-Oct,TXN-1013,Southwest Air,Card,OpEx,Travel,Conf: Austin (S. Johnson),-450
+6-Oct,TXN-1014,Southwest Air,Card,OpEx,Travel,Conf: Austin (M. Lee),-450
+6-Oct,TXN-1015,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-345
+7-Oct,TXN-1016,Zoom.us,Card,OpEx,Software,,-320
+8-Oct,TXN-1017,Uber,Card,OpEx,Travel,Client Transport,-32.5
+8-Oct,TXN-1018,Amazon AWS,Card,OpEx,Hosting,,"-1,110.00"
+9-Oct,TXN-1019,GoDaddy,Card,OpEx,Dues,,-85
+10-Oct,DEP-3004,Client: LocalRetail,Deposit,Revenue,Consulting,Q4 Strategy Prep,"8,500.00"
+10-Oct,TXN-1020,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-5,100.00"
+10-Oct,TXN-1021,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Sept Close,"-1,250.00"
+11-Oct,TXN-1022,SEMRush,Card,OpEx,Software,,-499.95
+11-Oct,TXN-1023,Whole Foods,Card,OpEx,Meals,Office Fruit/Snacks,-180
+12-Oct,TXN-1024,Fiverr,Card,COGS,Contractor,Transcriptions,-220
+12-Oct,TXN-1025,DocuSign,Card,OpEx,Software,,-120
+13-Oct,TXN-1026,Sprout Social,Card,OpEx,Software,,-900
+13-Oct,DEP-3005,Client: FinTech,Deposit,Revenue,Retainer,Inv #1083,"12,500.00"
+14-Oct,TXN-1027,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-7,800.00"
+14-Oct,TXN-1028,Staples,Card,OpEx,Supplies,,-89
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Oct,PAY-10B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-Oct,PAY-10C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-Oct,TXN-1030,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+16-Oct,TXN-1031,Upwork,Card,COGS,Contractor,Copywriting Assist,-550
+16-Oct,TXN-1032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Oct,TXN-1033,Verizon Fios,Card,OpEx,Utilities,,-299
+17-Oct,TXN-1034,Airbnb,Card,OpEx,Travel,Austin Conf Lodging,"-1,850.00"
+17-Oct,TXN-1035,Terry Black's BBQ,Card,OpEx,Meals,Client Dinner (Austin),-340
+17-Oct,DEP-3006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1084,"9,500.00"
+18-Oct,TXN-1036,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-4,100.00"
+18-Oct,TXN-1037,Intercom,Card,OpEx,Software,,-350
+19-Oct,TXN-1038,Uber,Card,OpEx,Travel,Austin Airport xfer,-45
+19-Oct,TXN-1039,Zapier,Card,OpEx,Software,,-120
+19-Oct,TXN-1040,Loom,Card,OpEx,Software,,-80
+20-Oct,TXN-1041,QuickBooks,Card,OpEx,Software,,-150
+20-Oct,DEP-3007,Client: UrbanWear,Deposit,Revenue,Project,Q3 Campaign Closeout,"5,500.00"
+20-Oct,DEP-3008,Client: NewBiz Inc,Deposit,Revenue,Project,Deposit: Branding Pkg,"8,000.00"
+21-Oct,TXN-1042,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-2,100.00"
+21-Oct,TXN-1043,PandaDoc,Card,OpEx,Software,,-150
+21-Oct,TXN-1044,Shutterstock,Card,COGS,Production,,-250
+22-Oct,TXN-1045,LastPass,Card,OpEx,Software,,-45
+22-Oct,TXN-1046,Asana,Card,OpEx,Software,,-800
+22-Oct,TXN-1047,Monday.com,Card,OpEx,Software,,-400
+23-Oct,TXN-1048,Notion,Card,OpEx,Software,,-100
+23-Oct,TXN-1049,Best Buy,Card,OpEx,Equipment,HDMI Cables / Adapters,-65
+24-Oct,TXN-1050,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-11,500.00"
+24-Oct,TXN-1051,Upwork,Card,COGS,Contractor,Web Dev,"-1,400.00"
+24-Oct,TXN-1052,Figma,Card,OpEx,Software,,-300
+25-Oct,DEP-3009,Client: EduTech,Deposit,Revenue,Retainer,Inv #1085 - Monthly,"5,400.00"
+25-Oct,TXN-1053,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,"-1,800.00"
+25-Oct,TXN-1054,Iron Mountain,Card,OpEx,Services,,-85
+25-Oct,TXN-1055,Webflow,Card,OpEx,Software,,-250
+26-Oct,TXN-1056,Wistia,Card,OpEx,Software,,-100
+26-Oct,TXN-1057,WordPress,Card,OpEx,Software,,-120
+27-Oct,TXN-1058,Party City,Card,OpEx,Meals & Ent,Halloween Decor,-145
+27-Oct,TXN-1059,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-4,500.00"
+27-Oct,TXN-1060,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Oct,TXN-1061,Google Work.,Card,OpEx,Software,,-650
+28-Oct,TXN-1062,Cloudflare,Card,OpEx,Hosting,,-200
+28-Oct,TXN-1063,USPS,Card,OpEx,Supplies,,-15
+29-Oct,TXN-1064,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+29-Oct,TXN-1065,Stripe,Fee,Financial,Bank Fees,Processing,-980
+29-Oct,TXN-1066,GitHub,Card,OpEx,Software,,-250
+30-Oct,TXN-1067,Upwork,Card,COGS,Contractor,Oct True-up,-350
+30-Oct,TXN-1068,Domino's,Card,OpEx,Meals,Late Night Team Food,-85
+30-Oct,TXN-1069,Google Ads,Card,COGS,Media Buy,Client: NewBiz Inc,"-3,000.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+31-Oct,PAY-10E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+31-Oct,PAY-10F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+31-Oct,TXN-1070,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+31-Oct,DEP-3010,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1086,"22,000.00"
+31-Oct,TXN-1071,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-7,500.00"
+31-Oct,TXN-1072,Total Wine,Card,OpEx,Meals & Ent,Halloween Party Drinks,-220
+31-Oct,TXN-1073,Wegmans,Card,OpEx,Meals & Ent,Halloween Party Food,-350
+2-Oct,TXN-1074,Vimeo,Card,OpEx,Software,,-75
+4-Oct,TXN-1075,Basecamp,Card,OpEx,Software,,-99
+6-Oct,TXN-1076,ADP Fees,Fee,Financial,Bank Fees,,-180
+7-Oct,TXN-1077,Dropbox,Card,OpEx,Software,,-50
+8-Oct,TXN-1078,Grammarly,Card,OpEx,Software,,-450
+9-Oct,TXN-1079,Typeform,Card,OpEx,Software,,-85
+11-Oct,TXN-1080,CrazyEgg,Card,OpEx,Software,,-100
+12-Oct,TXN-1081,Moz,Card,OpEx,Software,,-149
+14-Oct,TXN-1082,Ahrefs,Card,OpEx,Software,,-199
+15-Oct,TXN-1083,Pipedrive,Card,OpEx,Software,,-150
+16-Oct,TXN-1084,Hotjar,Card,OpEx,Software,,-120
+18-Oct,TXN-1085,Waste Mgmt,ACH,OpEx,Utilities,,-120
+19-Oct,TXN-1086,Twilio,Card,OpEx,Software,,-150
+20-Oct,TXN-1087,SendGrid,Card,OpEx,Software,,-180
+21-Oct,TXN-1088,BP Gas,Card,OpEx,Travel,,-35
+22-Oct,TXN-1089,Dunkin,Card,OpEx,Meals,,-45
+23-Oct,TXN-1090,Target,Card,OpEx,Supplies,,-60
+24-Oct,TXN-1091,FedEx,Card,OpEx,Supplies,,-110
+25-Oct,TXN-1092,Starbucks,Card,OpEx,Meals,,-25
+27-Oct,TXN-1093,Uber Eats,Card,OpEx,Meals,,-120
+28-Oct,TXN-1094,Amazon,Card,OpEx,Supplies,,-95
+29-Oct,TXN-1095,Costco,Card,OpEx,Meals,,-200
+30-Oct,TXN-1096,Spotify,Card,OpEx,Services,,-15
+31-Oct,TXN-1097,Namecheap,Card,COGS,Production,,-45
+5-Oct,TXN-1098,Canva,Card,OpEx,Software,,-150
+8-Oct,TXN-1099,LegalZoom,Card,OpEx,Legal & Prof,,-300
+11-Oct,TXN-1100,ClickUp,Card,OpEx,Software,,-250
+13-Oct,TXN-1101,Expensify,Card,OpEx,Software,,-150
+17-Oct,TXN-1102,Delta Air,Card,OpEx,Travel,Baggage Fees,-60
+20-Oct,TXN-1103,Shell Oil,Card,OpEx,Travel,,-55
+26-Oct,TXN-1104,Apple Store,Card,OpEx,Equipment,Charger Replacements,-180
+1-Oct,TXN-1001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Oct,TXN-1002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Oct Prem.,"-14,250.00"
+1-Oct,TXN-1003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Oct,DEP-3001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1080 - Oct Base,"18,500.00"
+1-Oct,TXN-1004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-22,140.20"
+2-Oct,TXN-1005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Oct,TXN-1006,Slack,Card,OpEx,Software,,-850
+2-Oct,DEP-3002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1081,"12,000.00"
+3-Oct,TXN-1007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-4,500.00"
+3-Oct,TXN-1008,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+3-Oct,TXN-1009,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Oct,TXN-1010,Upwork,Card,COGS,Contractor,Freelancer: J. Doe (Design),-920
+5-Oct,DEP-3003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1082,"45,000.00"
+5-Oct,TXN-1011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-16,200.00"
+5-Oct,TXN-1012,Mailchimp,Card,OpEx,Software,,-350
+6-Oct,TXN-1013,Southwest Air,Card,OpEx,Travel,Conf: Austin (S. Johnson),-450
+6-Oct,TXN-1014,Southwest Air,Card,OpEx,Travel,Conf: Austin (M. Lee),-450
+6-Oct,TXN-1015,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-345
+7-Oct,TXN-1016,Zoom.us,Card,OpEx,Software,,-320
+8-Oct,TXN-1017,Uber,Card,OpEx,Travel,Client Transport,-32.5
+8-Oct,TXN-1018,Amazon AWS,Card,OpEx,Hosting,,"-1,110.00"
+9-Oct,TXN-1019,GoDaddy,Card,OpEx,Dues,,-85
+10-Oct,DEP-3004,Client: LocalRetail,Deposit,Revenue,Consulting,Q4 Strategy Prep,"8,500.00"
+10-Oct,TXN-1020,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-5,100.00"
+10-Oct,TXN-1021,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Sept Close,"-1,250.00"
+11-Oct,TXN-1022,SEMRush,Card,OpEx,Software,,-499.95
+11-Oct,TXN-1023,Whole Foods,Card,OpEx,Meals,Office Fruit/Snacks,-180
+12-Oct,TXN-1024,Fiverr,Card,COGS,Contractor,Transcriptions,-220
+12-Oct,TXN-1025,DocuSign,Card,OpEx,Software,,-120
+13-Oct,TXN-1026,Sprout Social,Card,OpEx,Software,,-900
+13-Oct,DEP-3005,Client: FinTech,Deposit,Revenue,Retainer,Inv #1083,"12,500.00"
+14-Oct,TXN-1027,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-7,800.00"
+14-Oct,TXN-1028,Staples,Card,OpEx,Supplies,,-89
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Oct,PAY-10A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Oct,PAY-10B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-Oct,PAY-10C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-Oct,TXN-1030,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+16-Oct,TXN-1031,Upwork,Card,COGS,Contractor,Copywriting Assist,-550
+16-Oct,TXN-1032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Oct,TXN-1033,Verizon Fios,Card,OpEx,Utilities,,-299
+17-Oct,TXN-1034,Airbnb,Card,OpEx,Travel,Austin Conf Lodging,"-1,850.00"
+17-Oct,TXN-1035,Terry Black's BBQ,Card,OpEx,Meals,Client Dinner (Austin),-340
+17-Oct,DEP-3006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1084,"9,500.00"
+18-Oct,TXN-1036,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-4,100.00"
+18-Oct,TXN-1037,Intercom,Card,OpEx,Software,,-350
+19-Oct,TXN-1038,Uber,Card,OpEx,Travel,Austin Airport xfer,-45
+19-Oct,TXN-1039,Zapier,Card,OpEx,Software,,-120
+19-Oct,TXN-1040,Loom,Card,OpEx,Software,,-80
+20-Oct,TXN-1041,QuickBooks,Card,OpEx,Software,,-150
+20-Oct,DEP-3007,Client: UrbanWear,Deposit,Revenue,Project,Q3 Campaign Closeout,"5,500.00"
+20-Oct,DEP-3008,Client: NewBiz Inc,Deposit,Revenue,Project,Deposit: Branding Pkg,"8,000.00"
+21-Oct,TXN-1042,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-2,100.00"
+21-Oct,TXN-1043,PandaDoc,Card,OpEx,Software,,-150
+21-Oct,TXN-1044,Shutterstock,Card,COGS,Production,,-250
+22-Oct,TXN-1045,LastPass,Card,OpEx,Software,,-45
+22-Oct,TXN-1046,Asana,Card,OpEx,Software,,-800
+22-Oct,TXN-1047,Monday.com,Card,OpEx,Software,,-400
+23-Oct,TXN-1048,Notion,Card,OpEx,Software,,-100
+23-Oct,TXN-1049,Best Buy,Card,OpEx,Equipment,HDMI Cables / Adapters,-65
+24-Oct,TXN-1050,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-11,500.00"
+24-Oct,TXN-1051,Upwork,Card,COGS,Contractor,Web Dev,"-1,400.00"
+24-Oct,TXN-1052,Figma,Card,OpEx,Software,,-300
+25-Oct,DEP-3009,Client: EduTech,Deposit,Revenue,Retainer,Inv #1085 - Monthly,"5,400.00"
+25-Oct,TXN-1053,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,"-1,800.00"
+25-Oct,TXN-1054,Iron Mountain,Card,OpEx,Services,,-85
+25-Oct,TXN-1055,Webflow,Card,OpEx,Software,,-250
+26-Oct,TXN-1056,Wistia,Card,OpEx,Software,,-100
+26-Oct,TXN-1057,WordPress,Card,OpEx,Software,,-120
+27-Oct,TXN-1058,Party City,Card,OpEx,Meals & Ent,Halloween Decor,-145
+27-Oct,TXN-1059,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-4,500.00"
+27-Oct,TXN-1060,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Oct,TXN-1061,Google Work.,Card,OpEx,Software,,-650
+28-Oct,TXN-1062,Cloudflare,Card,OpEx,Hosting,,-200
+28-Oct,TXN-1063,USPS,Card,OpEx,Supplies,,-15
+29-Oct,TXN-1064,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+29-Oct,TXN-1065,Stripe,Fee,Financial,Bank Fees,Processing,-980
+29-Oct,TXN-1066,GitHub,Card,OpEx,Software,,-250
+30-Oct,TXN-1067,Upwork,Card,COGS,Contractor,Oct True-up,-350
+30-Oct,TXN-1068,Domino's,Card,OpEx,Meals,Late Night Team Food,-85
+30-Oct,TXN-1069,Google Ads,Card,COGS,Media Buy,Client: NewBiz Inc,"-3,000.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+31-Oct,PAY-10D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+31-Oct,PAY-10E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+31-Oct,PAY-10F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+31-Oct,TXN-1070,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+31-Oct,DEP-3010,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1086,"22,000.00"
+31-Oct,TXN-1071,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-7,500.00"
+31-Oct,TXN-1072,Total Wine,Card,OpEx,Meals & Ent,Halloween Party Drinks,-220
+31-Oct,TXN-1073,Wegmans,Card,OpEx,Meals & Ent,Halloween Party Food,-350
+2-Oct,TXN-1074,Vimeo,Card,OpEx,Software,,-75
+4-Oct,TXN-1075,Basecamp,Card,OpEx,Software,,-99
+6-Oct,TXN-1076,ADP Fees,Fee,Financial,Bank Fees,,-180
+7-Oct,TXN-1077,Dropbox,Card,OpEx,Software,,-50
+8-Oct,TXN-1078,Grammarly,Card,OpEx,Software,,-450
+9-Oct,TXN-1079,Typeform,Card,OpEx,Software,,-85
+11-Oct,TXN-1080,CrazyEgg,Card,OpEx,Software,,-100
+12-Oct,TXN-1081,Moz,Card,OpEx,Software,,-149
+14-Oct,TXN-1082,Ahrefs,Card,OpEx,Software,,-199
+15-Oct,TXN-1083,Pipedrive,Card,OpEx,Software,,-150
+16-Oct,TXN-1084,Hotjar,Card,OpEx,Software,,-120
+18-Oct,TXN-1085,Waste Mgmt,ACH,OpEx,Utilities,,-120
+19-Oct,TXN-1086,Twilio,Card,OpEx,Software,,-150
+20-Oct,TXN-1087,SendGrid,Card,OpEx,Software,,-180
+21-Oct,TXN-1088,BP Gas,Card,OpEx,Travel,,-35
+22-Oct,TXN-1089,Dunkin,Card,OpEx,Meals,,-45
+23-Oct,TXN-1090,Target,Card,OpEx,Supplies,,-60
+24-Oct,TXN-1091,FedEx,Card,OpEx,Supplies,,-110
+25-Oct,TXN-1092,Starbucks,Card,OpEx,Meals,,-25
+27-Oct,TXN-1093,Uber Eats,Card,OpEx,Meals,,-120
+28-Oct,TXN-1094,Amazon,Card,OpEx,Supplies,,-95
+29-Oct,TXN-1095,Costco,Card,OpEx,Meals,,-200
+30-Oct,TXN-1096,Spotify,Card,OpEx,Services,,-15
+31-Oct,TXN-1097,Namecheap,Card,COGS,Production,,-45
+5-Oct,TXN-1098,Canva,Card,OpEx,Software,,-150
+8-Oct,TXN-1099,LegalZoom,Card,OpEx,Legal & Prof,,-300
+11-Oct,TXN-1100,ClickUp,Card,OpEx,Software,,-250
+13-Oct,TXN-1101,Expensify,Card,OpEx,Software,,-150
+17-Oct,TXN-1102,Delta Air,Card,OpEx,Travel,Baggage Fees,-60
+20-Oct,TXN-1103,Shell Oil,Card,OpEx,Travel,,-55
+26-Oct,TXN-1104,Apple Store,Card,OpEx,Equipment,Charger Replacements,-180
+1-Aug,TXN-0101,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Aug,TXN-0102,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Aug Prem.,"-14,250.00"
+1-Aug,TXN-0103,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Aug,DEP-1001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1055 - Aug Base,"18,500.00"
+1-Aug,TXN-0104,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-19,500.00"
+2-Aug,TXN-0105,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Aug,TXN-0106,Slack,Card,OpEx,Software,,-850
+3-Aug,TXN-0107,LinkedIn Ads,Card,COGS,Media Buy,Client: TechFlow,"-2,500.00"
+4-Aug,TXN-0108,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+4-Aug,TXN-0109,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+5-Aug,DEP-1002,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1056,"45,000.00"
+5-Aug,TXN-0110,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-13,800.00"
+5-Aug,TXN-0111,Mailchimp,Card,OpEx,Software,,-350
+6-Aug,TXN-0112,Upwork,Card,COGS,Contractor,Freelancer: J. Doe (Design),-750
+7-Aug,TXN-0113,Zoom.us,Card,OpEx,Software,,-320
+7-Aug,TXN-0114,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-410
+8-Aug,TXN-0115,Uber,Card,OpEx,Travel,,-35
+8-Aug,TXN-0116,Amazon AWS,Card,OpEx,Hosting,,"-1,020.00"
+9-Aug,TXN-0117,GoDaddy,Card,OpEx,Dues,,-85
+10-Aug,TXN-0118,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-2,800.00"
+11-Aug,DEP-1003,Client: LocalRetail,Deposit,Revenue,Consulting,Summer Promo Strategy,"4,500.00"
+11-Aug,TXN-0119,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - July Close,"-1,250.00"
+11-Aug,TXN-0120,SEMRush,Card,OpEx,Software,,-499.95
+12-Aug,TXN-0121,Potomac River Cruises,Card,OpEx,Meals & Ent,Team Summer Outing,"-3,200.00"
+12-Aug,TXN-0122,Mission BBQ,Card,OpEx,Meals & Ent,Catering: Team Outing,-850
+13-Aug,TXN-0123,Fiverr,Card,COGS,Contractor,,-120
+13-Aug,TXN-0124,DocuSign,Card,OpEx,Software,,-120
+14-Aug,DEP-1004,Client: FinTech,Deposit,Revenue,Retainer,Inv #1057,"12,500.00"
+14-Aug,TXN-0125,Sprout Social,Card,OpEx,Software,,-900
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Aug,PAY-08A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Aug,PAY-08B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-Aug,PAY-08C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-Aug,TXN-0130,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+15-Aug,TXN-0131,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-6,800.00"
+16-Aug,TXN-0132,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Aug,TXN-0133,Verizon Fios,Card,OpEx,Utilities,,-299
+17-Aug,TXN-0134,Upwork,Card,COGS,Contractor,,-450
+18-Aug,TXN-0135,Canva,Card,OpEx,Software,,-150
+18-Aug,DEP-1005,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1058,"9,500.00"
+19-Aug,TXN-0136,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,500.00"
+19-Aug,TXN-0137,Intercom,Card,OpEx,Software,,-350
+20-Aug,TXN-0138,Zapier,Card,OpEx,Software,,-120
+20-Aug,TXN-0139,Loom,Card,OpEx,Software,,-80
+21-Aug,TXN-0140,QuickBooks,Card,OpEx,Software,,-150
+21-Aug,DEP-1006,Client: UrbanWear,Deposit,Revenue,Project,Back-to-School Camp.,"18,000.00"
+22-Aug,TXN-0141,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-10,500.00"
+22-Aug,TXN-0142,PandaDoc,Card,OpEx,Software,,-150
+23-Aug,TXN-0143,Shutterstock,Card,COGS,Production,,-250
+23-Aug,TXN-0144,LastPass,Card,OpEx,Software,,-45
+24-Aug,TXN-0145,Asana,Card,OpEx,Software,,-800
+24-Aug,TXN-0146,Monday.com,Card,OpEx,Software,,-400
+25-Aug,DEP-1007,Client: EduTech,Deposit,Revenue,Retainer,Inv #1059,"5,400.00"
+25-Aug,TXN-0147,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,"-1,100.00"
+25-Aug,TXN-0148,Iron Mountain,Card,OpEx,Services,,-85
+25-Aug,TXN-0149,Webflow,Card,OpEx,Software,,-250
+26-Aug,TXN-0150,Wistia,Card,OpEx,Software,,-100
+26-Aug,TXN-0151,WordPress,Card,OpEx,Software,,-120
+27-Aug,TXN-0152,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-2,800.00"
+27-Aug,TXN-0153,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Aug,DEP-1008,Client: GreenEnergy,Deposit,Revenue,Retainer,LATE PMT: Inv #1055,"12,000.00"
+28-Aug,TXN-0154,Google Work.,Card,OpEx,Software,,-650
+28-Aug,TXN-0155,Cloudflare,Card,OpEx,Hosting,,-200
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+29-Aug,PAY-08D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+29-Aug,PAY-08E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+29-Aug,PAY-08F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+29-Aug,TXN-0160,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+30-Aug,TXN-0161,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+30-Aug,TXN-0162,Stripe,Fee,Financial,Bank Fees,Processing,-820
+30-Aug,TXN-0163,GitHub,Card,OpEx,Software,,-250
+31-Aug,TXN-0164,Upwork,Card,COGS,Contractor,Aug True-up,-150
+31-Aug,DEP-1009,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1060,"22,000.00"
+31-Aug,TXN-0165,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-6,000.00"
+31-Aug,TXN-0166,Uber Eats,Card,OpEx,Meals,Late Night Work,-45
+2-Aug,TXN-0167,Vimeo,Card,OpEx,Software,,-75
+3-Aug,TXN-0168,Basecamp,Card,OpEx,Software,,-99
+4-Aug,TXN-0169,ADP Fees,Fee,Financial,Bank Fees,,-180
+5-Aug,TXN-0170,Dropbox,Card,OpEx,Software,,-50
+8-Aug,TXN-0171,Grammarly,Card,OpEx,Software,,-450
+9-Aug,TXN-0172,Typeform,Card,OpEx,Software,,-85
+10-Aug,TXN-0173,CrazyEgg,Card,OpEx,Software,,-100
+11-Aug,TXN-0174,Moz,Card,OpEx,Software,,-149
+13-Aug,TXN-0175,Ahrefs,Card,OpEx,Software,,-199
+14-Aug,TXN-0176,Pipedrive,Card,OpEx,Software,,-150
+15-Aug,TXN-0177,Hotjar,Card,OpEx,Software,,-120
+18-Aug,TXN-0178,Waste Mgmt,ACH,OpEx,Utilities,,-120
+19-Aug,TXN-0179,Twilio,Card,OpEx,Software,,-150
+20-Aug,TXN-0180,SendGrid,Card,OpEx,Software,,-180
+21-Aug,TXN-0181,Exxon Mobil,Card,OpEx,Travel,,-38
+22-Aug,TXN-0182,Dunkin,Card,OpEx,Meals,,-28
+23-Aug,TXN-0183,Target,Card,OpEx,Supplies,,-45
+24-Aug,TXN-0184,FedEx,Card,OpEx,Supplies,,-65
+25-Aug,TXN-0185,Starbucks,Card,OpEx,Meals,,-18
+26-Aug,TXN-0186,DoorDash,Card,OpEx,Meals,,-95
+27-Aug,TXN-0187,Amazon,Card,OpEx,Supplies,,-60
+28-Aug,TXN-0188,Costco,Card,OpEx,Meals,,-150
+29-Aug,TXN-0189,Spotify,Card,OpEx,Services,,-15
+30-Aug,TXN-0190,Namecheap,Card,COGS,Production,,-45
+31-Aug,TXN-0191,USPS,Card,OpEx,Supplies,,-12
+7-Aug,TXN-0192,Notion,Card,OpEx,Software,,-100
+9-Aug,TXN-0193,Figma,Card,OpEx,Software,,-300
+12-Aug,TXN-0194,ClickUp,Card,OpEx,Software,,-250
+15-Aug,TXN-0195,Expensify,Card,OpEx,Software,,-150
+18-Aug,TXN-0196,Uber Eats,Card,OpEx,Meals,,-75
+20-Aug,TXN-0197,Shell Oil,Card,OpEx,Travel,,-45
+25-Aug,TXN-0198,Best Buy,Card,OpEx,Equipment,Wireless Mouse (x2),-110
+1-Jul,TXN-0001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Jul,TXN-0002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Jul Prem.,"-14,250.00"
+1-Jul,TXN-0003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Jul,DEP-0501,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1040 - Jul Base,"18,500.00"
+1-Jul,TXN-0004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-18,200.00"
+2-Jul,TXN-0005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Jul,TXN-0006,Slack,Card,OpEx,Software,,-850
+2-Jul,TXN-0007,Hiscox Insurance,ACH,OpEx,Business Ins.,Annual Cyber Liab. Policy,"-3,400.00"
+3-Jul,DEP-0502,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1041,"12,000.00"
+3-Jul,TXN-0008,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-2,100.00"
+3-Jul,TXN-0009,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+3-Jul,TXN-0010,Costco,Card,OpEx,Meals & Ent,July 4th Office BBQ,-450
+7-Jul,DEP-0503,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1042 (Holiday Delay),"45,000.00"
+7-Jul,TXN-0011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-12,500.00"
+7-Jul,TXN-0012,Mailchimp,Card,OpEx,Software,,-350
+7-Jul,TXN-0013,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-620
+8-Jul,TXN-0014,Zoom.us,Card,OpEx,Software,,-320
+8-Jul,TXN-0015,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-480
+9-Jul,TXN-0016,Alaska Airlines,Card,OpEx,Travel,Trip: Seattle Pitch,-560
+9-Jul,TXN-0017,Amazon AWS,Card,OpEx,Hosting,,-990
+10-Jul,TXN-0018,GoDaddy,Card,OpEx,Dues,,-85
+10-Jul,DEP-0504,Client: LocalRetail,Deposit,Revenue,Consulting,Q2 Perf Review Fee,"2,500.00"
+10-Jul,TXN-0019,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-1,500.00"
+11-Jul,TXN-0020,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - June Close,"-1,250.00"
+11-Jul,TXN-0021,SEMRush,Card,OpEx,Software,,-499.95
+11-Jul,TXN-0022,The Westin Seattle,Card,OpEx,Travel,Hotel: Pitch Mtg,-840
+12-Jul,TXN-0023,Uber,Card,OpEx,Travel,Seattle Transport,-45
+12-Jul,TXN-0024,Starbucks,Card,OpEx,Meals,,-22.5
+13-Jul,TXN-0025,Fiverr,Card,COGS,Contractor,Pitch Deck Polish,-180
+14-Jul,TXN-0026,DocuSign,Card,OpEx,Software,,-120
+14-Jul,DEP-0505,Client: LogiCorp,Deposit,Revenue,Project,New Client: SEO Audit,"8,500.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Jul,PAY-07A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Jul,PAY-07B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-Jul,PAY-07C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-Jul,TXN-0028,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+15-Jul,TXN-0029,Sprout Social,Card,OpEx,Software,,-900
+16-Jul,DEP-0506,Client: FinTech,Deposit,Revenue,Retainer,Inv #1043,"12,500.00"
+16-Jul,TXN-0030,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-6,200.00"
+17-Jul,TXN-0031,Upwork,Card,COGS,Contractor,Audit Support,-350
+17-Jul,TXN-0032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+18-Jul,TXN-0033,Verizon Fios,Card,OpEx,Utilities,,-299
+18-Jul,TXN-0034,The Capital Grille,Card,OpEx,Meals & Ent,Q3 Planning Dinner,"-1,150.00"
+19-Jul,TXN-0035,Canva,Card,OpEx,Software,,-150
+19-Jul,DEP-0507,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1044,"9,500.00"
+20-Jul,TXN-0036,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,100.00"
+20-Jul,TXN-0037,Intercom,Card,OpEx,Software,,-350
+21-Jul,TXN-0038,Uber,Card,OpEx,Travel,,-35
+21-Jul,TXN-0039,Zapier,Card,OpEx,Software,,-120
+22-Jul,TXN-0040,Loom,Card,OpEx,Software,,-80
+22-Jul,TXN-0041,QuickBooks,Card,OpEx,Software,,-150
+23-Jul,DEP-0508,Client: UrbanWear,Deposit,Revenue,Project,Summer Clearance,"8,000.00"
+23-Jul,TXN-0042,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-3,500.00"
+24-Jul,TXN-0043,PandaDoc,Card,OpEx,Software,,-150
+24-Jul,TXN-0044,Shutterstock,Card,COGS,Production,,-250
+25-Jul,TXN-0045,LastPass,Card,OpEx,Software,,-45
+25-Jul,TXN-0046,Asana,Card,OpEx,Software,,-800
+25-Jul,TXN-0047,Monday.com,Card,OpEx,Software,,-400
+25-Jul,DEP-0509,Client: EduTech,Deposit,Revenue,Retainer,Inv #1045,"5,400.00"
+26-Jul,TXN-0048,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,-900
+26-Jul,TXN-0049,Iron Mountain,Card,OpEx,Services,,-85
+27-Jul,TXN-0050,Webflow,Card,OpEx,Software,,-250
+27-Jul,TXN-0051,Wistia,Card,OpEx,Software,,-100
+28-Jul,TXN-0052,WordPress,Card,OpEx,Software,,-120
+28-Jul,TXN-0053,Staples,Card,OpEx,Supplies,Office Restock,-210
+29-Jul,TXN-0054,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-2,500.00"
+29-Jul,TXN-0055,LiquidWeb,Card,OpEx,Hosting,,-250
+30-Jul,TXN-0056,Google Work.,Card,OpEx,Software,,-650
+30-Jul,TXN-0057,Cloudflare,Card,OpEx,Hosting,,-200
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+31-Jul,PAY-07D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+31-Jul,PAY-07E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+31-Jul,PAY-07F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+31-Jul,TXN-0065,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+31-Jul,TXN-0066,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+31-Jul,TXN-0067,Stripe,Fee,Financial,Bank Fees,Processing,-780
+31-Jul,TXN-0068,GitHub,Card,OpEx,Software,,-250
+31-Jul,TXN-0069,Upwork,Card,COGS,Contractor,Jul True-up,-220
+31-Jul,DEP-0510,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1046,"22,000.00"
+31-Jul,TXN-0070,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,800.00"
+31-Jul,TXN-0071,Jimmy John's,Card,OpEx,Meals,Team Lunch,-110
+2-Jul,TXN-0072,Vimeo,Card,OpEx,Software,,-75
+3-Jul,TXN-0073,Basecamp,Card,OpEx,Software,,-99
+7-Jul,TXN-0074,ADP Fees,Fee,Financial,Bank Fees,,-180
+7-Jul,TXN-0075,Dropbox,Card,OpEx,Software,,-50
+8-Jul,TXN-0076,Grammarly,Card,OpEx,Software,,-450
+9-Jul,TXN-0077,Typeform,Card,OpEx,Software,,-85
+10-Jul,TXN-0078,CrazyEgg,Card,OpEx,Software,,-100
+11-Jul,TXN-0079,Moz,Card,OpEx,Software,,-149
+14-Jul,TXN-0080,Ahrefs,Card,OpEx,Software,,-199
+15-Jul,TXN-0081,Pipedrive,Card,OpEx,Software,,-150
+16-Jul,TXN-0082,Hotjar,Card,OpEx,Software,,-120
+18-Jul,TXN-0083,Waste Mgmt,ACH,OpEx,Utilities,,-120
+19-Jul,TXN-0084,Twilio,Card,OpEx,Software,,-150
+20-Jul,TXN-0085,SendGrid,Card,OpEx,Software,,-180
+21-Jul,TXN-0086,Shell Oil,Card,OpEx,Travel,,-38
+22-Jul,TXN-0087,Dunkin,Card,OpEx,Meals,,-22
+23-Jul,TXN-0088,Target,Card,OpEx,Supplies,,-40
+24-Jul,TXN-0089,FedEx,Card,OpEx,Supplies,,-55
+25-Jul,TXN-0090,Starbucks,Card,OpEx,Meals,,-18
+26-Jul,TXN-0091,DoorDash,Card,OpEx,Meals,,-85
+27-Jul,TXN-0092,Amazon,Card,OpEx,Supplies,,-45
+28-Jul,TXN-0093,Costco,Card,OpEx,Meals,,-120
+29-Jul,TXN-0094,Spotify,Card,OpEx,Services,,-15
+30-Jul,TXN-0095,Namecheap,Card,COGS,Production,,-45
+31-Jul,TXN-0096,USPS,Card,OpEx,Supplies,,-10
+5-Jul,TXN-0097,Notion,Card,OpEx,Software,,-100
+8-Jul,TXN-0098,Figma,Card,OpEx,Software,,-300
+12-Jul,TXN-0099,ClickUp,Card,OpEx,Software,,-250
+15-Jul,TXN-0100,Expensify,Card,OpEx,Software,,-150
+1-Jun,TXN-6001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Jun,TXN-6002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Jun Prem.,"-14,250.00"
+1-Jun,TXN-6003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+2-Jun,DEP-6001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1025 - Jun Base,"18,500.00"
+2-Jun,DEP-6002,Client: TechFlow,Deposit,Revenue,Bonus/Performance,H1 Performance Bonus,"5,000.00"
+2-Jun,TXN-6004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-19,100.00"
+2-Jun,TXN-6005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Jun,TXN-6006,Slack,Card,OpEx,Software,,-850
+3-Jun,DEP-6003,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1026,"12,000.00"
+3-Jun,TXN-6007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,900.00"
+3-Jun,TXN-6008,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Jun,TXN-6009,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+4-Jun,TXN-6010,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-550
+5-Jun,DEP-6004,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1027,"45,000.00"
+5-Jun,TXN-6011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-13,200.00"
+5-Jun,TXN-6012,Mailchimp,Card,OpEx,Software,,-350
+6-Jun,TXN-6013,Zoom.us,Card,OpEx,Software,,-320
+6-Jun,TXN-6014,Apple Store,Card,OpEx,Equipment,Intern Laptops (x2),"-2,400.00"
+7-Jun,TXN-6015,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-360
+8-Jun,TXN-6016,Amazon AWS,Card,OpEx,Hosting,,-980
+9-Jun,TXN-6017,GoDaddy,Card,OpEx,Dues,,-85
+10-Jun,DEP-6005,Client: LocalRetail,Deposit,Revenue,Consulting,Monthly Strategy,"2,500.00"
+10-Jun,TXN-6018,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-1,500.00"
+10-Jun,TXN-6019,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - May Close,"-1,250.00"
+11-Jun,TXN-6020,SEMRush,Card,OpEx,Software,,-499.95
+12-Jun,TXN-6021,DocuSign,Card,OpEx,Software,,-120
+12-Jun,TXN-6022,Pizza Hut,Card,OpEx,Meals,Intern Welcome Lunch,-145
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Intern Stipend,Emp: T. Green (Intern),"-1,500.00"
+13-Jun,PAY-06A,Gusto Payroll,ACH,Payroll,Intern Stipend,Emp: R. Black (Intern),"-1,500.00"
+13-Jun,PAY-06B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,298.00"
+13-Jun,PAY-06C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-465
+13-Jun,TAX-Q2-F,IRS / US Treasury,ACH,Taxes,Federal Tax,Q2 Estimated Tax Pmt,"-12,500.00"
+13-Jun,TAX-Q2-S,Va Dept Tax,ACH,Taxes,State Tax,Q2 Estimated Tax Pmt,"-3,200.00"
+13-Jun,TXN-6025,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+14-Jun,DEP-6006,Client: FinTech,Deposit,Revenue,Retainer,Inv #1028,"12,500.00"
+14-Jun,TXN-6026,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-6,400.00"
+15-Jun,TXN-6027,Sprout Social,Card,OpEx,Software,,-900
+15-Jun,TXN-6028,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Jun,TXN-6029,Upwork,Card,COGS,Contractor,,-420
+17-Jun,TXN-6030,Verizon Fios,Card,OpEx,Utilities,,-299
+18-Jun,TXN-6031,Canva,Card,OpEx,Software,,-150
+18-Jun,DEP-6007,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1029,"9,500.00"
+19-Jun,TXN-6032,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,400.00"
+19-Jun,TXN-6033,Intercom,Card,OpEx,Software,,-350
+20-Jun,TXN-6034,Uber,Card,OpEx,Travel,,-25
+20-Jun,TXN-6035,Zapier,Card,OpEx,Software,,-120
+21-Jun,TXN-6036,Loom,Card,OpEx,Software,,-80
+21-Jun,TXN-6037,QuickBooks,Card,OpEx,Software,,-150
+22-Jun,DEP-6008,Client: UrbanWear,Deposit,Revenue,Project,Summer Start,"5,000.00"
+22-Jun,TXN-6038,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-1,500.00"
+23-Jun,TXN-6039,PandaDoc,Card,OpEx,Software,,-150
+23-Jun,TXN-6040,Shutterstock,Card,COGS,Production,,-250
+24-Jun,TXN-6041,LastPass,Card,OpEx,Software,,-45
+24-Jun,TXN-6042,Asana,Card,OpEx,Software,,-800
+24-Jun,TXN-6043,Monday.com,Card,OpEx,Software,,-400
+25-Jun,DEP-6009,Client: EduTech,Deposit,Revenue,Retainer,Inv #1030,"5,400.00"
+25-Jun,TXN-6044,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,-900
+25-Jun,TXN-6045,Iron Mountain,Card,OpEx,Services,,-85
+26-Jun,TXN-6046,Webflow,Card,OpEx,Software,,-250
+26-Jun,TXN-6047,Wistia,Card,OpEx,Software,,-100
+27-Jun,TXN-6048,WordPress,Card,OpEx,Software,,-120
+27-Jun,TXN-6049,Staples,Card,OpEx,Supplies,,-65
+28-Jun,TXN-6050,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-2,100.00"
+28-Jun,TXN-6051,LiquidWeb,Card,OpEx,Hosting,,-250
+29-Jun,TXN-6052,Google Work.,Card,OpEx,Software,,-650
+29-Jun,TXN-6053,Cloudflare,Card,OpEx,Hosting,,-200
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Intern Stipend,Emp: T. Green (Intern),"-1,500.00"
+30-Jun,PAY-06D,Gusto Payroll,ACH,Payroll,Intern Stipend,Emp: R. Black (Intern),"-1,500.00"
+30-Jun,PAY-06E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,298.00"
+30-Jun,PAY-06F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-465
+30-Jun,TXN-6060,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+30-Jun,TXN-6061,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+30-Jun,TXN-6062,Stripe,Fee,Financial,Bank Fees,Processing,-880
+30-Jun,TXN-6063,GitHub,Card,OpEx,Software,,-250
+30-Jun,TXN-6064,Upwork,Card,COGS,Contractor,Jun True-up,-280
+30-Jun,DEP-6010,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1031,"22,000.00"
+30-Jun,TXN-6065,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,600.00"
+30-Jun,TXN-6066,Chipotle,Card,OpEx,Meals,Team Lunch,-160
+3-Jun,TXN-6067,Vimeo,Card,OpEx,Software,,-75
+4-Jun,TXN-6068,Basecamp,Card,OpEx,Software,,-99
+5-Jun,TXN-6069,ADP Fees,Fee,Financial,Bank Fees,,-180
+6-Jun,TXN-6070,Dropbox,Card,OpEx,Software,,-50
+7-Jun,TXN-6071,Grammarly,Card,OpEx,Software,,-450
+8-Jun,TXN-6072,Typeform,Card,OpEx,Software,,-85
+9-Jun,TXN-6073,CrazyEgg,Card,OpEx,Software,,-100
+10-Jun,TXN-6074,Moz,Card,OpEx,Software,,-149
+11-Jun,TXN-6075,Ahrefs,Card,OpEx,Software,,-199
+12-Jun,TXN-6076,Pipedrive,Card,OpEx,Software,,-150
+13-Jun,TXN-6077,Hotjar,Card,OpEx,Software,,-120
+14-Jun,TXN-6078,Waste Mgmt,ACH,OpEx,Utilities,,-120
+15-Jun,TXN-6079,Twilio,Card,OpEx,Software,,-150
+16-Jun,TXN-6080,SendGrid,Card,OpEx,Software,,-180
+17-Jun,TXN-6081,Shell Oil,Card,OpEx,Travel,,-35
+18-Jun,TXN-6082,Dunkin,Card,OpEx,Meals,,-25
+19-Jun,TXN-6083,Target,Card,OpEx,Supplies,,-40
+20-Jun,TXN-6084,FedEx,Card,OpEx,Supplies,,-70
+21-Jun,TXN-6085,Starbucks,Card,OpEx,Meals,,-15
+22-Jun,TXN-6086,DoorDash,Card,OpEx,Meals,,-85
+23-Jun,TXN-6087,Amazon,Card,OpEx,Supplies,,-60
+24-Jun,TXN-6088,Costco,Card,OpEx,Meals,,-120
+25-Jun,TXN-6089,Spotify,Card,OpEx,Services,,-15
+26-Jun,TXN-6090,Namecheap,Card,COGS,Production,,-45
+27-Jun,TXN-6091,USPS,Card,OpEx,Supplies,,-15
+6-Jun,TXN-6092,Notion,Card,OpEx,Software,,-100
+9-Jun,TXN-6093,Figma,Card,OpEx,Software,,-300
+14-Jun,TXN-6094,ClickUp,Card,OpEx,Software,,-250
+16-Jun,TXN-6095,Expensify,Card,OpEx,Software,,-150
+21-Jun,TXN-6096,Uber Eats,Card,OpEx,Meals,,-55
+23-Jun,TXN-6097,BP Gas,Card,OpEx,Travel,,-45
+28-Jun,TXN-6098,Best Buy,Card,OpEx,Equipment,Monitor Stand,-80
+1-May,TXN-5001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-May,TXN-5002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - May Prem.,"-14,250.00"
+1-May,TXN-5003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-May,DEP-5001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1010 - May Base,"18,500.00"
+1-May,TXN-5004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-18,800.00"
+2-May,TXN-5005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-May,TXN-5006,Slack,Card,OpEx,Software,,-850
+2-May,TXN-5007,Indeed.com,Card,OpEx,Recruiting,Summer Intern Job Posts,-450
+3-May,DEP-5002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1011,"12,000.00"
+3-May,TXN-5008,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,800.00"
+3-May,TXN-5009,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-May,TXN-5010,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+5-May,DEP-5003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1012,"45,000.00"
+5-May,TXN-5011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-12,900.00"
+5-May,TXN-5012,Mailchimp,Card,OpEx,Software,,-350
+5-May,TXN-5013,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-480
+6-May,TXN-5014,Zoom.us,Card,OpEx,Software,,-320
+6-May,TXN-5015,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-320
+7-May,TXN-5016,LinkedIn Talent,Card,OpEx,Recruiting,Recruiter Seat License,-850
+7-May,TXN-5017,Amazon AWS,Card,OpEx,Hosting,,-950
+8-May,TXN-5018,GoDaddy,Card,OpEx,Dues,,-85
+9-May,DEP-5004,Client: LocalRetail,Deposit,Revenue,Consulting,Mother's Day Promo Prep,"3,500.00"
+9-May,TXN-5019,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-1,200.00"
+10-May,TXN-5020,CPA Firm LLC,ACH,OpEx,Professional Fees,2024 Tax Filing Finalization,"-3,500.00"
+10-May,TXN-5021,SEMRush,Card,OpEx,Software,,-499.95
+11-May,TXN-5022,DocuSign,Card,OpEx,Software,,-120
+12-May,TXN-5023,Delta Airlines,Card,OpEx,Travel,Trip: Atlanta (S. Johnson),-580
+12-May,TXN-5024,Delta Airlines,Card,OpEx,Travel,Trip: Atlanta (A. Davis),-580
+13-May,TXN-5025,Fiverr,Card,COGS,Contractor,Voiceover Work,-120
+14-May,DEP-5005,Client: FinTech,Deposit,Revenue,Retainer,Inv #1013,"12,500.00"
+14-May,TXN-5026,Sprout Social,Card,OpEx,Software,,-900
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-May,PAY-05A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-May,PAY-05B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-May,PAY-05C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-May,TXN-5030,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+15-May,TXN-5031,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-6,200.00"
+16-May,TXN-5032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-May,TXN-5033,Omni Hotel ATL,Card,OpEx,Travel,Hotel: Atlanta Pitch,-850
+17-May,TXN-5034,Verizon Fios,Card,OpEx,Utilities,,-299
+17-May,TXN-5035,Bones Restaurant,Card,OpEx,Meals & Ent,Client Dinner (ATL),-620
+18-May,TXN-5036,Canva,Card,OpEx,Software,,-150
+18-May,DEP-5006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1014,"9,500.00"
+19-May,TXN-5037,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,300.00"
+19-May,TXN-5038,Intercom,Card,OpEx,Software,,-350
+20-May,TXN-5039,Uber,Card,OpEx,Travel,ATL Airport,-45
+20-May,TXN-5040,Zapier,Card,OpEx,Software,,-120
+21-May,TXN-5041,Loom,Card,OpEx,Software,,-80
+21-May,TXN-5042,QuickBooks,Card,OpEx,Software,,-150
+22-May,DEP-5007,Client: UrbanWear,Deposit,Revenue,Project,Initial Deposit,"5,000.00"
+22-May,TXN-5043,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-1,200.00"
+23-May,TXN-5044,PandaDoc,Card,OpEx,Software,,-150
+23-May,TXN-5045,Shutterstock,Card,COGS,Production,,-250
+23-May,TXN-5046,Newegg,Card,OpEx,Equipment,Monitors/Docks (Interns),"-1,100.00"
+24-May,TXN-5047,LastPass,Card,OpEx,Software,,-45
+24-May,TXN-5048,Asana,Card,OpEx,Software,,-800
+25-May,TXN-5049,Monday.com,Card,OpEx,Software,,-400
+25-May,DEP-5008,Client: EduTech,Deposit,Revenue,Retainer,Inv #1015,"5,400.00"
+27-May,TXN-5050,LinkedIn Ads,Card,COGS,Media Buy,Client: EduTech,-850
+27-May,TXN-5051,Iron Mountain,Card,OpEx,Services,,-85
+27-May,TXN-5052,Webflow,Card,OpEx,Software,,-250
+28-May,TXN-5053,Wistia,Card,OpEx,Software,,-100
+28-May,TXN-5054,WordPress,Card,OpEx,Software,,-120
+28-May,TXN-5055,Staples,Card,OpEx,Supplies,,-85
+29-May,TXN-5056,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,800.00"
+29-May,TXN-5057,LiquidWeb,Card,OpEx,Hosting,,-250
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+30-May,PAY-05D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+30-May,PAY-05E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+30-May,PAY-05F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+30-May,TXN-5065,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+30-May,TXN-5066,Google Work.,Card,OpEx,Software,,-650
+30-May,TXN-5067,Cloudflare,Card,OpEx,Hosting,,-200
+31-May,TXN-5068,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+31-May,TXN-5069,Stripe,Fee,Financial,Bank Fees,Processing,-860
+31-May,TXN-5070,GitHub,Card,OpEx,Software,,-250
+31-May,TXN-5071,Upwork,Card,COGS,Contractor,May True-up,-280
+31-May,DEP-5009,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1016,"22,000.00"
+31-May,TXN-5072,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,600.00"
+31-May,TXN-5073,Sweetgreen,Card,OpEx,Meals,Team Lunch,-150
+3-May,TXN-5074,Vimeo,Card,OpEx,Software,,-75
+4-May,TXN-5075,Basecamp,Card,OpEx,Software,,-99
+5-May,TXN-5076,ADP Fees,Fee,Financial,Bank Fees,,-180
+6-May,TXN-5077,Dropbox,Card,OpEx,Software,,-50
+7-May,TXN-5078,Grammarly,Card,OpEx,Software,,-450
+8-May,TXN-5079,Typeform,Card,OpEx,Software,,-85
+9-May,TXN-5080,CrazyEgg,Card,OpEx,Software,,-100
+10-May,TXN-5081,Moz,Card,OpEx,Software,,-149
+11-May,TXN-5082,Ahrefs,Card,OpEx,Software,,-199
+12-May,TXN-5083,Pipedrive,Card,OpEx,Software,,-150
+13-May,TXN-5084,Hotjar,Card,OpEx,Software,,-120
+14-May,TXN-5085,Waste Mgmt,ACH,OpEx,Utilities,,-120
+15-May,TXN-5086,Twilio,Card,OpEx,Software,,-150
+16-May,TXN-5087,SendGrid,Card,OpEx,Software,,-180
+17-May,TXN-5088,Shell Oil,Card,OpEx,Travel,,-35
+18-May,TXN-5089,Dunkin,Card,OpEx,Meals,,-25
+19-May,TXN-5090,Target,Card,OpEx,Supplies,,-40
+20-May,TXN-5091,FedEx,Card,OpEx,Supplies,,-70
+21-May,TXN-5092,Starbucks,Card,OpEx,Meals,,-15
+22-May,TXN-5093,DoorDash,Card,OpEx,Meals,,-85
+23-May,TXN-5094,Amazon,Card,OpEx,Supplies,,-60
+24-May,TXN-5095,Costco,Card,OpEx,Meals,,-120
+25-May,TXN-5096,Spotify,Card,OpEx,Services,,-15
+26-May,TXN-5097,Namecheap,Card,COGS,Production,,-45
+27-May,TXN-5098,USPS,Card,OpEx,Supplies,,-15
+7-May,TXN-5099,Notion,Card,OpEx,Software,,-100
+8-May,TXN-5100,Figma,Card,OpEx,Software,,-300
+14-May,TXN-5101,ClickUp,Card,OpEx,Software,,-250
+15-May,TXN-5102,Expensify,Card,OpEx,Software,,-150
+21-May,TXN-5103,Uber Eats,Card,OpEx,Meals,,-55
+23-May,TXN-5104,BP Gas,Card,OpEx,Travel,,-45
+28-May,TXN-5105,Best Buy,Card,OpEx,Equipment,Adapter Cables,-40
+1-Apr,TXN-4001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+1-Apr,TXN-4002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Apr Prem.,"-14,250.00"
+1-Apr,TXN-4003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+1-Apr,DEP-4001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #1001 - Apr Base,"18,500.00"
+1-Apr,TXN-4004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-18,200.00"
+2-Apr,TXN-4005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Apr,TXN-4006,Slack,Card,OpEx,Software,,-850
+3-Apr,DEP-4002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #1002,"12,000.00"
+3-Apr,TXN-4007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,750.00"
+3-Apr,TXN-4008,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Apr,TXN-4009,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+4-Apr,TXN-4010,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-450
+5-Apr,DEP-4003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #1003,"45,000.00"
+5-Apr,TXN-4011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-12,800.00"
+5-Apr,TXN-4012,Mailchimp,Card,OpEx,Software,,-350
+6-Apr,TXN-4013,Zoom.us,Card,OpEx,Software,,-320
+7-Apr,TXN-4014,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-310
+7-Apr,TXN-4015,Amazon AWS,Card,OpEx,Hosting,,-920
+8-Apr,TXN-4016,GoDaddy,Card,OpEx,Dues,,-85
+8-Apr,TXN-4017,Southwest Air,Card,OpEx,Travel,Trip: LA Summit (S. Johnson),-450
+8-Apr,TXN-4018,Southwest Air,Card,OpEx,Travel,Trip: LA Summit (M. Lee),-450
+9-Apr,DEP-4004,Client: LocalRetail,Deposit,Revenue,Retainer,Reduced: Maint. Only,"1,500.00"
+9-Apr,TXN-4019,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,-450
+10-Apr,TXN-4020,CPA Firm LLC,ACH,OpEx,Professional Fees,Tax Prep Rush Fee,"-1,500.00"
+10-Apr,TXN-4021,SEMRush,Card,OpEx,Software,,-499.95
+11-Apr,TXN-4022,DocuSign,Card,OpEx,Software,,-120
+11-Apr,TXN-4023,Staples,Card,OpEx,Supplies,Tax Season Folders/Ink,-210
+12-Apr,TXN-4024,Airbnb,Card,OpEx,Travel,LA Summit Lodging,"-1,100.00"
+12-Apr,TXN-4025,In-N-Out Burger,Card,OpEx,Meals,Team Lunch (LA),-45
+13-Apr,TXN-4026,Uber,Card,OpEx,Travel,LAX Transport,-65
+14-Apr,DEP-4005,Client: FinTech,Deposit,Revenue,Retainer,Inv #1005,"12,500.00"
+14-Apr,TXN-4027,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-6,100.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Apr,PAY-04A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Apr,PAY-04B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+15-Apr,PAY-04C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+15-Apr,TAX-Q1-F,IRS / US Treasury,ACH,Taxes,Federal Tax,Q1 Estimated Tax Pmt,"-11,800.00"
+15-Apr,TAX-Q1-S,Va Dept Tax,ACH,Taxes,State Tax,Q1 Estimated Tax Pmt,"-2,900.00"
+15-Apr,TXN-4030,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+15-Apr,TXN-4031,Sprout Social,Card,OpEx,Software,,-900
+16-Apr,TXN-4032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Apr,TXN-4033,Upwork,Card,COGS,Contractor,,-320
+17-Apr,TXN-4034,Verizon Fios,Card,OpEx,Utilities,,-299
+17-Apr,TXN-4035,Canva,Card,OpEx,Software,,-150
+18-Apr,DEP-4006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #1006,"9,500.00"
+18-Apr,TXN-4036,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,200.00"
+18-Apr,TXN-4037,Intercom,Card,OpEx,Software,,-350
+19-Apr,TXN-4038,Uber,Card,OpEx,Travel,,-25
+19-Apr,TXN-4039,Zapier,Card,OpEx,Software,,-120
+20-Apr,TXN-4040,Loom,Card,OpEx,Software,,-80
+20-Apr,TXN-4041,QuickBooks,Card,OpEx,Software,,-150
+21-Apr,DEP-4007,Client: EduTech,Deposit,Revenue,Project,Initial Audit Deposit,"2,500.00"
+21-Apr,TXN-4042,Fiverr,Card,COGS,Contractor,Audit Report Formatting,-150
+22-Apr,TXN-4043,PandaDoc,Card,OpEx,Software,,-150
+22-Apr,TXN-4044,Shutterstock,Card,COGS,Production,,-250
+23-Apr,TXN-4045,LastPass,Card,OpEx,Software,,-45
+23-Apr,TXN-4046,Asana,Card,OpEx,Software,,-800
+24-Apr,TXN-4047,Monday.com,Card,OpEx,Software,,-400
+24-Apr,TXN-4048,Iron Mountain,Card,OpEx,Services,,-85
+25-Apr,TXN-4049,Webflow,Card,OpEx,Software,,-250
+25-Apr,TXN-4050,Wistia,Card,OpEx,Software,,-100
+26-Apr,TXN-4051,WordPress,Card,OpEx,Software,,-120
+26-Apr,TXN-4052,Dunkin,Card,OpEx,Meals,Team Breakfast,-65
+27-Apr,TXN-4053,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,800.00"
+27-Apr,TXN-4054,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Apr,TXN-4055,Google Work.,Card,OpEx,Software,,-650
+28-Apr,TXN-4056,Cloudflare,Card,OpEx,Hosting,,-200
+28-Apr,TXN-4057,Apple Store,Card,OpEx,Equipment,Replacement iPad (Design),-850
+29-Apr,TXN-4058,USPS,Card,OpEx,Supplies,,-15
+29-Apr,TXN-4059,GitHub,Card,OpEx,Software,,-250
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+30-Apr,PAY-04D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+30-Apr,PAY-04E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+30-Apr,PAY-04F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+30-Apr,TXN-4066,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+30-Apr,TXN-4067,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+30-Apr,TXN-4068,Stripe,Fee,Financial,Bank Fees,Processing,-810
+30-Apr,TXN-4069,Upwork,Card,COGS,Contractor,Apr True-up,-220
+30-Apr,DEP-4008,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #1007,"22,000.00"
+30-Apr,TXN-4070,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,400.00"
+30-Apr,TXN-4071,The Cheesecake Fac,Card,OpEx,Meals,Q2 Strategy Lunch,-240
+2-Apr,TXN-4072,Vimeo,Card,OpEx,Software,,-75
+3-Apr,TXN-4073,Basecamp,Card,OpEx,Software,,-99
+4-Apr,TXN-4074,ADP Fees,Fee,Financial,Bank Fees,,-180
+5-Apr,TXN-4075,Dropbox,Card,OpEx,Software,,-50
+6-Apr,TXN-4076,Grammarly,Card,OpEx,Software,,-450
+7-Apr,TXN-4077,Typeform,Card,OpEx,Software,,-85
+8-Apr,TXN-4078,CrazyEgg,Card,OpEx,Software,,-100
+9-Apr,TXN-4079,Moz,Card,OpEx,Software,,-149
+10-Apr,TXN-4080,Ahrefs,Card,OpEx,Software,,-199
+11-Apr,TXN-4081,Pipedrive,Card,OpEx,Software,,-150
+12-Apr,TXN-4082,Hotjar,Card,OpEx,Software,,-120
+13-Apr,TXN-4083,Waste Mgmt,ACH,OpEx,Utilities,,-120
+14-Apr,TXN-4084,Twilio,Card,OpEx,Software,,-150
+15-Apr,TXN-4085,SendGrid,Card,OpEx,Software,,-180
+16-Apr,TXN-4086,Shell Oil,Card,OpEx,Travel,,-35
+17-Apr,TXN-4087,Dunkin,Card,OpEx,Meals,,-25
+18-Apr,TXN-4088,Target,Card,OpEx,Supplies,,-40
+19-Apr,TXN-4089,FedEx,Card,OpEx,Supplies,,-70
+20-Apr,TXN-4090,Starbucks,Card,OpEx,Meals,,-15
+21-Apr,TXN-4091,DoorDash,Card,OpEx,Meals,,-85
+22-Apr,TXN-4092,Amazon,Card,OpEx,Supplies,,-60
+23-Apr,TXN-4093,Costco,Card,OpEx,Meals,,-120
+24-Apr,TXN-4094,Spotify,Card,OpEx,Services,,-15
+25-Apr,TXN-4095,Namecheap,Card,COGS,Production,,-45
+4-Apr,TXN-4096,Notion,Card,OpEx,Software,,-100
+6-Apr,TXN-4097,Figma,Card,OpEx,Software,,-300
+12-Apr,TXN-4098,ClickUp,Card,OpEx,Software,,-250
+14-Apr,TXN-4099,Expensify,Card,OpEx,Software,,-150
+19-Apr,TXN-4100,Uber Eats,Card,OpEx,Meals,,-55
+21-Apr,TXN-4101,BP Gas,Card,OpEx,Travel,,-45
+27-Apr,TXN-4102,Best Buy,Card,OpEx,Equipment,Keyboard,-120
+3-Mar,TXN-3001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+3-Mar,TXN-3002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Mar Prem.,"-14,250.00"
+3-Mar,TXN-3003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+3-Mar,DEP-3001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #0990 - Mar Base,"18,500.00"
+3-Mar,TXN-3004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-18,100.00"
+3-Mar,TXN-3005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+3-Mar,TXN-3006,Slack,Card,OpEx,Software,,-850
+4-Mar,DEP-3002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #0991,"12,000.00"
+4-Mar,TXN-3007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,650.00"
+4-Mar,TXN-3008,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Mar,TXN-3009,SXSW Org,Card,OpEx,Training & Edu,Conference Badges (x3),"-4,850.00"
+5-Mar,DEP-3003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #0992,"45,000.00"
+5-Mar,TXN-3010,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-12,400.00"
+5-Mar,TXN-3011,Mailchimp,Card,OpEx,Software,,-350
+5-Mar,TXN-3012,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-550
+6-Mar,TXN-3013,Zoom.us,Card,OpEx,Software,,-320
+6-Mar,TXN-3014,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-345
+7-Mar,TXN-3015,Southwest Air,Card,OpEx,Travel,SXSW Flights (AUS),"-1,250.00"
+7-Mar,TXN-3016,Amazon AWS,Card,OpEx,Hosting,,-910
+8-Mar,TXN-3017,GoDaddy,Card,OpEx,Dues,,-85
+10-Mar,DEP-3004,Client: LocalRetail,Deposit,Revenue,Retainer,Full Svc Retainer (Final),"8,500.00"
+10-Mar,TXN-3018,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-4,800.00"
+10-Mar,TXN-3019,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Feb Close,"-1,250.00"
+11-Mar,TXN-3020,SEMRush,Card,OpEx,Software,,-499.95
+11-Mar,TXN-3021,DocuSign,Card,OpEx,Software,,-120
+12-Mar,TXN-3022,The Driskill Hotel,Card,OpEx,Travel,Hotel: SXSW (High Rate),"-2,400.00"
+12-Mar,TXN-3023,Iron Cactus,Card,OpEx,Meals & Ent,Client Dinner @ SXSW,-850
+13-Mar,TXN-3024,Uber,Card,OpEx,Travel,Austin Transport,-85
+14-Mar,DEP-3005,Client: FinTech,Deposit,Revenue,Retainer,Inv #0994,"12,500.00"
+14-Mar,TXN-3025,Sprout Social,Card,OpEx,Software,,-900
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+14-Mar,PAY-03A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+14-Mar,PAY-03B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+14-Mar,PAY-03C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+14-Mar,TXN-3028,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+14-Mar,TXN-3029,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-5,900.00"
+15-Mar,TAX-24-BAL,IRS / US Treasury,ACH,Taxes,Federal Tax,2024 Tax Balance Due,"-8,500.00"
+15-Mar,TXN-3030,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Mar,TXN-3031,Upwork,Card,COGS,Contractor,,-250
+17-Mar,TXN-3032,Verizon Fios,Card,OpEx,Utilities,,-299
+17-Mar,TXN-3033,Canva,Card,OpEx,Software,,-150
+17-Mar,DEP-3006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #0995,"9,500.00"
+18-Mar,TXN-3034,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,100.00"
+18-Mar,TXN-3035,Intercom,Card,OpEx,Software,,-350
+19-Mar,TXN-3036,Uber,Card,OpEx,Travel,,-25
+19-Mar,TXN-3037,Zapier,Card,OpEx,Software,,-120
+20-Mar,TXN-3038,Loom,Card,OpEx,Software,,-80
+20-Mar,TXN-3039,QuickBooks,Card,OpEx,Software,,-150
+21-Mar,TXN-3040,Fiverr,Card,COGS,Contractor,,-120
+21-Mar,TXN-3041,PandaDoc,Card,OpEx,Software,,-150
+22-Mar,TXN-3042,Shutterstock,Card,COGS,Production,,-250
+23-Mar,TXN-3043,LastPass,Card,OpEx,Software,,-45
+24-Mar,TXN-3044,Asana,Card,OpEx,Software,,-800
+24-Mar,TXN-3045,Monday.com,Card,OpEx,Software,,-400
+25-Mar,DEP-3007,Client: EduTech,Deposit,Revenue,Consulting,Q1 Strategy Session,"1,500.00"
+25-Mar,TXN-3046,Iron Mountain,Card,OpEx,Services,,-85
+25-Mar,TXN-3047,Webflow,Card,OpEx,Software,,-250
+26-Mar,TXN-3048,Wistia,Card,OpEx,Software,,-100
+26-Mar,TXN-3049,WordPress,Card,OpEx,Software,,-120
+27-Mar,TXN-3050,Staples,Card,OpEx,Supplies,,-145
+27-Mar,TXN-3051,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,600.00"
+28-Mar,TXN-3052,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Mar,TXN-3053,Google Work.,Card,OpEx,Software,,-650
+28-Mar,TXN-3054,Cloudflare,Card,OpEx,Hosting,,-200
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+31-Mar,PAY-03D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+31-Mar,PAY-03E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+31-Mar,PAY-03F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+31-Mar,TXN-3065,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+31-Mar,TXN-3066,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+31-Mar,TXN-3067,Stripe,Fee,Financial,Bank Fees,Processing,-850
+31-Mar,TXN-3068,GitHub,Card,OpEx,Software,,-250
+31-Mar,TXN-3069,Upwork,Card,COGS,Contractor,Mar True-up,-220
+31-Mar,DEP-3008,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #0997,"22,000.00"
+31-Mar,TXN-3070,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,300.00"
+31-Mar,TXN-3071,Torchy's Tacos,Card,OpEx,Meals,Team Lunch,-110
+3-Mar,TXN-3072,Vimeo,Card,OpEx,Software,,-75
+4-Mar,TXN-3073,Basecamp,Card,OpEx,Software,,-99
+5-Mar,TXN-3074,ADP Fees,Fee,Financial,Bank Fees,,-180
+6-Mar,TXN-3075,Dropbox,Card,OpEx,Software,,-50
+7-Mar,TXN-3076,Grammarly,Card,OpEx,Software,,-450
+8-Mar,TXN-3077,Typeform,Card,OpEx,Software,,-85
+10-Mar,TXN-3078,CrazyEgg,Card,OpEx,Software,,-100
+11-Mar,TXN-3079,Moz,Card,OpEx,Software,,-149
+12-Mar,TXN-3080,Ahrefs,Card,OpEx,Software,,-199
+13-Mar,TXN-3081,Pipedrive,Card,OpEx,Software,,-150
+14-Mar,TXN-3082,Hotjar,Card,OpEx,Software,,-120
+17-Mar,TXN-3083,Waste Mgmt,ACH,OpEx,Utilities,,-120
+18-Mar,TXN-3084,Twilio,Card,OpEx,Software,,-150
+19-Mar,TXN-3085,SendGrid,Card,OpEx,Software,,-180
+20-Mar,TXN-3086,Shell Oil,Card,OpEx,Travel,,-35
+21-Mar,TXN-3087,Dunkin,Card,OpEx,Meals,,-25
+22-Mar,TXN-3088,Target,Card,OpEx,Supplies,,-40
+23-Mar,TXN-3089,FedEx,Card,OpEx,Supplies,,-70
+24-Mar,TXN-3090,Starbucks,Card,OpEx,Meals,,-15
+25-Mar,TXN-3091,DoorDash,Card,OpEx,Meals,,-85
+26-Mar,TXN-3092,Amazon,Card,OpEx,Supplies,,-60
+27-Mar,TXN-3093,Costco,Card,OpEx,Meals,,-120
+28-Mar,TXN-3094,Spotify,Card,OpEx,Services,,-15
+29-Mar,TXN-3095,Namecheap,Card,COGS,Production,,-45
+7-Mar,TXN-3096,Notion,Card,OpEx,Software,,-100
+8-Mar,TXN-3097,Figma,Card,OpEx,Software,,-300
+13-Mar,TXN-3098,ClickUp,Card,OpEx,Software,,-250
+16-Mar,TXN-3099,Expensify,Card,OpEx,Software,,-150
+20-Mar,TXN-3100,Uber Eats,Card,OpEx,Meals,,-55
+25-Mar,TXN-3101,BP Gas,Card,OpEx,Travel,,-45
+28-Mar,TXN-3102,Best Buy,Card,OpEx,Equipment,Presentation Clicker,-40
+3-Feb,TXN-2001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+3-Feb,TXN-2002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Feb Prem.,"-14,250.00"
+3-Feb,TXN-2003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+3-Feb,DEP-2001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #0980 - Feb Base,"18,500.00"
+3-Feb,TXN-2004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-17,900.00"
+3-Feb,TXN-2005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+3-Feb,TXN-2006,Slack,Card,OpEx,Software,,-850
+4-Feb,DEP-2002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #0981,"12,000.00"
+4-Feb,TXN-2007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,600.00"
+4-Feb,TXN-2008,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+4-Feb,TXN-2009,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+5-Feb,DEP-2003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #0982,"45,000.00"
+5-Feb,TXN-2010,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-12,100.00"
+5-Feb,TXN-2011,Mailchimp,Card,OpEx,Software,,-350
+5-Feb,TXN-2012,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-450
+6-Feb,TXN-2013,Zoom.us,Card,OpEx,Software,,-320
+6-Feb,TXN-2014,Dominion Energy,ACH,OpEx,Utilities,High Usage (Winter),-520
+7-Feb,TXN-2015,Amazon AWS,Card,OpEx,Hosting,,-890
+7-Feb,TXN-2016,GoDaddy,Card,OpEx,Dues,,-85
+10-Feb,DEP-2004,Client: LocalRetail,Deposit,Revenue,Retainer,Valentine's Campaign,"9,500.00"
+10-Feb,TXN-2017,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-4,200.00"
+10-Feb,TXN-2018,Meta Ads,Card,COGS,Media Buy,Client: LocalRetail,"-2,800.00"
+10-Feb,TXN-2019,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Jan Close,"-1,250.00"
+11-Feb,TXN-2020,SEMRush,Card,OpEx,Software,,-499.95
+11-Feb,TXN-2021,DocuSign,Card,OpEx,Software,,-120
+12-Feb,TXN-2022,HVAC Pros Inc,Card,OpEx,Repairs & Maint,Server Room Heating Fix,"-1,850.00"
+13-Feb,TXN-2023,Fiverr,Card,COGS,Contractor,Social Assets (Val Day),-220
+13-Feb,TXN-2024,Staples,Card,OpEx,Supplies,,-89
+14-Feb,DEP-2005,Client: FinTech,Deposit,Revenue,Retainer,Inv #0984,"12,500.00"
+14-Feb,TXN-2025,Sprout Social,Card,OpEx,Software,,-900
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+14-Feb,PAY-02A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+14-Feb,PAY-02B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+14-Feb,PAY-02C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+14-Feb,TXN-2028,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+14-Feb,TXN-2029,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-5,800.00"
+14-Feb,TXN-2030,Edible Arrangements,Card,OpEx,Meals & Ent,Team Valentine's Gift,-350
+17-Feb,TXN-2031,Uber Eats,Card,OpEx,Meals,Holiday Work Meal,-65
+18-Feb,TXN-2032,Salesforce,Card,OpEx,Software,,"-2,500.00"
+18-Feb,TXN-2033,Upwork,Card,COGS,Contractor,,-250
+18-Feb,DEP-2006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #0985,"9,500.00"
+19-Feb,TXN-2034,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-3,000.00"
+19-Feb,TXN-2035,Intercom,Card,OpEx,Software,,-350
+19-Feb,TXN-2036,Verizon Fios,Card,OpEx,Utilities,,-299
+20-Feb,TXN-2037,Uber,Card,OpEx,Travel,,-25
+20-Feb,TXN-2038,Zapier,Card,OpEx,Software,,-120
+21-Feb,TXN-2039,Loom,Card,OpEx,Software,,-80
+21-Feb,TXN-2040,QuickBooks,Card,OpEx,Software,,-150
+21-Feb,DEP-2007,Client: UrbanWear,Deposit,Revenue,Project,Winter Clearance,"3,500.00"
+22-Feb,TXN-2041,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-1,500.00"
+23-Feb,TXN-2042,PandaDoc,Card,OpEx,Software,,-150
+24-Feb,TXN-2043,Shutterstock,Card,COGS,Production,,-250
+24-Feb,TXN-2044,LastPass,Card,OpEx,Software,,-45
+25-Feb,TXN-2045,Asana,Card,OpEx,Software,,-800
+25-Feb,TXN-2046,Monday.com,Card,OpEx,Software,,-400
+25-Feb,DEP-2008,Client: EduTech,Deposit,Revenue,Consulting,Q1 Audit (Project),"1,200.00"
+26-Feb,TXN-2047,Iron Mountain,Card,OpEx,Services,,-85
+26-Feb,TXN-2048,Webflow,Card,OpEx,Software,,-250
+26-Feb,TXN-2049,Wistia,Card,OpEx,Software,,-100
+27-Feb,TXN-2050,WordPress,Card,OpEx,Software,,-120
+27-Feb,TXN-2051,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,500.00"
+27-Feb,TXN-2052,LiquidWeb,Card,OpEx,Hosting,,-250
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+28-Feb,PAY-02D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+28-Feb,PAY-02E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+28-Feb,PAY-02F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+28-Feb,TXN-2060,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+28-Feb,TXN-2061,Google Work.,Card,OpEx,Software,,-650
+28-Feb,TXN-2062,Cloudflare,Card,OpEx,Hosting,,-200
+28-Feb,TXN-2063,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+28-Feb,TXN-2064,Stripe,Fee,Financial,Bank Fees,Processing,-830
+28-Feb,TXN-2065,GitHub,Card,OpEx,Software,,-250
+28-Feb,TXN-2066,Upwork,Card,COGS,Contractor,Feb True-up,-220
+28-Feb,DEP-2009,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #0987,"22,000.00"
+28-Feb,TXN-2067,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,100.00"
+28-Feb,TXN-2068,Jersey Mike's,Card,OpEx,Meals,Team Lunch,-130
+3-Feb,TXN-2069,Vimeo,Card,OpEx,Software,,-75
+3-Feb,TXN-2070,Basecamp,Card,OpEx,Software,,-99
+4-Feb,TXN-2071,ADP Fees,Fee,Financial,Bank Fees,,-180
+5-Feb,TXN-2072,Dropbox,Card,OpEx,Software,,-50
+6-Feb,TXN-2073,Grammarly,Card,OpEx,Software,,-450
+7-Feb,TXN-2074,Typeform,Card,OpEx,Software,,-85
+10-Feb,TXN-2075,CrazyEgg,Card,OpEx,Software,,-100
+11-Feb,TXN-2076,Moz,Card,OpEx,Software,,-149
+12-Feb,TXN-2077,Ahrefs,Card,OpEx,Software,,-199
+13-Feb,TXN-2078,Pipedrive,Card,OpEx,Software,,-150
+14-Feb,TXN-2079,Hotjar,Card,OpEx,Software,,-120
+17-Feb,TXN-2080,Waste Mgmt,ACH,OpEx,Utilities,,-120
+18-Feb,TXN-2081,Twilio,Card,OpEx,Software,,-150
+19-Feb,TXN-2082,SendGrid,Card,OpEx,Software,,-180
+20-Feb,TXN-2083,Shell Oil,Card,OpEx,Travel,,-35
+21-Feb,TXN-2084,Dunkin,Card,OpEx,Meals,,-25
+22-Feb,TXN-2085,Target,Card,OpEx,Supplies,,-40
+23-Feb,TXN-2086,FedEx,Card,OpEx,Supplies,,-70
+24-Feb,TXN-2087,Starbucks,Card,OpEx,Meals,,-15
+25-Feb,TXN-2088,DoorDash,Card,OpEx,Meals,,-85
+26-Feb,TXN-2089,Amazon,Card,OpEx,Supplies,,-60
+27-Feb,TXN-2090,Costco,Card,OpEx,Meals,,-120
+28-Feb,TXN-2091,Spotify,Card,OpEx,Services,,-15
+3-Feb,TXN-2092,Namecheap,Card,COGS,Production,,-45
+6-Feb,TXN-2093,Notion,Card,OpEx,Software,,-100
+7-Feb,TXN-2094,Figma,Card,OpEx,Software,,-300
+13-Feb,TXN-2095,ClickUp,Card,OpEx,Software,,-250
+18-Feb,TXN-2096,Expensify,Card,OpEx,Software,,-150
+21-Feb,TXN-2097,Uber Eats,Card,OpEx,Meals,,-55
+24-Feb,TXN-2098,BP Gas,Card,OpEx,Travel,,-45
+27-Feb,TXN-2099,Best Buy,Card,OpEx,Equipment,External Hard Drive,-110
+12-Feb,TXN-2100,Apple Store,Card,OpEx,Equipment,Magic Trackpad,-129
+2-Jan,TXN-1001,WeWork,Card,OpEx,Rent & Office,HQ Private Office - Ste 400,"-12,500.00"
+2-Jan,TXN-1002,BlueCross BlueShield,ACH,OpEx,Benefits,Group Health - Jan Prem.,"-14,250.00"
+2-Jan,TXN-1003,SBA Treasury,ACH,Liability,Loan Repayment,,"-2,845.00"
+2-Jan,DEP-1001,Client: TechFlow,Deposit,Revenue,Retainer,Inv #0970 - Jan Base,"18,500.00"
+2-Jan,TXN-1004,Google Ads,Card,COGS,Media Buy,Client: TechFlow,"-17,500.00"
+2-Jan,TXN-1005,HubSpot,Card,OpEx,Software,,"-4,200.00"
+2-Jan,TXN-1006,Slack,Card,OpEx,Software,Annual Renewal (2025),"-8,500.00"
+3-Jan,DEP-1002,Client: GreenEnergy,Deposit,Revenue,Retainer,Inv #0971,"12,000.00"
+3-Jan,TXN-1007,LinkedIn Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,500.00"
+3-Jan,TXN-1008,Adobe Creative,Card,OpEx,Software,,"-1,200.00"
+3-Jan,TXN-1009,Hiscox Insurance,ACH,OpEx,Business Ins.,Policy #998221,-450
+4-Jan,TXN-1010,Upwork,Card,COGS,Contractor,Freelancer: J. Doe,-450
+5-Jan,DEP-1003,Client: PharmaCorp,Deposit,Revenue,Retainer,Inv #0972,"45,000.00"
+5-Jan,TXN-1011,Meta Ads,Card,COGS,Media Buy,Client: PharmaCorp,"-11,800.00"
+5-Jan,TXN-1012,Mailchimp,Card,OpEx,Software,,-350
+6-Jan,TXN-1013,Zoom.us,Card,OpEx,Software,Annual Enterprise Plan,"-3,200.00"
+6-Jan,TXN-1014,Dominion Energy,ACH,OpEx,Utilities,Acct ending 8821,-480
+7-Jan,TXN-1015,Amazon AWS,Card,OpEx,Hosting,,-880
+7-Jan,TXN-1016,GoDaddy,Card,OpEx,Dues,,-85
+8-Jan,DEP-1004,Client: LocalRetail,Deposit,Revenue,Retainer,New Year Campaign,"9,500.00"
+8-Jan,TXN-1017,Google Ads,Card,COGS,Media Buy,Client: LocalRetail,"-3,800.00"
+8-Jan,TXN-1018,Meta Ads,Card,COGS,Media Buy,Client: LocalRetail,"-2,500.00"
+9-Jan,TXN-1019,CPA Firm LLC,ACH,OpEx,Professional Fees,Retainer - Dec Close,"-1,250.00"
+10-Jan,TXN-1020,SEMRush,Card,OpEx,Software,,-499.95
+10-Jan,TXN-1021,DocuSign,Card,OpEx,Software,Annual Renewal,"-1,200.00"
+10-Jan,TXN-1022,Best Buy,Card,OpEx,Equipment,New Employee Laptop,"-1,400.00"
+11-Jan,TXN-1023,Fiverr,Card,COGS,Contractor,,-180
+12-Jan,TXN-1024,Staples,Card,OpEx,Supplies,2025 Planners/Supplies,-350
+13-Jan,DEP-1005,Client: FinTech,Deposit,Revenue,Retainer,Inv #0974,"12,500.00"
+13-Jan,TXN-1025,Sprout Social,Card,OpEx,Software,,-900
+14-Jan,TXN-1026,Google Ads,Card,COGS,Media Buy,Client: FinTech,"-5,500.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+15-Jan,PAY-01A,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+15-Jan,PAY-BON,Gusto Payroll,ACH,Payroll,Bonus Pay,2024 Performance Bonus,"-15,000.00"
+15-Jan,PAY-01B,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-3,315.00"
+15-Jan,PAY-01C,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-650
+15-Jan,TXN-1028,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+16-Jan,TXN-1030,Salesforce,Card,OpEx,Software,,"-2,500.00"
+16-Jan,TXN-1031,Upwork,Card,COGS,Contractor,,-250
+17-Jan,DEP-1006,Client: HealthPlus,Deposit,Revenue,Retainer,Inv #0975,"9,500.00"
+17-Jan,TXN-1032,Meta Ads,Card,COGS,Media Buy,Client: HealthPlus,"-2,800.00"
+17-Jan,TXN-1033,Intercom,Card,OpEx,Software,,-350
+17-Jan,TXN-1034,Verizon Fios,Card,OpEx,Utilities,,-299
+18-Jan,TXN-1035,Uber,Card,OpEx,Travel,,-25
+18-Jan,TXN-1036,Zapier,Card,OpEx,Software,,-120
+19-Jan,TXN-1037,Loom,Card,OpEx,Software,,-80
+19-Jan,TXN-1038,QuickBooks,Card,OpEx,Software,,-150
+20-Jan,DEP-1007,Client: UrbanWear,Deposit,Revenue,Project,New Year Sale,"3,500.00"
+20-Jan,TXN-1039,TikTok Ads,Card,COGS,Media Buy,Client: UrbanWear,"-1,200.00"
+21-Jan,TXN-1040,PandaDoc,Card,OpEx,Software,,-150
+21-Jan,TXN-1041,Shutterstock,Card,COGS,Production,,-250
+22-Jan,TXN-1042,LastPass,Card,OpEx,Software,,-45
+22-Jan,TXN-1043,Asana,Card,OpEx,Software,,-800
+23-Jan,TXN-1044,Monday.com,Card,OpEx,Software,,-400
+24-Jan,DEP-1008,Client: EduTech,Deposit,Revenue,Consulting,Pre-Audit Retainer,"1,200.00"
+24-Jan,TXN-1045,Iron Mountain,Card,OpEx,Services,,-85
+24-Jan,TXN-1046,Webflow,Card,OpEx,Software,,-250
+25-Jan,TXN-1047,Wistia,Card,OpEx,Software,,-100
+25-Jan,TXN-1048,WordPress,Card,OpEx,Software,,-120
+26-Jan,TXN-1049,Meta Ads,Card,COGS,Media Buy,Client: GreenEnergy,"-1,200.00"
+26-Jan,TXN-1050,LiquidWeb,Card,OpEx,Hosting,,-250
+27-Jan,TXN-1051,Google Work.,Card,OpEx,Software,,-650
+27-Jan,TXN-1052,Cloudflare,Card,OpEx,Hosting,,-200
+27-Jan,TXN-1053,State Corp Comm,Card,OpEx,Taxes & Lic.,Annual Business License,-50
+28-Jan,TXN-1054,The Capital Grille,Card,OpEx,Meals & Ent,Team Kickoff Dinner,"-1,200.00"
+29-Jan,TXN-1055,GitHub,Card,OpEx,Software,Annual Team Plan,"-2,500.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: S. Johnson (CEO),"-6,250.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: M. Lee (CTO),"-5,800.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: D. Chen (Snr Dev),"-4,500.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: A. Davis (Acc Mgr),"-3,200.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: B. Smith (Acc Mgr),"-3,200.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: K. Patel (Jr Dev),"-2,800.00"
+30-Jan,PAY-01D,Gusto Payroll,ACH,Payroll,Salary & Wages,Emp: L. White (Copy),"-2,600.00"
+30-Jan,PAY-01E,IRS / US Treasury,ACH,Payroll,Taxes - Federal,Employer FICA/Med Match,"-2,168.00"
+30-Jan,PAY-01F,State Dept Tax,ACH,Payroll,Taxes - State,VA Unemployment Tax,-450
+30-Jan,TXN-1065,Guideline 401k,ACH,OpEx,Benefits,Safe Harbor Match,"-1,425.00"
+31-Jan,TXN-1066,Bank of Amer,Fee,Financial,Bank Fees,Wire Fee,-45
+31-Jan,TXN-1067,Stripe,Fee,Financial,Bank Fees,Processing,-810
+31-Jan,TXN-1068,Upwork,Card,COGS,Contractor,Jan True-up,-220
+31-Jan,DEP-1009,Client: AutoGrp,Deposit,Revenue,Retainer,Inv #0977,"22,000.00"
+31-Jan,TXN-1069,Google Ads,Card,COGS,Media Buy,Client: AutoGrp,"-5,000.00"
+31-Jan,TXN-1070,Panera Bread,Card,OpEx,Meals,Team Lunch,-110
+2-Jan,TXN-1071,Vimeo,Card,OpEx,Software,,-75
+3-Jan,TXN-1072,Basecamp,Card,OpEx,Software,,-99
+4-Jan,TXN-1073,ADP Fees,Fee,Financial,Bank Fees,,-180
+5-Jan,TXN-1074,Dropbox,Card,OpEx,Software,Annual Plus Plan,-120
+6-Jan,TXN-1075,Grammarly,Card,OpEx,Software,Annual Business Plan,"-1,800.00"
+7-Jan,TXN-1076,Typeform,Card,OpEx,Software,,-85
+8-Jan,TXN-1077,CrazyEgg,Card,OpEx,Software,,-100
+9-Jan,TXN-1078,Moz,Card,OpEx,Software,,-149
+10-Jan,TXN-1079,Ahrefs,Card,OpEx,Software,,-199
+11-Jan,TXN-1080,Pipedrive,Card,OpEx,Software,,-150
+12-Jan,TXN-1081,Hotjar,Card,OpEx,Software,,-120
+13-Jan,TXN-1082,Waste Mgmt,ACH,OpEx,Utilities,,-120
+14-Jan,TXN-1083,Twilio,Card,OpEx,Software,,-150
+15-Jan,TXN-1084,SendGrid,Card,OpEx,Software,,-180
+16-Jan,TXN-1085,Shell Oil,Card,OpEx,Travel,,-35
+17-Jan,TXN-1086,Dunkin,Card,OpEx,Meals,,-25
+18-Jan,TXN-1087,Target,Card,OpEx,Supplies,,-40
+19-Jan,TXN-1088,FedEx,Card,OpEx,Supplies,,-70
+20-Jan,TXN-1089,Starbucks,Card,OpEx,Meals,,-15
+21-Jan,TXN-1090,DoorDash,Card,OpEx,Meals,,-85
+22-Jan,TXN-1091,Amazon,Card,OpEx,Supplies,,-60
+23-Jan,TXN-1092,Costco,Card,OpEx,Meals,,-120
+24-Jan,TXN-1093,Spotify,Card,OpEx,Services,,-15
+25-Jan,TXN-1094,Namecheap,Card,COGS,Production,,-45
+6-Jan,TXN-1095,Notion,Card,OpEx,Software,,-100
+7-Jan,TXN-1096,Figma,Card,OpEx,Software,,-300
+10-Jan,TXN-1097,ClickUp,Card,OpEx,Software,,-250
+14-Jan,TXN-1098,Expensify,Card,OpEx,Software,,-150
+18-Jan,TXN-1099,Uber Eats,Card,OpEx,Meals,,-55
+21-Jan,TXN-1100,BP Gas,Card,OpEx,Travel,,-45
+25-Jan,TXN-1101,Apple Store,Card,OpEx,Equipment,iPad Case,-45
