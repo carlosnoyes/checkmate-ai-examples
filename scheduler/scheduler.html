@@ -314,7 +314,7 @@
         }
 
         .search-box::before {
-            content: '=';
+            content: '';
             position: absolute;
             left: 1rem;
             top: 50%;
@@ -854,101 +854,6 @@
             text-transform: uppercase;
         }
 
-        /* Collapsed week appointments with tooltip */
-        .week-appointment-collapsed {
-            position: absolute;
-            left: 2px;
-            right: 2px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-left: 2px solid;
-            z-index: 5;
-        }
-
-        .week-appointment-collapsed:hover {
-            z-index: 20;
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .week-appointment-collapsed .appt-bar {
-            height: 100%;
-            width: 100%;
-        }
-
-        /* Tooltip */
-        .tooltip {
-            position: fixed;
-            background: var(--bg-dark);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 0.75rem;
-            font-size: 0.75rem;
-            z-index: 1000;
-            pointer-events: none;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-            max-width: 280px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.15s ease, visibility 0.15s ease;
-        }
-
-        .tooltip.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .tooltip-header {
-            font-weight: 600;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tooltip-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.25rem;
-        }
-
-        .tooltip-label {
-            color: var(--text-muted);
-        }
-
-        .tooltip-value {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        /* Expand/collapse button */
-        .expand-btn {
-            padding: 0.375rem 0.625rem;
-            font-size: 0.7rem;
-            font-weight: 500;
-            border-radius: 6px;
-            background: var(--bg-hover);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.375rem;
-        }
-
-        .expand-btn:hover {
-            background: var(--border);
-            color: var(--text-primary);
-        }
-
-        .expand-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
         /* Month View */
         .month-view {
             display: grid;
@@ -1250,12 +1155,6 @@
                         <button class="toggle-btn" data-group="car">Car</button>
                     </div>
                 </div>
-                <div class="control-group" id="expandControl" style="display: none;">
-                    <button class="expand-btn" id="expandBtn">
-                        <span id="expandIcon">⊕</span>
-                        <span id="expandText">Expand</span>
-                    </button>
-                </div>
             </div>
         </div>
 
@@ -1305,9 +1204,6 @@
         </div>
     </div>
 
-    <!-- Tooltip for collapsed week view -->
-    <div class="tooltip" id="tooltip"></div>
-
     <script>
         // ==========================================
         // Data Storage
@@ -1320,7 +1216,6 @@
         let currentDate = new Date(2025, 11, 1); // December 1, 2025
         let sortColumn = 'date';
         let sortDirection = 'asc';
-        let weekExpanded = false;
 
         // Color palettes
         const instructorColors = {
@@ -1767,85 +1662,7 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
         }
 
         function renderWeekView(container) {
-            if (weekExpanded) {
-                renderWeekViewExpanded(container);
-            } else {
-                renderWeekViewCollapsed(container);
-            }
-        }
-
-        function renderWeekViewCollapsed(container) {
-            const startOfWeek = new Date(currentDate);
-            startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
-
-            const days = [];
-            for (let i = 0; i < 7; i++) {
-                const day = new Date(startOfWeek);
-                day.setDate(startOfWeek.getDate() + i);
-                days.push(day);
-            }
-
-            const today = new Date();
-            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-            let html = '<div class="week-view">';
-
-            // Header
-            html += '<div class="week-header">';
-            html += '<div class="week-time-spacer"></div>';
-            days.forEach((day, i) => {
-                const isToday = isSameDay(day, today);
-                html += `<div class="week-day-header ${isToday ? 'today' : ''}">
-                    <div class="day-name">${dayNames[i]}</div>
-                    <div class="day-number">${day.getDate()}</div>
-                </div>`;
-            });
-            html += '</div>';
-
-            // Body
-            html += '<div class="week-body">';
-
-            // Time column
-            html += '<div class="week-time-column">';
-            for (let hour = 8; hour <= 20; hour++) {
-                html += `<div class="week-time-slot">${hour.toString().padStart(2, '0')}:00</div>`;
-            }
-            html += '</div>';
-
-            // Day columns
-            days.forEach(day => {
-                const dayAppts = getAppointmentsForDate(day);
-
-                html += '<div class="week-day-column">';
-
-                // Hour rows
-                for (let hour = 8; hour <= 20; hour++) {
-                    html += '<div class="week-hour-row"></div>';
-                }
-
-                // Appointments - thin bars with hover tooltips
-                dayAppts.forEach(appt => {
-                    const startMins = timeToMinutes(appt.startTime) - 8 * 60;
-                    const endMins = timeToMinutes(appt.endTime) - 8 * 60;
-                    const top = (startMins / 60) * 50;
-                    const height = ((endMins - startMins) / 60) * 50;
-                    const color = getColor(appt);
-
-                    html += `<div class="week-appointment-collapsed"
-                        style="top: ${top}px; height: ${height}px; background: ${color.bg}; border-left-color: ${color.border};"
-                        data-appt-id="${appt.id}"
-                        onclick="showAppointmentDetails('${appt.id}')"
-                        onmouseenter="showTooltip(event, '${appt.id}')"
-                        onmouseleave="hideTooltip()">
-                        <div class="appt-bar"></div>
-                    </div>`;
-                });
-
-                html += '</div>';
-            });
-
-            html += '</div></div>';
-            container.innerHTML = html;
+            renderWeekViewExpanded(container);
         }
 
         function renderWeekViewExpanded(container) {
@@ -2324,66 +2141,6 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
         }
 
         // ==========================================
-        // Tooltip Functions
-        // ==========================================
-        function showTooltip(event, appointmentId) {
-            const appt = appointments.find(a => a.id === appointmentId);
-            if (!appt) return;
-
-            const tooltip = document.getElementById('tooltip');
-            const student = getStudentName(appt.studentId);
-            const instructor = getInstructorName(appt.instructorId);
-            const color = getColor(appt);
-
-            tooltip.innerHTML = `
-                <div class="tooltip-header" style="color: ${color.border};">${student}</div>
-                <div class="tooltip-row">
-                    <span class="tooltip-label">Time</span>
-                    <span class="tooltip-value">${appt.startTime} - ${appt.endTime}</span>
-                </div>
-                <div class="tooltip-row">
-                    <span class="tooltip-label">Instructor</span>
-                    <span class="tooltip-value">${instructor}</span>
-                </div>
-                <div class="tooltip-row">
-                    <span class="tooltip-label">Car</span>
-                    <span class="tooltip-value">${appt.carId}</span>
-                </div>
-                <div class="tooltip-row">
-                    <span class="tooltip-label">Type</span>
-                    <span class="tooltip-value">${appt.lessonType}</span>
-                </div>
-                <div class="tooltip-row">
-                    <span class="tooltip-label">Status</span>
-                    <span class="tooltip-value">${appt.status}</span>
-                </div>
-            `;
-
-            // Position tooltip near the cursor
-            const rect = event.target.getBoundingClientRect();
-            let left = rect.right + 10;
-            let top = rect.top;
-
-            // Ensure tooltip stays within viewport
-            const tooltipRect = tooltip.getBoundingClientRect();
-            if (left + 280 > window.innerWidth) {
-                left = rect.left - 290;
-            }
-            if (top + 200 > window.innerHeight) {
-                top = window.innerHeight - 210;
-            }
-
-            tooltip.style.left = `${left}px`;
-            tooltip.style.top = `${top}px`;
-            tooltip.classList.add('visible');
-        }
-
-        function hideTooltip() {
-            const tooltip = document.getElementById('tooltip');
-            tooltip.classList.remove('visible');
-        }
-
-        // ==========================================
         // Event Listeners
         // ==========================================
         document.addEventListener('DOMContentLoaded', () => {
@@ -2408,29 +2165,8 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
                     document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
                     currentView = btn.dataset.view;
-                    // Show/hide expand button for week view only
-                    const expandControl = document.getElementById('expandControl');
-                    expandControl.style.display = currentView === 'week' ? 'flex' : 'none';
                     renderCalendar();
                 });
-            });
-
-            // Expand/collapse toggle for week view
-            document.getElementById('expandBtn').addEventListener('click', () => {
-                weekExpanded = !weekExpanded;
-                const btn = document.getElementById('expandBtn');
-                const icon = document.getElementById('expandIcon');
-                const text = document.getElementById('expandText');
-                if (weekExpanded) {
-                    btn.classList.add('active');
-                    icon.textContent = '⊖';
-                    text.textContent = 'Collapse';
-                } else {
-                    btn.classList.remove('active');
-                    icon.textContent = '⊕';
-                    text.textContent = 'Expand';
-                }
-                renderCalendar();
             });
 
             // Group toggle
@@ -2468,32 +2204,51 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
         // ==========================================
         // Load Data Function
         // ==========================================
-        function loadExampleData() {
-            // Parse the data
-            instructors = parseInstructors(exampleInstructors);
-            students = parseStudents(exampleStudents);
-            appointments = parseAppointments(exampleAppointments);
-
-            // Update UI
-            document.getElementById('calendarEmptyState').style.display = 'none';
-            document.getElementById('calendarContent').style.display = 'flex';
-            document.getElementById('calendarLegend').style.display = 'flex';
-            document.getElementById('calendarControls').style.display = 'flex';
-
-            document.getElementById('tableEmptyState').style.display = 'none';
-            document.getElementById('tableContent').style.display = 'block';
-
-            // Update button
+        async function loadExampleData() {
             const btn = document.getElementById('loadDataBtn');
-            btn.innerHTML = '<span></span> Data Loaded';
-            btn.classList.remove('btn-primary');
-            btn.classList.add('btn-secondary');
+            btn.innerHTML = '<span></span> Loading...';
             btn.disabled = true;
 
-            // Render views
-            renderCalendar();
-            renderTable();
+            try {
+                // Fetch CSV files
+                const [instructorsCSV, studentsCSV, appointmentsCSV] = await Promise.all([
+                    fetch('Data/instructures.csv').then(r => r.text()),
+                    fetch('Data/students.csv').then(r => r.text()),
+                    fetch('Data/appointments.csv').then(r => r.text())
+                ]);
+
+                // Parse the data
+                instructors = parseInstructors(instructorsCSV);
+                students = parseStudents(studentsCSV);
+                appointments = parseAppointments(appointmentsCSV);
+
+                // Update UI
+                document.getElementById('calendarEmptyState').style.display = 'none';
+                document.getElementById('calendarContent').style.display = 'flex';
+                document.getElementById('calendarLegend').style.display = 'flex';
+                document.getElementById('calendarControls').style.display = 'flex';
+
+                document.getElementById('tableEmptyState').style.display = 'none';
+                document.getElementById('tableContent').style.display = 'block';
+
+                // Update button
+                btn.innerHTML = '<span></span> Data Loaded';
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-secondary');
+
+                // Render views
+                renderCalendar();
+                renderTable();
+            } catch (error) {
+                console.error('Error loading CSV files:', error);
+                btn.innerHTML = '<span></span> Error Loading Data';
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-secondary');
+                alert('Error loading CSV files. Make sure the files exist in the Data folder and the page is served via HTTP (not file://)');
+                btn.disabled = false;
+            }
         }
+
     </script>
 </body>
 </html>
