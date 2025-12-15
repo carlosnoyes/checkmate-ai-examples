@@ -357,6 +357,33 @@
                     { type: 'thinking', message: 'Thinking...', delay: 1000 },
                     { type: 'response', message: 'The area of the women\'s bathroom is 234.04 ft².', delay: 2000 }
                 ]
+            },
+            "how many rooms have an external wall": {
+                question: "How many rooms have an external wall?",
+                steps: [
+                    { type: 'thinking', message: 'Thinking...', delay: 1000 },
+                    { type: 'action', message: 'First, let me examine the Rooms-Information layer to see all 71 rooms...', delay: 2000 },
+                    { type: 'execute', action: 'toggleLayersExcept', params: ['Rooms-Information'], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'action', message: 'I can see there are 71 rooms (based on Rooms-Information layer having 71 MTEXT entries). Now let me look at the building exterior boundary...', delay: 3000 },
+                    { type: 'execute', action: 'toggleLayersExcept', params: ['AREA-GROSS'], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'action', message: 'The AREA-GROSS layer (entity ID: 89B) contains the building\'s exterior boundary with 32 vertices. Now let me examine the room polygons...', delay: 3000 },
+                    { type: 'execute', action: 'addLayersToSelection', params: ['AREA-ASSIGN'], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'action', message: 'Perfect! The AREA-ASSIGN layer has 71 room polygons that match the 71 rooms. I\'ll now analyze which room polygons have edges within 12 inches (1 foot) of the exterior boundary...', delay: 3500 },
+                    { type: 'thinking', message: 'Analyzing geometric distances between room boundaries and building exterior...', delay: 2500 },
+                    { type: 'action', message: 'I found 29 room polygons with external walls! Let me highlight just those external room polygons...', delay: 2500 },
+                    { type: 'execute', action: 'toggleOnlyEntitiesById', params: [['1798', '88F', '895', '897', '898', '89A', '8A1', '8A5', '8A6', '8A7', '8A8', '8A9', '8AA', '8AC', '8AF', '8B1', '8B6', '8B7', '8B8', '8B9', '8CC', '8CD', '8CE', '8CF', '8D4', '8D7', '937', '939', 'EF13']], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'action', message: 'Now let me show the building exterior boundary alongside the external rooms...', delay: 2000 },
+                    { type: 'execute', action: 'addEntityToSelection', params: ['89B'], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'action', message: 'Let me add the room information labels for the external rooms to show their room numbers...', delay: 2000 },
+                    { type: 'execute', action: 'addEntitiesToSelection', params: [['13264', '13273', '1327D', '13282', '1328C', '132A0', '132AF', '132B4', '132B9', '132BE', '132C3', '132C8', '132D2', '132D7', '132E1', '132FA', '132FF', '13304', '13309', '1333B', '13340', '13345', '1334A', '1334F', '13354', '1335E', '13363', '133B3', '133B8']], delay: 2000 },
+                    { type: 'thinking', message: 'Thinking...', delay: 1500 },
+                    { type: 'response', message: '**29 rooms have external walls** (out of 71 total rooms).\n\nThe analysis used a 12-inch (1 foot) threshold to account for wall thickness. These rooms include:\n\n**Regular Rooms:** 105, 106A, 106B, 107, 109, 110, 110C, 110E, 110F, 110G, 110H, 110I, 110J, 112, 114, 115, 116, 116A, 117, 118, 119, 122, 123, 126, 126A, 134\n\n**Other Spaces:** C101 (Corridor/Closet), L113 (Lobby), S101 (Stair/Storage)\n\nThe distances range from 6.0" to 11.0" from the building exterior boundary (AREA-GROSS layer). You can see the highlighted external room polygons (in red) along with the building perimeter and their room labels on the canvas.', delay: 3500 }
+                ]
             }
             // Add more pre-programmed scenarios here
         };
@@ -434,6 +461,49 @@
             render();
         }
 
+        // Helper function to toggle only multiple specific entities by IDs (deselects everything else)
+        function toggleOnlyEntitiesById(entityIds) {
+            const idsSet = new Set(entityIds);
+            entities.forEach(e => {
+                if (idsSet.has(e.id)) {
+                    e._selected = true;
+                    e._hidden = false;
+                } else {
+                    e._selected = false;
+                    e._hidden = false;
+                }
+            });
+            populateLayerUI();
+            updateTable();
+            render();
+        }
+
+        // Helper function to add a single entity to selection by ID
+        function addEntityToSelection(entityId) {
+            const entity = entities.find(e => e.id === entityId);
+            if (entity) {
+                entity._selected = true;
+                entity._hidden = false;
+            }
+            populateLayerUI();
+            updateTable();
+            render();
+        }
+
+        // Helper function to add multiple entities to selection by IDs
+        function addEntitiesToSelection(entityIds) {
+            const idsSet = new Set(entityIds);
+            entities.forEach(e => {
+                if (idsSet.has(e.id)) {
+                    e._selected = true;
+                    e._hidden = false;
+                }
+            });
+            populateLayerUI();
+            updateTable();
+            render();
+        }
+
         // Handle suggestion click
         async function handleSuggestionClick(questionText, scenarioKey) {
             // Add user message simulating them asking the question
@@ -470,6 +540,12 @@
                             addLayersToSelection(step.params[0]);
                         } else if (step.action === 'toggleOnlyEntityById') {
                             toggleOnlyEntityById(step.params[0], step.params[1]);
+                        } else if (step.action === 'toggleOnlyEntitiesById') {
+                            toggleOnlyEntitiesById(step.params[0]);
+                        } else if (step.action === 'addEntityToSelection') {
+                            addEntityToSelection(step.params[0]);
+                        } else if (step.action === 'addEntitiesToSelection') {
+                            addEntitiesToSelection(step.params[0]);
                         }
                         break;
                 }
@@ -768,123 +844,133 @@
             panel.classList.toggle('collapsed');
         }
 
+        let draggedLayer = null;
+        let dropZonesInitialized = false;
+
+        function initializeDropZones() {
+            if (dropZonesInitialized) return;
+
+            const zones = [
+                { id: 'selectedLayerList', state: 'selected' },
+                { id: 'deselectedLayerList', state: 'deselected' },
+                { id: 'hiddenLayerList', state: 'hidden' }
+            ];
+
+            zones.forEach(({ id, state }) => {
+                const el = document.getElementById(id);
+                el.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    el.classList.add('drag-over');
+                });
+                el.addEventListener('dragleave', (e) => {
+                    if (!el.contains(e.relatedTarget)) {
+                        el.classList.remove('drag-over');
+                    }
+                });
+                el.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    el.classList.remove('drag-over');
+                    if (draggedLayer) {
+                        moveLayerToState(draggedLayer, state);
+                    }
+                });
+            });
+
+            dropZonesInitialized = true;
+        }
+
         function populateLayerUI() {
+            initializeDropZones();
+
             const selectedList = document.getElementById('selectedLayerList');
             const deselectedList = document.getElementById('deselectedLayerList');
             const hiddenList = document.getElementById('hiddenLayerList');
-            selectedList.innerHTML = '';
-            deselectedList.innerHTML = '';
-            hiddenList.innerHTML = '';
 
+            // Build HTML strings instead of creating DOM elements one by one
             const counts = {};
-            entities.forEach(e => counts[e.layer] = (counts[e.layer] || 0) + 1);
-            const layers = [...new Set(entities.map(e => e.layer))];
+            const layersByState = { selected: [], partial: [], deselected: [], hidden: [] };
 
-            // Organize layers by state: selected, partial, deselected, hidden
-            const layersByState = {
-                selected: [],
-                partial: [],
-                deselected: [],
-                hidden: []
-            };
-
-            layers.forEach(ln => {
-                const state = getLayerState(ln);
-                layersByState[state].push(ln);
-            });
-
-            // Sort each group alphabetically
-            Object.keys(layersByState).forEach(key => layersByState[key].sort());
-
-            // Helper to create draggable layer item
-            function createLayerItem(ln, stateClass, opacity = 1) {
-                const div = document.createElement('div');
-                div.className = 'layer-item';
-                div.draggable = true;
-                div.dataset.layer = ln;
-                div.innerHTML = `<div class="layer-state ${stateClass}" style="opacity: ${opacity};"></div><span class="layer-item-name" title="${ln}">${ln}</span><span class="layer-item-count">${counts[ln] || 0}</span>`;
-
-                // Drag events
-                div.addEventListener('dragstart', handleDragStart);
-                div.addEventListener('dragend', handleDragEnd);
-
-                return div;
+            for (let i = 0; i < entities.length; i++) {
+                const layer = entities[i].layer;
+                counts[layer] = (counts[layer] || 0) + 1;
             }
 
-            // Render selected and partial layers in selected panel
-            const selectedLayers = [...layersByState.selected, ...layersByState.partial];
-            selectedLayers.forEach(ln => {
+            const layerSet = new Set();
+            for (let i = 0; i < entities.length; i++) {
+                layerSet.add(entities[i].layer);
+            }
+
+            layerSet.forEach(ln => {
+                layersByState[getLayerState(ln)].push(ln);
+            });
+
+            // Sort each group
+            for (const key in layersByState) {
+                layersByState[key].sort();
+            }
+
+            // Build HTML strings
+            let selectedHTML = '';
+            let deselectedHTML = '';
+            let hiddenHTML = '';
+
+            const selectedLayers = layersByState.selected.concat(layersByState.partial);
+            for (let i = 0; i < selectedLayers.length; i++) {
+                const ln = selectedLayers[i];
                 const state = getLayerState(ln);
                 const stateClass = state === 'partial' ? 'selected' : state;
                 const opacity = state === 'partial' ? 0.5 : 1;
-                selectedList.appendChild(createLayerItem(ln, stateClass, opacity));
-            });
+                selectedHTML += `<div class="layer-item" draggable="true" data-layer="${ln}"><div class="layer-state ${stateClass}" style="opacity: ${opacity};"></div><span class="layer-item-name" title="${ln}">${ln}</span><span class="layer-item-count">${counts[ln] || 0}</span></div>`;
+            }
 
-            // Render deselected layers
-            layersByState.deselected.forEach(ln => {
-                deselectedList.appendChild(createLayerItem(ln, 'deselected'));
-            });
+            for (let i = 0; i < layersByState.deselected.length; i++) {
+                const ln = layersByState.deselected[i];
+                deselectedHTML += `<div class="layer-item" draggable="true" data-layer="${ln}"><div class="layer-state deselected"></div><span class="layer-item-name" title="${ln}">${ln}</span><span class="layer-item-count">${counts[ln] || 0}</span></div>`;
+            }
 
-            // Render hidden layers
-            layersByState.hidden.forEach(ln => {
-                hiddenList.appendChild(createLayerItem(ln, 'hidden'));
-            });
+            for (let i = 0; i < layersByState.hidden.length; i++) {
+                const ln = layersByState.hidden[i];
+                hiddenHTML += `<div class="layer-item" draggable="true" data-layer="${ln}"><div class="layer-state hidden"></div><span class="layer-item-name" title="${ln}">${ln}</span><span class="layer-item-count">${counts[ln] || 0}</span></div>`;
+            }
 
-            // Setup drop zones
-            setupDropZone(selectedList, 'selected');
-            setupDropZone(deselectedList, 'deselected');
-            setupDropZone(hiddenList, 'hidden');
+            selectedList.innerHTML = selectedHTML;
+            deselectedList.innerHTML = deselectedHTML;
+            hiddenList.innerHTML = hiddenHTML;
         }
 
-        let draggedLayer = null;
+        // Use event delegation for drag events on sidebar
+        document.querySelector('.sidebar').addEventListener('dragstart', (e) => {
+            const item = e.target.closest('.layer-item');
+            if (item) {
+                draggedLayer = item.dataset.layer;
+                item.classList.add('dragging');
+            }
+        });
 
-        function handleDragStart(e) {
-            draggedLayer = e.target.dataset.layer;
-            e.target.classList.add('dragging');
-        }
-
-        function handleDragEnd(e) {
-            e.target.classList.remove('dragging');
-            draggedLayer = null;
-        }
-
-        function setupDropZone(listElement, targetState) {
-            listElement.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                listElement.classList.add('drag-over');
-            });
-
-            listElement.addEventListener('dragleave', (e) => {
-                if (e.target === listElement) {
-                    listElement.classList.remove('drag-over');
-                }
-            });
-
-            listElement.addEventListener('drop', (e) => {
-                e.preventDefault();
-                listElement.classList.remove('drag-over');
-
-                if (draggedLayer) {
-                    moveLayerToState(draggedLayer, targetState);
-                }
-            });
-        }
+        document.querySelector('.sidebar').addEventListener('dragend', (e) => {
+            const item = e.target.closest('.layer-item');
+            if (item) {
+                item.classList.remove('dragging');
+                draggedLayer = null;
+            }
+        });
 
         function moveLayerToState(layerName, targetState) {
-            const layerEntities = entities.filter(e => e.layer === layerName);
-
-            layerEntities.forEach(e => {
-                if (targetState === 'selected') {
-                    e._selected = true;
-                    e._hidden = false;
-                } else if (targetState === 'deselected') {
-                    e._selected = false;
-                    e._hidden = false;
-                } else if (targetState === 'hidden') {
-                    e._selected = false;
-                    e._hidden = true;
+            for (let i = 0; i < entities.length; i++) {
+                const e = entities[i];
+                if (e.layer === layerName) {
+                    if (targetState === 'selected') {
+                        e._selected = true;
+                        e._hidden = false;
+                    } else if (targetState === 'deselected') {
+                        e._selected = false;
+                        e._hidden = false;
+                    } else if (targetState === 'hidden') {
+                        e._selected = false;
+                        e._hidden = true;
+                    }
                 }
-            });
+            }
 
             populateLayerUI();
             updateTable();
