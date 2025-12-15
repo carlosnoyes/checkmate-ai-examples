@@ -1535,10 +1535,24 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
             return student ? `${student.firstName} ${student.lastName}` : id;
         }
 
+        function getUniqueInstructors() {
+            const unique = new Set();
+            appointments.forEach(appt => unique.add(appt.instructorId));
+            return Array.from(unique).sort();
+        }
+
+        function getUniqueCars() {
+            const unique = new Set();
+            appointments.forEach(appt => unique.add(appt.carId));
+            return Array.from(unique).sort();
+        }
+
         function getColor(appointment) {
+            // When grouped by instructor, color by car (and vice versa)
+            // This provides both organizational dimensions: grouping AND color
             const colorSet = currentGroupBy === 'instructor'
-                ? instructorColors[appointment.instructorId]
-                : carColors[appointment.carId];
+                ? carColors[appointment.carId]
+                : instructorColors[appointment.instructorId];
             return colorSet || { bg: 'rgba(100, 100, 100, 0.25)', border: '#666', text: '#ccc' };
         }
 
@@ -1868,19 +1882,26 @@ APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Ni
             const legend = document.getElementById('calendarLegend');
             let html = '';
 
+            // Legend shows what the colors represent (opposite of grouping)
+            // When grouped by instructor, colors show cars (and vice versa)
+            // Only show items that are actually used in appointments
             if (currentGroupBy === 'instructor') {
-                Object.entries(instructorColors).forEach(([id, color]) => {
+                const usedCars = getUniqueCars();
+                usedCars.forEach(id => {
+                    const color = carColors[id] || { border: '#666' };
+                    html += `<div class="legend-item">
+                        <div class="legend-color" style="background: ${color.border}"></div>
+                        <span>${id}</span>
+                    </div>`;
+                });
+            } else {
+                const usedInstructors = getUniqueInstructors();
+                usedInstructors.forEach(id => {
+                    const color = instructorColors[id] || { border: '#666' };
                     const name = getInstructorName(id);
                     html += `<div class="legend-item">
                         <div class="legend-color" style="background: ${color.border}"></div>
                         <span>${name}</span>
-                    </div>`;
-                });
-            } else {
-                Object.entries(carColors).forEach(([id, color]) => {
-                    html += `<div class="legend-item">
-                        <div class="legend-color" style="background: ${color.border}"></div>
-                        <span>${id}</span>
                     </div>`;
                 });
             }
