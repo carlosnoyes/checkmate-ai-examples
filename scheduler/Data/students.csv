@@ -1,0 +1,101 @@
+student_id,first_name,last_name,dob,phone,email,permit_number,permit_exp,pickup_address,hours_driven,hours_purchased,skill_level,emergency_contact_phone
+ST-001,Aiden,Miller,4/12/2008,555-0101,aiden.m@email.com,D5584930,4/12/2026,12 Maple Dr,2,6,Beginner,555-9901
+ST-002,Sophia,Davis,11/23/2007,555-0102,sophia.d@email.com,D9938211,11/23/2026,44 Oak Ln,8,10,Advanced,555-9902
+ST-003,Lucas,Garcia,1/15/2008,555-0103,lucas.g@email.com,D2293844,1/15/2026,88 Pine St,0,6,Beginner,555-9903
+ST-004,Isabella,Rodriguez,6/30/2007,555-0104,isabella.r@email.com,D1129384,6/30/2025,102 Cedar Ave,5,6,Intermediate,555-9904
+ST-005,Mason,Wilson,9/14/2006,555-0105,mason.w@email.com,D8837291,9/14/2025,9 Elm Ct,10,10,Test Ready,555-9905
+ST-006,Mia,Martinez,3/22/2008,555-0106,mia.m@email.com,D7728394,3/22/2026,55 Birch Rd,1,10,Beginner,555-9906
+ST-007,Ethan,Anderson,12/5/2007,555-0107,ethan.a@email.com,D3392810,12/5/2026,77 Spruce Way,4,6,Intermediate,555-9907
+ST-008,Ava,Taylor,8/19/2006,555-0108,ava.t@email.com,D4482910,8/19/2025,20 Willow Dr,6,6,Test Ready,555-9908
+ST-009,Noah,Thomas,5/11/2008,555-0109,noah.t@email.com,D6638291,5/11/2026,14 Aspen Cir,0,6,Beginner,555-9909
+ST-010,Charlotte,Hernandez,2/28/2007,555-0110,charlotte.h@email.com,D1192834,2/28/2025,33 Magnolia Blvd,9,10,Advanced,555-9910
+ST-011,James,Moore,7/7/2007,555-0111,james.m@email.com,D5592831,7/7/2025,91 Poplar St,3,6,Intermediate,555-9911
+ST-012,Amelia,Martin,9/1/2008,555-0112,amelia.m@email.com,D9928371,9/1/2026,66 Redwood Dr,0,10,Beginner,555-9912
+ST-013,Benjamin,Jackson,10/30/2006,555-0113,ben.j@email.com,D2283741,10/30/2025,45 Cypress Ln,5,6,Test Ready,555-9913
+ST-014,Harper,Thompson,4/18/2007,555-0114,harper.t@email.com,D7738291,4/18/2026,12 Sycamore Ct,2,6,Beginner,555-9914
+ST-015,Elijah,White,2/14/2008,555-0115,elijah.w@email.com,D3382910,2/14/2026,89 Fir Rd,1,10,Beginner,555-9915
+ST-016,Evelyn,Lopez,1/25/2007,555-0116,evelyn.l@email.com,D8829371,1/25/2026,23 Ash Ave,7,10,Advanced,555-9916
+ST-017,William,Lee,11/11/2006,555-0117,william.l@email.com,D4492837,11/11/2025,78 Beech Blvd,6,6,Test Ready,555-9917
+ST-018,Abigail,Gonzalez,6/5/2008,555-0118,abigail.g@email.com,D6628391,6/5/2026,34 Cherry Ln,0,6,Beginner,555-9918
+ST-019,Alexander,Harris,3/15/2007,555-0119,alex.h@email.com,D1182934,3/15/2026,56 Dogwood Dr,4,6,Intermediate,555-9919
+ST-020,Emily,Clark,8/22/2007,555-0120,emily.c@email.com,D5538291,8/22/2025,90 Elm St,8,10,Advanced,555-9920
+ST-021,Michael,Lewis,5/5/2008,555-0121,michael.l@email.com,D9928312,5/5/2026,123 Main St,1,6,Beginner,555-9921
+ST-022,Elizabeth,Robinson,9/12/2007,555-0122,liz.r@email.com,D2238412,9/12/2025,456 Oak Ave,3,6,Intermediate,555-9922
+ST-023,Daniel,Walker,12/30/2006,555-0123,dan.w@email.com,D7748291,12/30/2025,789 Pine Rd,5,6,Test Ready,555-9923
+ST-024,Sofia,Perez,2/18/2008,555-0124,sofia.p@email.com,D3392813,2/18/2026,321 Maple Ln,0,10,Beginner,555-9924
+ST-025,Matthew,Hall,6/25/2007,555-0125,matt.h@email.com,D8829374,6/25/2026,654 Cedar Ct,6,10,Advanced,555-9925
+ST-026,Avery,Young,8/8/2008,555-0126,avery.y@email.com,D4482915,8/8/2026,987 Birch Way,2,6,Beginner,555-9926
+ST-027,Henry,Allen,4/4/2007,555-0127,henry.a@email.com,D6638296,4/4/2026,135 Spruce Pl,4,6,Intermediate,555-9927
+ST-028,Ella,Sanchez,10/10/2006,555-0128,ella.s@email.com,D1192837,10/10/2025,246 Willow Blvd,6,6,Test Ready,555-9928
+ST-029,Jackson,Wright,1/20/2008,555-0129,jack.w@email.com,D5592838,1/20/2026,357 Aspen Ter,1,10,Beginner,555-9929
+ST-030,Scarlett,King,11/15/2007,555-0130,scarlett.k@email.com,D9928379,11/15/2026,468 Magnolia Dr,7,10,Advanced,555-9930
+ST-031,Sebastian,Scott,3/30/2008,555-0131,seb.s@email.com,D2283740,3/30/2026,579 Poplar Ln,0,6,Beginner,555-9931
+ST-032,Grace,Green,7/22/2007,555-0132,grace.g@email.com,D7738292,7/22/2025,680 Redwood Ave,3,6,Intermediate,555-9932
+ST-033,Owen,Baker,9/9/2006,555-0133,owen.b@email.com,D3382913,9/9/2025,791 Cypress Rd,5,6,Test Ready,555-9933
+ST-034,Chloe,Adams,5/25/2008,555-0134,chloe.a@email.com,D8829374,5/25/2026,802 Sycamore St,1,10,Beginner,555-9934
+ST-035,Jack,Nelson,2/10/2007,555-0135,jack.n@email.com,D4492835,2/10/2026,913 Fir Ct,6,10,Advanced,555-9935
+ST-036,Victoria,Hill,12/12/2008,555-0136,tori.h@email.com,D6628396,12/12/2026,124 Ash Way,0,6,Beginner,555-9936
+ST-037,Joseph,Ramirez,8/1/2007,555-0137,joe.r@email.com,D1182937,8/1/2025,235 Beech Dr,4,6,Intermediate,555-9937
+ST-038,Riley,Campbell,11/28/2006,555-0138,riley.c@email.com,D5538298,11/28/2025,346 Cherry Ln,6,6,Test Ready,555-9938
+ST-039,Samuel,Mitchell,4/14/2008,555-0139,sam.m@email.com,D9928319,4/14/2026,457 Dogwood Ave,2,10,Beginner,555-9939
+ST-040,Zoey,Roberts,1/5/2007,555-0140,zoey.r@email.com,D2238420,1/5/2026,568 Elm Rd,8,10,Advanced,555-9940
+ST-041,David,Carter,6/18/2008,555-0141,david.c@email.com,D7748221,6/18/2026,679 Oak St,0,6,Beginner,555-9941
+ST-042,Lillian,Phillips,10/22/2007,555-0142,lily.p@email.com,D3392822,10/22/2025,780 Pine Dr,3,6,Intermediate,555-9942
+ST-043,Carter,Evans,8/30/2006,555-0143,carter.e@email.com,D8829383,8/30/2025,891 Maple Ct,5,6,Test Ready,555-9943
+ST-044,Natalie,Turner,2/5/2008,555-0144,nat.t@email.com,D4482924,2/5/2026,902 Cedar Ln,1,10,Beginner,555-9944
+ST-045,Wyatt,Torres,5/15/2007,555-0145,wyatt.t@email.com,D6638235,5/15/2026,113 Birch Rd,7,10,Advanced,555-9945
+ST-046,Layla,Parker,9/25/2008,555-0146,layla.p@email.com,D1192846,9/25/2026,224 Spruce Ave,0,6,Beginner,555-9946
+ST-047,Julian,Collins,3/8/2007,555-0147,jules.c@email.com,D5592847,3/8/2026,335 Willow Way,4,6,Intermediate,555-9947
+ST-048,Penelope,Edwards,12/19/2006,555-0148,penny.e@email.com,D9928388,12/19/2025,446 Aspen Dr,6,6,Test Ready,555-9948
+ST-049,Gabriel,Stewart,7/12/2008,555-0149,gabe.s@email.com,D2283759,7/12/2026,557 Magnolia Ct,2,10,Beginner,555-9949
+ST-050,Hannah,Flores,4/28/2007,555-0150,hannah.f@email.com,D7738230,4/28/2026,668 Poplar Blvd,9,10,Advanced,555-9950
+ST-051,Anthony,Morris,11/2/2008,555-0151,tony.m@email.com,D3382941,11/2/2026,779 Redwood Ln,0,6,Beginner,555-9951
+ST-052,Brooklyn,Nguyen,1/18/2007,555-0152,brook.n@email.com,D8829382,1/18/2026,880 Cypress St,3,6,Intermediate,555-9952
+ST-053,Dylan,Murphy,9/5/2006,555-0153,dylan.m@email.com,D4492853,9/5/2025,991 Sycamore Dr,5,6,Test Ready,555-9953
+ST-054,Audrey,Rivera,5/9/2008,555-0154,audrey.r@email.com,D6628344,5/9/2026,102 Fir Rd,1,10,Beginner,555-9954
+ST-055,Leo,Cook,8/14/2007,555-0155,leo.c@email.com,D1182955,8/14/2025,213 Ash Ave,6,10,Advanced,555-9955
+ST-056,Samantha,Rogers,3/3/2008,555-0156,sam.r@email.com,D5538256,3/3/2026,324 Beech Ct,0,6,Beginner,555-9956
+ST-057,Isaiah,Morgan,6/11/2007,555-0157,isaiah.m@email.com,D9928327,6/11/2026,435 Cherry Blvd,4,6,Intermediate,555-9957
+ST-058,Claire,Peterson,10/29/2006,555-0158,claire.p@email.com,D2238438,10/29/2025,546 Dogwood Ln,6,6,Test Ready,555-9958
+ST-059,Thomas,Cooper,2/22/2008,555-0159,tom.c@email.com,D7748239,2/22/2026,657 Elm Dr,2,10,Beginner,555-9959
+ST-060,Skylar,Reed,12/8/2007,555-0160,skylar.r@email.com,D3392840,12/8/2026,768 Oak Rd,8,10,Advanced,555-9960
+ST-061,Charles,Bailey,7/1/2008,555-0161,charlie.b@email.com,D8829391,7/1/2026,879 Pine St,0,6,Beginner,555-9961
+ST-062,Paisley,Bell,4/12/2007,555-0162,paisley.b@email.com,D4482932,4/12/2026,980 Maple Ave,3,6,Intermediate,555-9962
+ST-063,Christopher,Gomez,8/25/2006,555-0163,chris.g@email.com,D6638243,8/25/2025,191 Cedar Ct,5,6,Test Ready,555-9963
+ST-064,Savannah,Kelly,1/30/2008,555-0164,sav.k@email.com,D1192854,1/30/2026,202 Birch Dr,1,10,Beginner,555-9964
+ST-065,Joshua,Howard,9/19/2007,555-0165,josh.h@email.com,D5592855,9/19/2025,313 Spruce Ln,7,10,Advanced,555-9965
+ST-066,Anna,Ward,6/6/2008,555-0166,anna.w@email.com,D9928396,6/6/2026,424 Willow Rd,0,6,Beginner,555-9966
+ST-067,Andrew,Cox,3/22/2007,555-0167,drew.c@email.com,D2283767,3/22/2026,535 Aspen Blvd,4,6,Intermediate,555-9967
+ST-068,Caroline,Diaz,11/15/2006,555-0168,caroline.d@email.com,D7738248,11/15/2025,646 Magnolia Way,6,6,Test Ready,555-9968
+ST-069,Nathan,Richardson,10/5/2008,555-0169,nate.r@email.com,D3382959,10/5/2026,757 Poplar Dr,2,10,Beginner,555-9969
+ST-070,Nova,Wood,2/14/2007,555-0170,nova.w@email.com,D8829390,2/14/2026,868 Redwood Ct,9,10,Advanced,555-9970
+ST-071,Ryan,Watson,5/20/2008,555-0171,ryan.w@email.com,D4492861,5/20/2026,979 Cypress Ln,0,6,Beginner,555-9971
+ST-072,Genesis,Brooks,8/8/2007,555-0172,gen.b@email.com,D6628352,8/8/2025,180 Sycamore Rd,3,6,Intermediate,555-9972
+ST-073,Adrian,Bennett,12/25/2006,555-0173,adrian.b@email.com,D1182963,12/25/2025,291 Fir Ave,5,6,Test Ready,555-9973
+ST-074,Emilia,Gray,4/18/2008,555-0174,emilia.g@email.com,D5538264,4/18/2026,302 Ash Dr,1,10,Beginner,555-9974
+ST-075,Christian,James,7/30/2007,555-0175,chris.j@email.com,D9928335,7/30/2025,413 Beech St,6,10,Advanced,555-9975
+ST-076,Kennedy,Reyes,9/12/2008,555-0176,ken.r@email.com,D2238446,9/12/2026,524 Cherry Ct,0,6,Beginner,555-9976
+ST-077,Hunter,Cruz,1/9/2007,555-0177,hunter.c@email.com,D7748247,1/9/2026,635 Dogwood Blvd,4,6,Intermediate,555-9977
+ST-078,Maya,Hughes,10/2/2006,555-0178,maya.h@email.com,D3392858,10/2/2025,746 Elm Ln,6,6,Test Ready,555-9978
+ST-079,Aaron,Price,2/28/2008,555-0179,aaron.p@email.com,D8829399,2/28/2026,857 Oak Way,2,10,Beginner,555-9979
+ST-080,Willow,Myers,11/20/2007,555-0180,willow.m@email.com,D4482940,11/20/2026,968 Pine Dr,8,10,Advanced,555-9980
+ST-081,Ezra,Long,6/14/2008,555-0181,ezra.l@email.com,D6638251,6/14/2026,179 Maple Rd,0,6,Beginner,555-9981
+ST-082,Madelyn,Foster,3/10/2007,555-0182,maddy.f@email.com,D1192862,3/10/2026,280 Cedar Ave,3,6,Intermediate,555-9982
+ST-083,Landon,Sanders,8/22/2006,555-0183,landon.s@email.com,D5592863,8/22/2025,391 Birch Ct,5,6,Test Ready,555-9983
+ST-084,Naomi,Ross,12/1/2008,555-0184,naomi.r@email.com,D9928404,12/1/2026,402 Spruce Dr,1,10,Beginner,555-9984
+ST-085,Connor,Morales,5/5/2007,555-0185,connor.m@email.com,D2283775,5/5/2026,513 Willow Ln,7,10,Advanced,555-9985
+ST-086,Elena,Powell,9/29/2008,555-0186,elena.p@email.com,D7738256,9/29/2026,624 Aspen St,0,6,Beginner,555-9986
+ST-087,Jeremiah,Sullivan,2/2/2007,555-0187,jeremy.s@email.com,D3382967,2/2/2026,735 Magnolia Blvd,4,6,Intermediate,555-9987
+ST-088,Sarah,Russell,11/8/2006,555-0188,sarah.r@email.com,D8829408,11/8/2025,846 Poplar Rd,6,6,Test Ready,555-9988
+ST-089,Cameron,Ortiz,4/24/2008,555-0189,cam.o@email.com,D4492879,4/24/2026,957 Redwood Ave,2,10,Beginner,555-9989
+ST-090,Ariana,Jenkins,7/16/2007,555-0190,ari.j@email.com,D6628360,7/16/2025,168 Cypress Dr,9,10,Advanced,555-9990
+ST-091,Josiah,Gutierrez,8/30/2008,555-0191,josiah.g@email.com,D1182971,8/30/2026,279 Sycamore Ct,0,6,Beginner,555-9991
+ST-092,Allison,Perry,1/22/2007,555-0192,allie.p@email.com,D5538272,1/22/2026,380 Fir Ln,3,6,Intermediate,555-9992
+ST-093,Colton,Butler,9/14/2006,555-0193,colton.b@email.com,D9928343,9/14/2025,491 Ash Rd,5,6,Test Ready,555-9993
+ST-094,Gabriella,Barnes,11/25/2008,555-0194,gabby.b@email.com,D2238454,11/25/2026,502 Beech Dr,1,10,Beginner,555-9994
+ST-095,Elias,Fisher,6/3/2007,555-0195,elias.f@email.com,D7748255,6/3/2026,613 Cherry Ave,6,10,Advanced,555-9995
+ST-096,Alice,Henderson,3/12/2008,555-0196,alice.h@email.com,D3392866,3/12/2026,724 Dogwood St,0,6,Beginner,555-9996
+ST-097,Robert,Coleman,10/18/2007,555-0197,rob.c@email.com,D8829417,10/18/2025,835 Elm Ct,4,6,Intermediate,555-9997
+ST-098,Sadie,Simmons,12/29/2006,555-0198,sadie.s@email.com,D4482948,12/29/2025,946 Oak Blvd,6,6,Test Ready,555-9998
+ST-099,Evan,Patterson,5/2/2008,555-0199,evan.p@email.com,D6638259,5/2/2026,157 Pine Rd,2,10,Beginner,555-9999
+ST-100,Serenity,Jordan,8/20/2007,555-0200,serenity.j@email.com,D1192870,8/20/2025,268 Maple Dr,8,10,Advanced,555-0000

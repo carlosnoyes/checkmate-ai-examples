@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving School Scheduler</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #334155;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+
+            /* Instructor colors */
+            --ins-001: #f97316;
+            --ins-002: #06b6d4;
+            --ins-003: #8b5cf6;
+            --ins-004: #ec4899;
+            --ins-005: #14b8a6;
+            --ins-006: #f43f5e;
+            --ins-007: #84cc16;
+            --ins-008: #eab308;
+            --ins-009: #6366f1;
+            --ins-010: #22d3ee;
+
+            /* Car colors */
+            --car-01: #f97316;
+            --car-02: #06b6d4;
+            --car-03: #8b5cf6;
+            --car-04: #ec4899;
+            --car-05: #14b8a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.625rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 73px);
+        }
+
+        /* Tabs */
+        .tabs-container {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0;
+        }
+
+        .tab {
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+        }
+
+        .tab.active {
+            color: var(--primary-light);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-icon {
+            font-size: 1.125rem;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .control-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .toggle-group {
+            display: flex;
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 3px;
+            border: 1px solid var(--border);
+        }
+
+        .toggle-btn {
+            padding: 0.375rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--text-secondary);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .toggle-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .toggle-btn:hover:not(.active) {
+            color: var(--text-primary);
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .view-container {
+            flex: 1;
+            overflow: auto;
+            display: none;
+        }
+
+        .view-container.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Empty State */
+        .empty-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            gap: 1rem;
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .empty-state h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .empty-state p {
+            max-width: 400px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Table View */
+        .table-container {
+            flex: 1;
+            overflow: auto;
+            padding: 1.5rem 2rem;
+        }
+
+        .search-filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .search-box::before {
+            content: '=';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.875rem;
+            opacity: 0.5;
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            min-width: 150px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: var(--bg-dark);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .data-table th:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover);
+        }
+
+        .data-table th.sorted {
+            color: var(--primary-light);
+        }
+
+        .data-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .data-table tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        .data-table tbody tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .status-completed {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+        }
+
+        .status-cancelled, .status-no-show {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+        }
+
+        .status-scheduled {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--info);
+        }
+
+        .instructor-badge, .car-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .table-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .table-stats span {
+            background: var(--bg-card);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        /* Calendar View */
+        .calendar-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calendar-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .calendar-nav-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-nav-btn:hover {
+            background: var(--border);
+        }
+
+        .calendar-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .today-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .today-btn:hover {
+            background: var(--border);
+        }
+
+        .calendar-body {
+            flex: 1;
+            overflow: auto;
+            padding: 1rem 2rem;
+        }
+
+        /* Day View */
+        .day-view {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .day-columns-container {
+            display: flex;
+            flex: 1;
+            gap: 1px;
+            background: var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .day-time-column {
+            width: 60px;
+            flex-shrink: 0;
+            background: var(--bg-dark);
+        }
+
+        .day-time-slot {
+            height: 60px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .day-time-slot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            border-top: 1px solid var(--border);
+        }
+
+        .day-column {
+            flex: 1;
+            min-width: 200px;
+            background: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .day-column-header {
+            padding: 0.75rem;
+            text-align: center;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            font-size: 0.875rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .day-column-body {
+            flex: 1;
+            position: relative;
+        }
+
+        .day-hour-row {
+            height: 60px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .day-hour-row:last-child {
+            border-bottom: none;
+        }
+
+        .appointment-block {
+            position: absolute;
+            left: 4px;
+            right: 4px;
+            border-radius: 6px;
+            padding: 0.375rem 0.5rem;
+            font-size: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 5;
+            border-left: 3px solid;
+        }
+
+        .appointment-block:hover {
+            transform: scale(1.02);
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .appointment-block .appt-time {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .appointment-block .appt-student {
+            color: rgba(255, 255, 255, 0.9);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .appointment-block .appt-type {
+            font-size: 0.625rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        /* Week View */
+        .week-view {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .week-header {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-dark);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+        }
+
+        .week-time-spacer {
+            width: 60px;
+            flex-shrink: 0;
+        }
+
+        .week-day-header {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            border-left: 1px solid var(--border);
+        }
+
+        .week-day-header .day-name {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .week-day-header .day-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .week-day-header.today {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .week-day-header.today .day-number {
+            color: var(--primary-light);
+        }
+
+        .week-body {
+            display: flex;
+            flex: 1;
+            background: var(--border);
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+        }
+
+        .week-time-column {
+            width: 60px;
+            flex-shrink: 0;
+            background: var(--bg-dark);
+        }
+
+        .week-day-column {
+            flex: 1;
+            min-width: 120px;
+            background: var(--bg-card);
+            border-left: 1px solid var(--border);
+            position: relative;
+        }
+
+        .week-hour-row {
+            height: 50px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .week-time-slot {
+            height: 50px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 2px 0.5rem 0;
+            font-size: 0.625rem;
+            color: var(--text-muted);
+        }
+
+        .week-appointment {
+            position: absolute;
+            left: 2px;
+            right: 2px;
+            border-radius: 4px;
+            padding: 2px 4px;
+            font-size: 0.625rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-left: 2px solid;
+        }
+
+        .week-appointment:hover {
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .week-appointment .appt-summary {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Expanded Week View */
+        .week-view.expanded {
+            min-width: max-content;
+        }
+
+        .week-view.expanded .week-header {
+            min-width: max-content;
+        }
+
+        .week-view.expanded .week-body {
+            min-width: max-content;
+        }
+
+        .week-day-container {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid var(--border);
+        }
+
+        .week-day-title {
+            padding: 0.5rem;
+            text-align: center;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .week-day-title .day-name {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .week-day-title .day-number {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .week-day-title.today {
+            background: rgba(99, 102, 241, 0.15);
+        }
+
+        .week-day-title.today .day-number {
+            color: var(--primary-light);
+        }
+
+        .week-day-groups {
+            display: flex;
+            flex: 1;
+        }
+
+        .week-group-column {
+            min-width: 140px;
+            width: 140px;
+            background: var(--bg-card);
+            border-left: 1px solid var(--border);
+            position: relative;
+        }
+
+        .week-group-column:first-child {
+            border-left: none;
+        }
+
+        .week-group-header {
+            padding: 0.375rem 0.5rem;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 500;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .week-group-body {
+            position: relative;
+            height: 100%;
+        }
+
+        .week-expanded-appointment {
+            position: absolute;
+            left: 3px;
+            right: 3px;
+            border-radius: 4px;
+            padding: 3px 5px;
+            font-size: 0.65rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-left: 3px solid;
+            z-index: 5;
+        }
+
+        .week-expanded-appointment:hover {
+            z-index: 10;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .week-expanded-appointment .appt-time {
+            font-weight: 600;
+            font-size: 0.6rem;
+        }
+
+        .week-expanded-appointment .appt-student {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.625rem;
+        }
+
+        .week-expanded-appointment .appt-type {
+            font-size: 0.55rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+
+        /* Collapsed week appointments with tooltip */
+        .week-appointment-collapsed {
+            position: absolute;
+            left: 2px;
+            right: 2px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-left: 2px solid;
+            z-index: 5;
+        }
+
+        .week-appointment-collapsed:hover {
+            z-index: 20;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .week-appointment-collapsed .appt-bar {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: fixed;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem;
+            font-size: 0.75rem;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            max-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.15s ease, visibility 0.15s ease;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tooltip-header {
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.25rem;
+        }
+
+        .tooltip-label {
+            color: var(--text-muted);
+        }
+
+        .tooltip-value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Expand/collapse button */
+        .expand-btn {
+            padding: 0.375rem 0.625rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border-radius: 6px;
+            background: var(--bg-hover);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .expand-btn:hover {
+            background: var(--border);
+            color: var(--text-primary);
+        }
+
+        .expand-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Month View */
+        .month-view {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .month-header-cell {
+            background: var(--bg-dark);
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .month-day-cell {
+            background: var(--bg-card);
+            min-height: 120px;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.2s ease;
+        }
+
+        .month-day-cell:hover {
+            background: var(--bg-hover);
+        }
+
+        .month-day-cell.other-month {
+            opacity: 0.4;
+        }
+
+        .month-day-cell.today {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .month-day-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .month-day-cell.today .month-day-number {
+            color: var(--primary-light);
+        }
+
+        .month-appointments {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .month-appointment {
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.625rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .month-appointment:hover {
+            transform: scale(1.02);
+        }
+
+        .month-more {
+            font-size: 0.625rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: auto;
+            cursor: pointer;
+        }
+
+        .month-more:hover {
+            color: var(--primary-light);
+        }
+
+        /* Appointment Detail Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.25rem;
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--bg-hover);
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--border);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-field {
+            margin-bottom: 1rem;
+        }
+
+        .modal-field label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .modal-field .value {
+            font-size: 0.9375rem;
+            color: var(--text-primary);
+        }
+
+        .modal-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 0.75rem 2rem;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        /* Loading state */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">=�</div>
+            <h1>DrivePro Scheduler</h1>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-primary" id="loadDataBtn">
+                <span>=�</span>
+                Load Example Data
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="calendar">
+                    <span class="tab-icon">=�</span>
+                    Calendar
+                </div>
+                <div class="tab" data-tab="table">
+                    <span class="tab-icon">=�</span>
+                    Table
+                </div>
+            </div>
+            <div class="controls" id="calendarControls" style="display: none;">
+                <div class="control-group">
+                    <span class="control-label">View</span>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-view="day">Day</button>
+                        <button class="toggle-btn" data-view="week">Week</button>
+                        <button class="toggle-btn" data-view="month">Month</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span class="control-label">Group By</span>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-group="instructor">Instructor</button>
+                        <button class="toggle-btn" data-group="car">Car</button>
+                    </div>
+                </div>
+                <div class="control-group" id="expandControl" style="display: none;">
+                    <button class="expand-btn" id="expandBtn">
+                        <span id="expandIcon">⊕</span>
+                        <span id="expandText">Expand</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Calendar View -->
+            <div class="view-container active" id="calendarView">
+                <div class="empty-state" id="calendarEmptyState">
+                    <div class="empty-state-icon">=�</div>
+                    <h2>No Appointments</h2>
+                    <p>Click "Load Example Data" to populate the scheduler with sample driving lesson appointments.</p>
+                </div>
+                <div class="calendar-container" id="calendarContent" style="display: none;">
+                    <div class="calendar-header">
+                        <div class="calendar-nav">
+                            <button class="calendar-nav-btn" id="prevBtn">�</button>
+                            <h2 class="calendar-title" id="calendarTitle">December 2025</h2>
+                            <button class="calendar-nav-btn" id="nextBtn">�</button>
+                        </div>
+                        <button class="today-btn" id="todayBtn">Today</button>
+                    </div>
+                    <div class="calendar-body" id="calendarBody"></div>
+                </div>
+                <div class="legend" id="calendarLegend" style="display: none;"></div>
+            </div>
+
+            <!-- Table View -->
+            <div class="view-container" id="tableView">
+                <div class="empty-state" id="tableEmptyState">
+                    <div class="empty-state-icon">=�</div>
+                    <h2>No Data</h2>
+                    <p>Click "Load Example Data" to populate the table with appointment records.</p>
+                </div>
+                <div class="table-container" id="tableContent" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Appointment Detail Modal -->
+    <div class="modal-overlay" id="appointmentModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Appointment Details</h2>
+                <button class="modal-close" id="closeModal"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Tooltip for collapsed week view -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // ==========================================
+        // Data Storage
+        // ==========================================
+        let appointments = [];
+        let instructors = {};
+        let students = {};
+        let currentView = 'day';
+        let currentGroupBy = 'instructor';
+        let currentDate = new Date(2025, 11, 1); // December 1, 2025
+        let sortColumn = 'date';
+        let sortDirection = 'asc';
+        let weekExpanded = false;
+
+        // Color palettes
+        const instructorColors = {
+            'INS-001': { bg: 'rgba(249, 115, 22, 0.25)', border: '#f97316', text: '#fed7aa' },
+            'INS-002': { bg: 'rgba(6, 182, 212, 0.25)', border: '#06b6d4', text: '#cffafe' },
+            'INS-003': { bg: 'rgba(139, 92, 246, 0.25)', border: '#8b5cf6', text: '#e9d5ff' },
+            'INS-004': { bg: 'rgba(236, 72, 153, 0.25)', border: '#ec4899', text: '#fbcfe8' },
+            'INS-005': { bg: 'rgba(20, 184, 166, 0.25)', border: '#14b8a6', text: '#ccfbf1' },
+            'INS-006': { bg: 'rgba(244, 63, 94, 0.25)', border: '#f43f5e', text: '#fecdd3' },
+            'INS-007': { bg: 'rgba(132, 204, 22, 0.25)', border: '#84cc16', text: '#ecfccb' },
+            'INS-008': { bg: 'rgba(234, 179, 8, 0.25)', border: '#eab308', text: '#fef3c7' },
+            'INS-009': { bg: 'rgba(99, 102, 241, 0.25)', border: '#6366f1', text: '#e0e7ff' },
+            'INS-010': { bg: 'rgba(34, 211, 238, 0.25)', border: '#22d3ee', text: '#cffafe' }
+        };
+
+        const carColors = {
+            'CAR-01': { bg: 'rgba(249, 115, 22, 0.25)', border: '#f97316', text: '#fed7aa' },
+            'CAR-02': { bg: 'rgba(6, 182, 212, 0.25)', border: '#06b6d4', text: '#cffafe' },
+            'CAR-03': { bg: 'rgba(139, 92, 246, 0.25)', border: '#8b5cf6', text: '#e9d5ff' },
+            'CAR-04': { bg: 'rgba(236, 72, 153, 0.25)', border: '#ec4899', text: '#fbcfe8' },
+            'CAR-05': { bg: 'rgba(20, 184, 166, 0.25)', border: '#14b8a6', text: '#ccfbf1' }
+        };
+
+        // ==========================================
+        // Example Data
+        // ==========================================
+        const exampleInstructors = `Instructor ID\tFirst Name\tLast Name\tEmployment Type\tTarget Hours
+INS-001\tSarah\tJenkins\tFull-Time\t40
+INS-002\tMike\tRossi\tFull-Time\t40
+INS-003\tDavid\tChen\tFull-Time\t40
+INS-004\tElena\tGomez\tFull-Time\t40
+INS-005\tMarcus\tThorne\tFull-Time\t40
+INS-006\tLinda\tPires\tPart-Time\t20
+INS-007\tSam\tO'Connor\tPart-Time\t20
+INS-008\tRaj\tPatel\tPart-Time\t20
+INS-009\tEmily\tWhite\tPart-Time\t20
+INS-010\tTyrone\tBanks\tPart-Time\t20`;
+
+        const exampleStudents = `student_id,first_name,last_name,dob,phone,email,permit_number,permit_exp,pickup_address,hours_driven,hours_purchased,skill_level,emergency_contact_phone
+ST-001,Aiden,Miller,4/12/2008,555-0101,aiden.m@email.com,D5584930,4/12/2026,12 Maple Dr,2,6,Beginner,555-9901
+ST-002,Sophia,Davis,11/23/2007,555-0102,sophia.d@email.com,D9938211,11/23/2026,44 Oak Ln,8,10,Advanced,555-9902
+ST-003,Lucas,Garcia,1/15/2008,555-0103,lucas.g@email.com,D2293844,1/15/2026,88 Pine St,0,6,Beginner,555-9903
+ST-004,Isabella,Rodriguez,6/30/2007,555-0104,isabella.r@email.com,D1129384,6/30/2025,102 Cedar Ave,5,6,Intermediate,555-9904
+ST-005,Mason,Wilson,9/14/2006,555-0105,mason.w@email.com,D8837291,9/14/2025,9 Elm Ct,10,10,Test Ready,555-9905
+ST-006,Mia,Martinez,3/22/2008,555-0106,mia.m@email.com,D7728394,3/22/2026,55 Birch Rd,1,10,Beginner,555-9906
+ST-007,Ethan,Anderson,12/5/2007,555-0107,ethan.a@email.com,D3392810,12/5/2026,77 Spruce Way,4,6,Intermediate,555-9907
+ST-008,Ava,Taylor,8/19/2006,555-0108,ava.t@email.com,D4482910,8/19/2025,20 Willow Dr,6,6,Test Ready,555-9908
+ST-009,Noah,Thomas,5/11/2008,555-0109,noah.t@email.com,D6638291,5/11/2026,14 Aspen Cir,0,6,Beginner,555-9909
+ST-010,Charlotte,Hernandez,2/28/2007,555-0110,charlotte.h@email.com,D1192834,2/28/2025,33 Magnolia Blvd,9,10,Advanced,555-9910
+ST-011,James,Moore,7/7/2007,555-0111,james.m@email.com,D5592831,7/7/2025,91 Poplar St,3,6,Intermediate,555-9911
+ST-012,Amelia,Martin,9/1/2008,555-0112,amelia.m@email.com,D9928371,9/1/2026,66 Redwood Dr,0,10,Beginner,555-9912
+ST-013,Benjamin,Jackson,10/30/2006,555-0113,ben.j@email.com,D2283741,10/30/2025,45 Cypress Ln,5,6,Test Ready,555-9913
+ST-014,Harper,Thompson,4/18/2007,555-0114,harper.t@email.com,D7738291,4/18/2026,12 Sycamore Ct,2,6,Beginner,555-9914
+ST-015,Elijah,White,2/14/2008,555-0115,elijah.w@email.com,D3382910,2/14/2026,89 Fir Rd,1,10,Beginner,555-9915
+ST-016,Evelyn,Lopez,1/25/2007,555-0116,evelyn.l@email.com,D8829371,1/25/2026,23 Ash Ave,7,10,Advanced,555-9916
+ST-017,William,Lee,11/11/2006,555-0117,william.l@email.com,D4492837,11/11/2025,78 Beech Blvd,6,6,Test Ready,555-9917
+ST-018,Abigail,Gonzalez,6/5/2008,555-0118,abigail.g@email.com,D6628391,6/5/2026,34 Cherry Ln,0,6,Beginner,555-9918
+ST-019,Alexander,Harris,3/15/2007,555-0119,alex.h@email.com,D1182934,3/15/2026,56 Dogwood Dr,4,6,Intermediate,555-9919
+ST-020,Emily,Clark,8/22/2007,555-0120,emily.c@email.com,D5538291,8/22/2025,90 Elm St,8,10,Advanced,555-9920
+ST-021,Michael,Lewis,5/5/2008,555-0121,michael.l@email.com,D9928312,5/5/2026,123 Main St,1,6,Beginner,555-9921
+ST-022,Elizabeth,Robinson,9/12/2007,555-0122,liz.r@email.com,D2238412,9/12/2025,456 Oak Ave,3,6,Intermediate,555-9922
+ST-023,Daniel,Walker,12/30/2006,555-0123,dan.w@email.com,D7748291,12/30/2025,789 Pine Rd,5,6,Test Ready,555-9923
+ST-024,Sofia,Perez,2/18/2008,555-0124,sofia.p@email.com,D3392813,2/18/2026,321 Maple Ln,0,10,Beginner,555-9924
+ST-025,Matthew,Hall,6/25/2007,555-0125,matt.h@email.com,D8829374,6/25/2026,654 Cedar Ct,6,10,Advanced,555-9925
+ST-026,Avery,Young,8/8/2008,555-0126,avery.y@email.com,D4482915,8/8/2026,987 Birch Way,2,6,Beginner,555-9926
+ST-027,Henry,Allen,4/4/2007,555-0127,henry.a@email.com,D6638296,4/4/2026,135 Spruce Pl,4,6,Intermediate,555-9927
+ST-028,Ella,Sanchez,10/10/2006,555-0128,ella.s@email.com,D1192837,10/10/2025,246 Willow Blvd,6,6,Test Ready,555-9928
+ST-029,Jackson,Wright,1/20/2008,555-0129,jack.w@email.com,D5592838,1/20/2026,357 Aspen Ter,1,10,Beginner,555-9929
+ST-030,Scarlett,King,11/15/2007,555-0130,scarlett.k@email.com,D9928379,11/15/2026,468 Magnolia Dr,7,10,Advanced,555-9930
+ST-031,Sebastian,Scott,3/30/2008,555-0131,seb.s@email.com,D2283740,3/30/2026,579 Poplar Ln,0,6,Beginner,555-9931
+ST-032,Grace,Green,7/22/2007,555-0132,grace.g@email.com,D7738292,7/22/2025,680 Redwood Ave,3,6,Intermediate,555-9932
+ST-033,Owen,Baker,9/9/2006,555-0133,owen.b@email.com,D3382913,9/9/2025,791 Cypress Rd,5,6,Test Ready,555-9933
+ST-034,Chloe,Adams,5/25/2008,555-0134,chloe.a@email.com,D8829374,5/25/2026,802 Sycamore St,1,10,Beginner,555-9934
+ST-035,Jack,Nelson,2/10/2007,555-0135,jack.n@email.com,D4492835,2/10/2026,913 Fir Ct,6,10,Advanced,555-9935
+ST-036,Victoria,Hill,12/12/2008,555-0136,tori.h@email.com,D6628396,12/12/2026,124 Ash Way,0,6,Beginner,555-9936
+ST-037,Joseph,Ramirez,8/1/2007,555-0137,joe.r@email.com,D1182937,8/1/2025,235 Beech Dr,4,6,Intermediate,555-9937
+ST-038,Riley,Campbell,11/28/2006,555-0138,riley.c@email.com,D5538298,11/28/2025,346 Cherry Ln,6,6,Test Ready,555-9938
+ST-039,Samuel,Mitchell,4/14/2008,555-0139,sam.m@email.com,D9928319,4/14/2026,457 Dogwood Ave,2,10,Beginner,555-9939
+ST-040,Zoey,Roberts,1/5/2007,555-0140,zoey.r@email.com,D2238420,1/5/2026,568 Elm Rd,8,10,Advanced,555-9940
+ST-041,David,Carter,6/18/2008,555-0141,david.c@email.com,D7748221,6/18/2026,679 Oak St,0,6,Beginner,555-9941
+ST-042,Lillian,Phillips,10/22/2007,555-0142,lily.p@email.com,D3392822,10/22/2025,780 Pine Dr,3,6,Intermediate,555-9942
+ST-043,Carter,Evans,8/30/2006,555-0143,carter.e@email.com,D8829383,8/30/2025,891 Maple Ct,5,6,Test Ready,555-9943
+ST-044,Natalie,Turner,2/5/2008,555-0144,nat.t@email.com,D4482924,2/5/2026,902 Cedar Ln,1,10,Beginner,555-9944
+ST-045,Wyatt,Torres,5/15/2007,555-0145,wyatt.t@email.com,D6638235,5/15/2026,113 Birch Rd,7,10,Advanced,555-9945
+ST-046,Layla,Parker,9/25/2008,555-0146,layla.p@email.com,D1192846,9/25/2026,224 Spruce Ave,0,6,Beginner,555-9946
+ST-047,Julian,Collins,3/8/2007,555-0147,jules.c@email.com,D5592847,3/8/2026,335 Willow Way,4,6,Intermediate,555-9947
+ST-048,Penelope,Edwards,12/19/2006,555-0148,penny.e@email.com,D9928388,12/19/2025,446 Aspen Dr,6,6,Test Ready,555-9948
+ST-049,Gabriel,Stewart,7/12/2008,555-0149,gabe.s@email.com,D2283759,7/12/2026,557 Magnolia Ct,2,10,Beginner,555-9949
+ST-050,Hannah,Flores,4/28/2007,555-0150,hannah.f@email.com,D7738230,4/28/2026,668 Poplar Blvd,9,10,Advanced,555-9950
+ST-051,Anthony,Morris,11/2/2008,555-0151,tony.m@email.com,D3382941,11/2/2026,779 Redwood Ln,0,6,Beginner,555-9951
+ST-052,Brooklyn,Nguyen,1/18/2007,555-0152,brook.n@email.com,D8829382,1/18/2026,880 Cypress St,3,6,Intermediate,555-9952
+ST-053,Dylan,Murphy,9/5/2006,555-0153,dylan.m@email.com,D4492853,9/5/2025,991 Sycamore Dr,5,6,Test Ready,555-9953
+ST-054,Audrey,Rivera,5/9/2008,555-0154,audrey.r@email.com,D6628344,5/9/2026,102 Fir Rd,1,10,Beginner,555-9954
+ST-055,Leo,Cook,8/14/2007,555-0155,leo.c@email.com,D1182955,8/14/2025,213 Ash Ave,6,10,Advanced,555-9955
+ST-056,Samantha,Rogers,3/3/2008,555-0156,sam.r@email.com,D5538256,3/3/2026,324 Beech Ct,0,6,Beginner,555-9956
+ST-057,Isaiah,Morgan,6/11/2007,555-0157,isaiah.m@email.com,D9928327,6/11/2026,435 Cherry Blvd,4,6,Intermediate,555-9957
+ST-058,Claire,Peterson,10/29/2006,555-0158,claire.p@email.com,D2238438,10/29/2025,546 Dogwood Ln,6,6,Test Ready,555-9958
+ST-059,Thomas,Cooper,2/22/2008,555-0159,tom.c@email.com,D7748239,2/22/2026,657 Elm Dr,2,10,Beginner,555-9959
+ST-060,Skylar,Reed,12/8/2007,555-0160,skylar.r@email.com,D3392840,12/8/2026,768 Oak Rd,8,10,Advanced,555-9960
+ST-061,Charles,Bailey,7/1/2008,555-0161,charlie.b@email.com,D8829391,7/1/2026,879 Pine St,0,6,Beginner,555-9961
+ST-062,Paisley,Bell,4/12/2007,555-0162,paisley.b@email.com,D4482932,4/12/2026,980 Maple Ave,3,6,Intermediate,555-9962
+ST-063,Christopher,Gomez,8/25/2006,555-0163,chris.g@email.com,D6638243,8/25/2025,191 Cedar Ct,5,6,Test Ready,555-9963
+ST-064,Savannah,Kelly,1/30/2008,555-0164,sav.k@email.com,D1192854,1/30/2026,202 Birch Dr,1,10,Beginner,555-9964
+ST-065,Joshua,Howard,9/19/2007,555-0165,josh.h@email.com,D5592855,9/19/2025,313 Spruce Ln,7,10,Advanced,555-9965
+ST-066,Anna,Ward,6/6/2008,555-0166,anna.w@email.com,D9928396,6/6/2026,424 Willow Rd,0,6,Beginner,555-9966
+ST-067,Andrew,Cox,3/22/2007,555-0167,drew.c@email.com,D2283767,3/22/2026,535 Aspen Blvd,4,6,Intermediate,555-9967
+ST-068,Caroline,Diaz,11/15/2006,555-0168,caroline.d@email.com,D7738248,11/15/2025,646 Magnolia Way,6,6,Test Ready,555-9968
+ST-069,Nathan,Richardson,10/5/2008,555-0169,nate.r@email.com,D3382959,10/5/2026,757 Poplar Dr,2,10,Beginner,555-9969
+ST-070,Nova,Wood,2/14/2007,555-0170,nova.w@email.com,D8829390,2/14/2026,868 Redwood Ct,9,10,Advanced,555-9970
+ST-071,Ryan,Watson,5/20/2008,555-0171,ryan.w@email.com,D4492861,5/20/2026,979 Cypress Ln,0,6,Beginner,555-9971
+ST-072,Genesis,Brooks,8/8/2007,555-0172,gen.b@email.com,D6628352,8/8/2025,180 Sycamore Rd,3,6,Intermediate,555-9972
+ST-073,Adrian,Bennett,12/25/2006,555-0173,adrian.b@email.com,D1182963,12/25/2025,291 Fir Ave,5,6,Test Ready,555-9973
+ST-074,Emilia,Gray,4/18/2008,555-0174,emilia.g@email.com,D5538264,4/18/2026,302 Ash Dr,1,10,Beginner,555-9974
+ST-075,Christian,James,7/30/2007,555-0175,chris.j@email.com,D9928335,7/30/2025,413 Beech St,6,10,Advanced,555-9975
+ST-076,Kennedy,Reyes,9/12/2008,555-0176,ken.r@email.com,D2238446,9/12/2026,524 Cherry Ct,0,6,Beginner,555-9976
+ST-077,Hunter,Cruz,1/9/2007,555-0177,hunter.c@email.com,D7748247,1/9/2026,635 Dogwood Blvd,4,6,Intermediate,555-9977
+ST-078,Maya,Hughes,10/2/2006,555-0178,maya.h@email.com,D3392858,10/2/2025,746 Elm Ln,6,6,Test Ready,555-9978
+ST-079,Aaron,Price,2/28/2008,555-0179,aaron.p@email.com,D8829399,2/28/2026,857 Oak Way,2,10,Beginner,555-9979
+ST-080,Willow,Myers,11/20/2007,555-0180,willow.m@email.com,D4482940,11/20/2026,968 Pine Dr,8,10,Advanced,555-9980
+ST-081,Ezra,Long,6/14/2008,555-0181,ezra.l@email.com,D6638251,6/14/2026,179 Maple Rd,0,6,Beginner,555-9981
+ST-082,Madelyn,Foster,3/10/2007,555-0182,maddy.f@email.com,D1192862,3/10/2026,280 Cedar Ave,3,6,Intermediate,555-9982
+ST-083,Landon,Sanders,8/22/2006,555-0183,landon.s@email.com,D5592863,8/22/2025,391 Birch Ct,5,6,Test Ready,555-9983
+ST-084,Naomi,Ross,12/1/2008,555-0184,naomi.r@email.com,D9928404,12/1/2026,402 Spruce Dr,1,10,Beginner,555-9984
+ST-085,Connor,Morales,5/5/2007,555-0185,connor.m@email.com,D2283775,5/5/2026,513 Willow Ln,7,10,Advanced,555-9985
+ST-086,Elena,Powell,9/29/2008,555-0186,elena.p@email.com,D7738256,9/29/2026,624 Aspen St,0,6,Beginner,555-9986
+ST-087,Jeremiah,Sullivan,2/2/2007,555-0187,jeremy.s@email.com,D3382967,2/2/2026,735 Magnolia Blvd,4,6,Intermediate,555-9987
+ST-088,Sarah,Russell,11/8/2006,555-0188,sarah.r@email.com,D8829408,11/8/2025,846 Poplar Rd,6,6,Test Ready,555-9988
+ST-089,Cameron,Ortiz,4/24/2008,555-0189,cam.o@email.com,D4492879,4/24/2026,957 Redwood Ave,2,10,Beginner,555-9989
+ST-090,Ariana,Jenkins,7/16/2007,555-0190,ari.j@email.com,D6628360,7/16/2025,168 Cypress Dr,9,10,Advanced,555-9990
+ST-091,Josiah,Gutierrez,8/30/2008,555-0191,josiah.g@email.com,D1182971,8/30/2026,279 Sycamore Ct,0,6,Beginner,555-9991
+ST-092,Allison,Perry,1/22/2007,555-0192,allie.p@email.com,D5538272,1/22/2026,380 Fir Ln,3,6,Intermediate,555-9992
+ST-093,Colton,Butler,9/14/2006,555-0193,colton.b@email.com,D9928343,9/14/2025,491 Ash Rd,5,6,Test Ready,555-9993
+ST-094,Gabriella,Barnes,11/25/2008,555-0194,gabby.b@email.com,D2238454,11/25/2026,502 Beech Dr,1,10,Beginner,555-9994
+ST-095,Elias,Fisher,6/3/2007,555-0195,elias.f@email.com,D7748255,6/3/2026,613 Cherry Ave,6,10,Advanced,555-9995
+ST-096,Alice,Henderson,3/12/2008,555-0196,alice.h@email.com,D3392866,3/12/2026,724 Dogwood St,0,6,Beginner,555-9996
+ST-097,Robert,Coleman,10/18/2007,555-0197,rob.c@email.com,D8829417,10/18/2025,835 Elm Ct,4,6,Intermediate,555-9997
+ST-098,Sadie,Simmons,12/29/2006,555-0198,sadie.s@email.com,D4482948,12/29/2025,946 Oak Blvd,6,6,Test Ready,555-9998
+ST-099,Evan,Patterson,5/2/2008,555-0199,evan.p@email.com,D6638259,5/2/2026,157 Pine Rd,2,10,Beginner,555-9999
+ST-100,Serenity,Jordan,8/20/2007,555-0200,serenity.j@email.com,D1192870,8/20/2025,268 Maple Dr,8,10,Advanced,555-0000`;
+
+        const exampleAppointments = `appointment_id,date,start_time,end_time,student_id,instructor_id,car_id,lesson_type,pickup_location,status,instructor_notes
+APPT-2001,2025-12-01,08:00,10:00,ST-001,INS-001,CAR-01,Standard,Home,Completed,Student is hesitant on left turns. Needs more scanning.
+APPT-2002,2025-12-01,08:00,10:00,ST-002,INS-002,CAR-02,Highway,Home,Completed,Merged well at 65mph. Good lane discipline.
+APPT-2003,2025-12-01,10:00,12:00,ST-003,INS-001,CAR-01,Standard,Home,Completed,Worked on smooth braking. Much improved.
+APPT-2004,2025-12-01,10:00,12:00,ST-004,INS-002,CAR-02,Parking,Home,Completed,Parallel parking needs work. Hits curb often.
+APPT-2005,2025-12-01,13:00,15:00,ST-005,INS-003,CAR-03,Test Prep,Home,Completed,Ready for test. 100% on mock score.
+APPT-2006,2025-12-01,13:00,15:00,ST-006,INS-006,CAR-04,Standard,School,Completed,Nervous in traffic. Kept stalling manual transmission.
+APPT-2007,2025-12-01,15:00,17:00,ST-007,INS-003,CAR-03,Standard,Home,Completed,Good observation at intersections.
+APPT-2008,2025-12-01,15:00,17:00,ST-008,INS-006,CAR-04,Test Prep,Home,Completed,Review 3-point turn. ready.
+APPT-2009,2025-12-01,17:00,19:00,ST-009,INS-007,CAR-05,Standard,Home,No-Show,Student not home. Waited 15 mins.
+APPT-2010,2025-12-01,17:00,19:00,ST-010,INS-006,CAR-04,Highway,Home,Completed,Night driving practice.
+APPT-2011,2025-12-01,18:00,20:00,ST-011,INS-007,CAR-05,Standard,Home,Completed,Struggles with glare.
+APPT-2012,2025-12-01,08:00,10:00,ST-012,INS-003,CAR-03,Standard,Home,Completed,Basics. Steering is jerky.
+APPT-2013,2025-12-01,10:00,12:00,ST-013,INS-003,CAR-03,Test Prep,Home,Completed,Perfect drive.
+APPT-2014,2025-12-01,12:00,14:00,ST-014,INS-001,CAR-01,Standard,School,Completed,Distracted easily.
+APPT-2015,2025-12-02,08:00,10:00,ST-015,INS-001,CAR-01,Standard,Home,Completed,Steering control improved.
+APPT-2016,2025-12-02,08:00,10:00,ST-016,INS-002,CAR-02,Highway,Home,Completed,Speed maintenance is good.
+APPT-2017,2025-12-02,10:00,12:00,ST-017,INS-001,CAR-01,Test Prep,Home,Completed,Mock test passed.
+APPT-2018,2025-12-02,10:00,12:00,ST-018,INS-002,CAR-02,Standard,Home,Completed,Wide right turns. Corrected twice.
+APPT-2019,2025-12-02,13:00,15:00,ST-019,INS-003,CAR-03,Standard,Home,Completed,Smooth acceleration.
+APPT-2020,2025-12-02,13:00,15:00,ST-020,INS-006,CAR-04,Highway,School,Completed,Merge anxiety.
+APPT-2021,2025-12-02,15:00,17:00,ST-021,INS-003,CAR-03,Standard,Home,Cancelled-Student,Sick.
+APPT-2022,2025-12-02,15:00,17:00,ST-022,INS-006,CAR-04,Standard,Home,Completed,Good mirror checks.
+APPT-2023,2025-12-02,17:00,19:00,ST-023,INS-008,CAR-05,Test Prep,Home,Completed,Needs to stop fully at stop signs.
+APPT-2024,2025-12-02,17:00,19:00,ST-024,INS-006,CAR-04,Standard,Home,Completed,Parking lot practice.
+APPT-2025,2025-12-02,18:00,20:00,ST-025,INS-008,CAR-05,Standard,Home,Completed,Night drive. Good high beam use.
+APPT-2026,2025-12-02,12:00,14:00,ST-026,INS-001,CAR-01,Standard,Home,Completed,Cornering too fast.
+APPT-2027,2025-12-02,14:00,16:00,ST-027,INS-002,CAR-02,Standard,Home,Completed,Solid drive.
+APPT-2028,2025-12-02,16:00,18:00,ST-028,INS-003,CAR-03,Test Prep,Home,Completed,Test ready.
+APPT-2029,2025-12-03,08:00,10:00,ST-029,INS-001,CAR-01,Standard,Home,Completed,Confused by roundabouts.
+APPT-2030,2025-12-03,08:00,10:00,ST-030,INS-002,CAR-02,Parking,Home,Completed,Reverse parking is solid.
+APPT-2031,2025-12-03,10:00,12:00,ST-031,INS-001,CAR-01,Standard,Home,Completed,Drifting in lane.
+APPT-2032,2025-12-03,10:00,12:00,ST-032,INS-002,CAR-02,Standard,Home,Completed,Good defensive driving.
+APPT-2033,2025-12-03,12:00,14:00,ST-033,INS-004,CAR-03,Test Prep,Home,Completed,Review parallel park.
+APPT-2034,2025-12-03,12:00,14:00,ST-034,INS-005,CAR-04,Standard,School,Completed,Scared of trucks.
+APPT-2035,2025-12-03,14:00,16:00,ST-035,INS-004,CAR-03,Highway,Home,Completed,Lane changes smooth.
+APPT-2036,2025-12-03,14:00,16:00,ST-036,INS-005,CAR-04,Standard,Home,Completed,First lesson. Overview of controls.
+APPT-2037,2025-12-03,16:00,18:00,ST-037,INS-004,CAR-03,Standard,Home,Completed,Following distance too close.
+APPT-2038,2025-12-03,16:00,18:00,ST-038,INS-005,CAR-04,Test Prep,Home,Completed,Ready.
+APPT-2039,2025-12-03,18:00,20:00,ST-039,INS-004,CAR-03,Standard,Home,Completed,Rain driving practice.
+APPT-2040,2025-12-03,18:00,20:00,ST-040,INS-005,CAR-04,Highway,Home,Completed,Exit ramp speed good.
+APPT-2041,2025-12-03,08:00,10:00,ST-041,INS-003,CAR-05,Standard,Home,Completed,Learning pedals.
+APPT-2042,2025-12-03,10:00,12:00,ST-042,INS-003,CAR-05,Standard,Home,Completed,Improving turns.
+APPT-2043,2025-12-04,08:00,10:00,ST-043,INS-001,CAR-01,Test Prep,Home,Completed,Watch speed zones.
+APPT-2044,2025-12-04,08:00,10:00,ST-044,INS-002,CAR-02,Standard,Home,Completed,Hands crossing on wheel.
+APPT-2045,2025-12-04,10:00,12:00,ST-045,INS-001,CAR-01,Highway,Home,Completed,Merging is safe.
+APPT-2046,2025-12-04,10:00,12:00,ST-046,INS-002,CAR-02,Standard,Home,Completed,Very nervous.
+APPT-2047,2025-12-04,12:00,14:00,ST-047,INS-004,CAR-03,Standard,School,Completed,Right of way confusion.
+APPT-2048,2025-12-04,12:00,14:00,ST-048,INS-005,CAR-04,Test Prep,Home,Completed,Excellent driver.
+APPT-2049,2025-12-04,14:00,16:00,ST-049,INS-004,CAR-03,Standard,Home,Cancelled-School,Car issue (tire).
+APPT-2050,2025-12-04,14:00,16:00,ST-050,INS-005,CAR-04,Highway,Home,Completed,Traffic handling good.
+APPT-2051,2025-12-04,16:00,18:00,ST-051,INS-004,CAR-03,Standard,Home,Completed,Basic steering.
+APPT-2052,2025-12-04,16:00,18:00,ST-052,INS-005,CAR-04,Standard,Home,Completed,Checking blind spots well.
+APPT-2053,2025-12-04,18:00,20:00,ST-053,INS-004,CAR-03,Test Prep,Home,Completed,Mock test pass.
+APPT-2054,2025-12-04,18:00,20:00,ST-054,INS-005,CAR-04,Standard,Home,Completed,Needs more practice.
+APPT-2055,2025-12-04,08:00,10:00,ST-055,INS-003,CAR-05,Highway,Home,Completed,Speed varies too much.
+APPT-2056,2025-12-04,10:00,12:00,ST-056,INS-003,CAR-05,Standard,Home,Completed,Starting from stop is jerky.
+APPT-2057,2025-12-05,08:00,10:00,ST-057,INS-001,CAR-01,Standard,Home,Completed,Traffic circles.
+APPT-2058,2025-12-05,08:00,10:00,ST-058,INS-002,CAR-02,Test Prep,Home,Completed,Ready.
+APPT-2059,2025-12-05,10:00,12:00,ST-059,INS-001,CAR-01,Standard,Home,No-Show,Forgot appointment.
+APPT-2060,2025-12-05,10:00,12:00,ST-060,INS-002,CAR-02,Highway,Home,Completed,Great focus.
+APPT-2061,2025-12-05,12:00,14:00,ST-061,INS-004,CAR-03,Standard,School,Completed,Needs basics.
+APPT-2062,2025-12-05,12:00,14:00,ST-062,INS-005,CAR-04,Standard,Home,Completed,Signaling late.
+APPT-2063,2025-12-05,14:00,16:00,ST-063,INS-004,CAR-03,Test Prep,Home,Completed,Parking needs polish.
+APPT-2064,2025-12-05,14:00,16:00,ST-064,INS-005,CAR-04,Standard,Home,Completed,Scared of speed.
+APPT-2065,2025-12-05,16:00,18:00,ST-065,INS-004,CAR-03,Highway,Home,Completed,Confident.
+APPT-2066,2025-12-05,16:00,18:00,ST-066,INS-005,CAR-04,Standard,Home,Completed,Parking lot turns.
+APPT-2067,2025-12-05,18:00,20:00,ST-067,INS-004,CAR-03,Standard,Home,Completed,Urban driving.
+APPT-2068,2025-12-05,18:00,20:00,ST-068,INS-005,CAR-04,Test Prep,Home,Completed,Ready for DMV.
+APPT-2069,2025-12-05,08:00,10:00,ST-069,INS-003,CAR-05,Standard,Home,Completed,Braking too hard.
+APPT-2070,2025-12-05,10:00,12:00,ST-070,INS-003,CAR-05,Parking,Home,Completed,Needs reference points.
+APPT-2071,2025-12-06,08:00,10:00,ST-071,INS-009,CAR-01,Standard,Home,Completed,First time.
+APPT-2072,2025-12-06,08:00,10:00,ST-072,INS-010,CAR-02,Standard,Home,Completed,Good progress.
+APPT-2073,2025-12-06,08:00,10:00,ST-073,INS-007,CAR-03,Test Prep,Home,Completed,Check mirrors more.
+APPT-2074,2025-12-06,10:00,12:00,ST-074,INS-009,CAR-01,Standard,Home,Completed,Jerky steering.
+APPT-2075,2025-12-06,10:00,12:00,ST-075,INS-010,CAR-02,Highway,Home,Completed,Smooth lane change.
+APPT-2076,2025-12-06,10:00,12:00,ST-076,INS-007,CAR-03,Standard,Home,Completed,Needs confidence.
+APPT-2077,2025-12-06,12:00,14:00,ST-077,INS-004,CAR-04,Standard,Home,Completed,Rolling stops.
+APPT-2078,2025-12-06,12:00,14:00,ST-078,INS-005,CAR-05,Test Prep,Home,Completed,Good.
+APPT-2079,2025-12-06,12:00,14:00,ST-079,INS-009,CAR-01,Standard,Home,Completed,Parking lot only.
+APPT-2080,2025-12-06,14:00,16:00,ST-080,INS-004,CAR-04,Highway,Home,Completed,Good speed.
+APPT-2081,2025-12-06,14:00,16:00,ST-081,INS-005,CAR-05,Standard,Home,Completed,Stalled engine.
+APPT-2082,2025-12-06,14:00,16:00,ST-082,INS-010,CAR-02,Standard,Home,Completed,Drifting right.
+APPT-2083,2025-12-06,16:00,18:00,ST-083,INS-004,CAR-04,Test Prep,Home,Cancelled-Student,Family emergency.
+APPT-2084,2025-12-06,16:00,18:00,ST-084,INS-005,CAR-05,Standard,Home,Completed,Turning wide.
+APPT-2085,2025-12-06,18:00,20:00,ST-085,INS-004,CAR-04,Highway,Home,Completed,Night drive intro.
+APPT-2086,2025-12-07,08:00,10:00,ST-086,INS-009,CAR-01,Standard,Home,Completed,Learning pedals.
+APPT-2087,2025-12-07,08:00,10:00,ST-087,INS-010,CAR-02,Standard,Home,Completed,Intersections good.
+APPT-2088,2025-12-07,08:00,10:00,ST-088,INS-008,CAR-03,Test Prep,Home,Completed,Parallel park perfect.
+APPT-2089,2025-12-07,10:00,12:00,ST-089,INS-009,CAR-01,Standard,Home,Completed,Unsure of self.
+APPT-2090,2025-12-07,10:00,12:00,ST-090,INS-010,CAR-02,Highway,Home,Completed,Merging fine.
+APPT-2091,2025-12-07,10:00,12:00,ST-091,INS-008,CAR-03,Standard,Home,Completed,Struggles with turn signals.
+APPT-2092,2025-12-07,12:00,14:00,ST-092,INS-004,CAR-04,Standard,Home,Completed,Four way stops confused.
+APPT-2093,2025-12-07,12:00,14:00,ST-093,INS-005,CAR-05,Test Prep,Home,Completed,Passed mock.
+APPT-2094,2025-12-07,12:00,14:00,ST-094,INS-007,CAR-01,Standard,Home,Completed,Very timid.
+APPT-2095,2025-12-07,14:00,16:00,ST-095,INS-004,CAR-04,Highway,Home,Completed,Cruising speed steady.
+APPT-2096,2025-12-07,14:00,16:00,ST-096,INS-005,CAR-05,Standard,Home,Completed,Steering needs work.
+APPT-2097,2025-12-07,14:00,16:00,ST-097,INS-008,CAR-03,Standard,Home,Completed,Lane position good.
+APPT-2098,2025-12-07,16:00,18:00,ST-098,INS-004,CAR-04,Test Prep,Home,Completed,Ready.
+APPT-2099,2025-12-07,16:00,18:00,ST-099,INS-005,CAR-05,Standard,Home,Completed,Starts and stops good.
+APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-008,CAR-03,Highway,Home,Completed,Night highway driving.`;
+
+        // ==========================================
+        // Data Parsing Functions
+        // ==========================================
+        function parseInstructors(csv) {
+            const lines = csv.trim().split('\n');
+            const result = {};
+            for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split('\t');
+                if (cols.length >= 3) {
+                    result[cols[0]] = {
+                        id: cols[0],
+                        firstName: cols[1],
+                        lastName: cols[2],
+                        type: cols[3] || '',
+                        targetHours: parseInt(cols[4]) || 0
+                    };
+                }
+            }
+            return result;
+        }
+
+        function parseStudents(csv) {
+            const lines = csv.trim().split('\n');
+            const result = {};
+            for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split(',');
+                if (cols.length >= 2) {
+                    result[cols[0]] = {
+                        id: cols[0],
+                        firstName: cols[1],
+                        lastName: cols[2],
+                        phone: cols[4] || '',
+                        email: cols[5] || '',
+                        skillLevel: cols[11] || ''
+                    };
+                }
+            }
+            return result;
+        }
+
+        function parseAppointments(csv) {
+            const lines = csv.trim().split('\n');
+            const result = [];
+            for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split(',');
+                if (cols.length >= 10) {
+                    result.push({
+                        id: cols[0],
+                        date: cols[1],
+                        startTime: cols[2],
+                        endTime: cols[3],
+                        studentId: cols[4],
+                        instructorId: cols[5],
+                        carId: cols[6],
+                        lessonType: cols[7],
+                        pickupLocation: cols[8],
+                        status: cols[9],
+                        notes: cols.slice(10).join(',')
+                    });
+                }
+            }
+            return result;
+        }
+
+        // ==========================================
+        // Helper Functions
+        // ==========================================
+        function getInstructorName(id) {
+            const instructor = instructors[id];
+            return instructor ? `${instructor.firstName} ${instructor.lastName}` : id;
+        }
+
+        function getStudentName(id) {
+            const student = students[id];
+            return student ? `${student.firstName} ${student.lastName}` : id;
+        }
+
+        function getColor(appointment) {
+            const colorSet = currentGroupBy === 'instructor'
+                ? instructorColors[appointment.instructorId]
+                : carColors[appointment.carId];
+            return colorSet || { bg: 'rgba(100, 100, 100, 0.25)', border: '#666', text: '#ccc' };
+        }
+
+        function timeToMinutes(time) {
+            const [hours, minutes] = time.split(':').map(Number);
+            return hours * 60 + minutes;
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        }
+
+        function isSameDay(date1, date2) {
+            return date1.getFullYear() === date2.getFullYear() &&
+                   date1.getMonth() === date2.getMonth() &&
+                   date1.getDate() === date2.getDate();
+        }
+
+        function getAppointmentsForDate(date) {
+            const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+            return appointments.filter(a => a.date === dateStr);
+        }
+
+        function getStatusClass(status) {
+            if (status.toLowerCase().includes('completed')) return 'status-completed';
+            if (status.toLowerCase().includes('cancelled') || status.toLowerCase().includes('no-show')) return 'status-cancelled';
+            return 'status-scheduled';
+        }
+
+        // ==========================================
+        // Calendar Rendering
+        // ==========================================
+        function renderCalendar() {
+            const calendarBody = document.getElementById('calendarBody');
+            const calendarTitle = document.getElementById('calendarTitle');
+
+            if (currentView === 'day') {
+                calendarTitle.textContent = currentDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+                renderDayView(calendarBody);
+            } else if (currentView === 'week') {
+                const startOfWeek = new Date(currentDate);
+                startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+                const endOfWeek = new Date(startOfWeek);
+                endOfWeek.setDate(startOfWeek.getDate() + 6);
+                calendarTitle.textContent = `${startOfWeek.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - ${endOfWeek.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+                renderWeekView(calendarBody);
+            } else if (currentView === 'month') {
+                calendarTitle.textContent = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                renderMonthView(calendarBody);
+            }
+
+            renderLegend();
+        }
+
+        function renderDayView(container) {
+            const dayAppointments = getAppointmentsForDate(currentDate);
+
+            // Group appointments by instructor or car
+            const groups = {};
+            const groupKey = currentGroupBy === 'instructor' ? 'instructorId' : 'carId';
+
+            dayAppointments.forEach(appt => {
+                const key = appt[groupKey];
+                if (!groups[key]) groups[key] = [];
+                groups[key].push(appt);
+            });
+
+            const groupKeys = Object.keys(groups).sort();
+            if (groupKeys.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">=�</div><h2>No appointments</h2><p>No appointments scheduled for this day.</p></div>';
+                return;
+            }
+
+            let html = '<div class="day-view"><div class="day-columns-container">';
+
+            // Time column
+            html += '<div class="day-time-column">';
+            for (let hour = 8; hour <= 20; hour++) {
+                html += `<div class="day-time-slot">${hour.toString().padStart(2, '0')}:00</div>`;
+            }
+            html += '</div>';
+
+            // Appointment columns
+            groupKeys.forEach(key => {
+                const label = currentGroupBy === 'instructor' ? getInstructorName(key) : key;
+                const colorSet = currentGroupBy === 'instructor' ? instructorColors[key] : carColors[key];
+
+                html += '<div class="day-column">';
+                html += `<div class="day-column-header" style="border-left: 3px solid ${colorSet?.border || '#666'}">${label}</div>`;
+                html += '<div class="day-column-body">';
+
+                // Hour rows
+                for (let hour = 8; hour <= 20; hour++) {
+                    html += '<div class="day-hour-row"></div>';
+                }
+
+                // Appointments
+                groups[key].forEach(appt => {
+                    const startMins = timeToMinutes(appt.startTime) - 8 * 60;
+                    const endMins = timeToMinutes(appt.endTime) - 8 * 60;
+                    const top = startMins;
+                    const height = endMins - startMins;
+                    const color = getColor(appt);
+                    const student = getStudentName(appt.studentId);
+
+                    html += `<div class="appointment-block"
+                        style="top: ${top}px; height: ${height}px; background: ${color.bg}; border-left-color: ${color.border}; color: ${color.text};"
+                        onclick="showAppointmentDetails('${appt.id}')">
+                        <div class="appt-time">${appt.startTime} - ${appt.endTime}</div>
+                        <div class="appt-student">${student}</div>
+                        <div class="appt-type">${appt.lessonType}</div>
+                    </div>`;
+                });
+
+                html += '</div></div>';
+            });
+
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+
+        function renderWeekView(container) {
+            if (weekExpanded) {
+                renderWeekViewExpanded(container);
+            } else {
+                renderWeekViewCollapsed(container);
+            }
+        }
+
+        function renderWeekViewCollapsed(container) {
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+
+            const days = [];
+            for (let i = 0; i < 7; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i);
+                days.push(day);
+            }
+
+            const today = new Date();
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            let html = '<div class="week-view">';
+
+            // Header
+            html += '<div class="week-header">';
+            html += '<div class="week-time-spacer"></div>';
+            days.forEach((day, i) => {
+                const isToday = isSameDay(day, today);
+                html += `<div class="week-day-header ${isToday ? 'today' : ''}">
+                    <div class="day-name">${dayNames[i]}</div>
+                    <div class="day-number">${day.getDate()}</div>
+                </div>`;
+            });
+            html += '</div>';
+
+            // Body
+            html += '<div class="week-body">';
+
+            // Time column
+            html += '<div class="week-time-column">';
+            for (let hour = 8; hour <= 20; hour++) {
+                html += `<div class="week-time-slot">${hour.toString().padStart(2, '0')}:00</div>`;
+            }
+            html += '</div>';
+
+            // Day columns
+            days.forEach(day => {
+                const dayAppts = getAppointmentsForDate(day);
+
+                html += '<div class="week-day-column">';
+
+                // Hour rows
+                for (let hour = 8; hour <= 20; hour++) {
+                    html += '<div class="week-hour-row"></div>';
+                }
+
+                // Appointments - thin bars with hover tooltips
+                dayAppts.forEach(appt => {
+                    const startMins = timeToMinutes(appt.startTime) - 8 * 60;
+                    const endMins = timeToMinutes(appt.endTime) - 8 * 60;
+                    const top = (startMins / 60) * 50;
+                    const height = ((endMins - startMins) / 60) * 50;
+                    const color = getColor(appt);
+
+                    html += `<div class="week-appointment-collapsed"
+                        style="top: ${top}px; height: ${height}px; background: ${color.bg}; border-left-color: ${color.border};"
+                        data-appt-id="${appt.id}"
+                        onclick="showAppointmentDetails('${appt.id}')"
+                        onmouseenter="showTooltip(event, '${appt.id}')"
+                        onmouseleave="hideTooltip()">
+                        <div class="appt-bar"></div>
+                    </div>`;
+                });
+
+                html += '</div>';
+            });
+
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+
+        function renderWeekViewExpanded(container) {
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+
+            const days = [];
+            for (let i = 0; i < 7; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i);
+                days.push(day);
+            }
+
+            const today = new Date();
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            // Get all unique groups (instructors or cars) that have appointments this week
+            const allGroups = new Set();
+            days.forEach(day => {
+                const dayAppts = getAppointmentsForDate(day);
+                dayAppts.forEach(appt => {
+                    const key = currentGroupBy === 'instructor' ? appt.instructorId : appt.carId;
+                    allGroups.add(key);
+                });
+            });
+            const groupKeys = Array.from(allGroups).sort();
+
+            let html = '<div class="week-view expanded">';
+
+            // Header row with day names spanning all group columns
+            html += '<div class="week-header">';
+            html += '<div class="week-time-spacer"></div>';
+            days.forEach((day, i) => {
+                const isToday = isSameDay(day, today);
+                const numGroups = groupKeys.length || 1;
+                html += `<div class="week-day-header ${isToday ? 'today' : ''}" style="min-width: ${numGroups * 140}px; flex: 0 0 ${numGroups * 140}px;">
+                    <div class="day-name">${dayNames[i]}</div>
+                    <div class="day-number">${day.getDate()}</div>
+                </div>`;
+            });
+            html += '</div>';
+
+            // Sub-header with group names
+            if (groupKeys.length > 0) {
+                html += '<div class="week-header" style="border-radius: 0;">';
+                html += '<div class="week-time-spacer"></div>';
+                days.forEach(day => {
+                    html += '<div style="display: flex; border-left: 1px solid var(--border);">';
+                    groupKeys.forEach((key, idx) => {
+                        const label = currentGroupBy === 'instructor' ? getInstructorName(key) : key;
+                        const colorSet = currentGroupBy === 'instructor' ? instructorColors[key] : carColors[key];
+                        html += `<div class="week-group-header" style="width: 140px; min-width: 140px; border-left-color: ${colorSet?.border || '#666'}; ${idx > 0 ? 'border-left: 1px solid var(--border);' : ''}">${label}</div>`;
+                    });
+                    html += '</div>';
+                });
+                html += '</div>';
+            }
+
+            // Body
+            html += '<div class="week-body">';
+
+            // Time column
+            html += '<div class="week-time-column">';
+            for (let hour = 8; hour <= 20; hour++) {
+                html += `<div class="week-time-slot">${hour.toString().padStart(2, '0')}:00</div>`;
+            }
+            html += '</div>';
+
+            // Day columns with group sub-columns
+            days.forEach(day => {
+                const dayAppts = getAppointmentsForDate(day);
+
+                // Group appointments by instructor/car
+                const groupedAppts = {};
+                groupKeys.forEach(key => groupedAppts[key] = []);
+                dayAppts.forEach(appt => {
+                    const key = currentGroupBy === 'instructor' ? appt.instructorId : appt.carId;
+                    if (groupedAppts[key]) {
+                        groupedAppts[key].push(appt);
+                    }
+                });
+
+                html += '<div class="week-day-container">';
+                html += '<div class="week-day-groups">';
+
+                if (groupKeys.length === 0) {
+                    // No appointments, show empty column
+                    html += '<div class="week-group-column" style="min-width: 140px;">';
+                    for (let hour = 8; hour <= 20; hour++) {
+                        html += '<div class="week-hour-row"></div>';
+                    }
+                    html += '</div>';
+                } else {
+                    groupKeys.forEach(key => {
+                        const colorSet = currentGroupBy === 'instructor' ? instructorColors[key] : carColors[key];
+
+                        html += '<div class="week-group-column">';
+
+                        // Hour grid
+                        html += '<div class="week-group-body">';
+                        for (let hour = 8; hour <= 20; hour++) {
+                            html += '<div class="week-hour-row"></div>';
+                        }
+
+                        // Appointments for this group
+                        groupedAppts[key].forEach(appt => {
+                            const startMins = timeToMinutes(appt.startTime) - 8 * 60;
+                            const endMins = timeToMinutes(appt.endTime) - 8 * 60;
+                            const top = (startMins / 60) * 50;
+                            const height = ((endMins - startMins) / 60) * 50;
+                            const color = getColor(appt);
+                            const student = getStudentName(appt.studentId);
+
+                            html += `<div class="week-expanded-appointment"
+                                style="top: ${top}px; height: ${height}px; background: ${color.bg}; border-left-color: ${color.border}; color: ${color.text};"
+                                onclick="showAppointmentDetails('${appt.id}')">
+                                <div class="appt-time">${appt.startTime}</div>
+                                <div class="appt-student">${student}</div>
+                                <div class="appt-type">${appt.lessonType}</div>
+                            </div>`;
+                        });
+
+                        html += '</div></div>';
+                    });
+                }
+
+                html += '</div></div>';
+            });
+
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+
+        function renderMonthView(container) {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const startDay = firstDay.getDay();
+            const daysInMonth = lastDay.getDate();
+
+            const today = new Date();
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            let html = '<div class="month-view">';
+
+            // Day headers
+            dayNames.forEach(name => {
+                html += `<div class="month-header-cell">${name}</div>`;
+            });
+
+            // Calculate days from previous month
+            const prevMonth = new Date(year, month, 0);
+            const prevMonthDays = prevMonth.getDate();
+
+            // Previous month days
+            for (let i = startDay - 1; i >= 0; i--) {
+                const day = prevMonthDays - i;
+                html += `<div class="month-day-cell other-month">
+                    <div class="month-day-number">${day}</div>
+                </div>`;
+            }
+
+            // Current month days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month, day);
+                const isToday = isSameDay(date, today);
+                const dayAppts = getAppointmentsForDate(date);
+
+                html += `<div class="month-day-cell ${isToday ? 'today' : ''}" onclick="navigateToDay(${year}, ${month}, ${day})">
+                    <div class="month-day-number">${day}</div>
+                    <div class="month-appointments">`;
+
+                const maxShow = 3;
+                dayAppts.slice(0, maxShow).forEach(appt => {
+                    const color = getColor(appt);
+                    html += `<div class="month-appointment" style="background: ${color.bg}; color: ${color.text};" onclick="event.stopPropagation(); showAppointmentDetails('${appt.id}')">
+                        ${appt.startTime} ${appt.lessonType}
+                    </div>`;
+                });
+
+                if (dayAppts.length > maxShow) {
+                    html += `<div class="month-more">+${dayAppts.length - maxShow} more</div>`;
+                }
+
+                html += '</div></div>';
+            }
+
+            // Next month days
+            const totalCells = startDay + daysInMonth;
+            const remainingCells = (7 - (totalCells % 7)) % 7;
+            for (let day = 1; day <= remainingCells; day++) {
+                html += `<div class="month-day-cell other-month">
+                    <div class="month-day-number">${day}</div>
+                </div>`;
+            }
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function renderLegend() {
+            const legend = document.getElementById('calendarLegend');
+            let html = '';
+
+            if (currentGroupBy === 'instructor') {
+                Object.entries(instructorColors).forEach(([id, color]) => {
+                    const name = getInstructorName(id);
+                    html += `<div class="legend-item">
+                        <div class="legend-color" style="background: ${color.border}"></div>
+                        <span>${name}</span>
+                    </div>`;
+                });
+            } else {
+                Object.entries(carColors).forEach(([id, color]) => {
+                    html += `<div class="legend-item">
+                        <div class="legend-color" style="background: ${color.border}"></div>
+                        <span>${id}</span>
+                    </div>`;
+                });
+            }
+
+            legend.innerHTML = html;
+        }
+
+        // ==========================================
+        // Table Rendering
+        // ==========================================
+        function renderTable() {
+            const container = document.getElementById('tableContent');
+            const searchTerm = document.getElementById('searchInput')?.value?.toLowerCase() || '';
+            const statusFilter = document.getElementById('statusFilter')?.value || '';
+            const instructorFilter = document.getElementById('instructorFilter')?.value || '';
+            const carFilter = document.getElementById('carFilter')?.value || '';
+
+            let filtered = appointments.filter(appt => {
+                const studentName = getStudentName(appt.studentId).toLowerCase();
+                const instructorName = getInstructorName(appt.instructorId).toLowerCase();
+
+                const matchesSearch = !searchTerm ||
+                    studentName.includes(searchTerm) ||
+                    instructorName.includes(searchTerm) ||
+                    appt.lessonType.toLowerCase().includes(searchTerm) ||
+                    appt.date.includes(searchTerm) ||
+                    appt.id.toLowerCase().includes(searchTerm);
+
+                const matchesStatus = !statusFilter || appt.status.toLowerCase().includes(statusFilter.toLowerCase());
+                const matchesInstructor = !instructorFilter || appt.instructorId === instructorFilter;
+                const matchesCar = !carFilter || appt.carId === carFilter;
+
+                return matchesSearch && matchesStatus && matchesInstructor && matchesCar;
+            });
+
+            // Sort
+            filtered.sort((a, b) => {
+                let valA, valB;
+                switch (sortColumn) {
+                    case 'date':
+                        valA = a.date + a.startTime;
+                        valB = b.date + b.startTime;
+                        break;
+                    case 'student':
+                        valA = getStudentName(a.studentId);
+                        valB = getStudentName(b.studentId);
+                        break;
+                    case 'instructor':
+                        valA = getInstructorName(a.instructorId);
+                        valB = getInstructorName(b.instructorId);
+                        break;
+                    case 'type':
+                        valA = a.lessonType;
+                        valB = b.lessonType;
+                        break;
+                    case 'status':
+                        valA = a.status;
+                        valB = b.status;
+                        break;
+                    default:
+                        valA = a.date;
+                        valB = b.date;
+                }
+
+                if (sortDirection === 'asc') {
+                    return valA > valB ? 1 : -1;
+                } else {
+                    return valA < valB ? 1 : -1;
+                }
+            });
+
+            let html = `
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search appointments..." value="${searchTerm}" oninput="renderTable()">
+                    </div>
+                    <select class="filter-select" id="statusFilter" onchange="renderTable()">
+                        <option value="">All Statuses</option>
+                        <option value="completed" ${statusFilter === 'completed' ? 'selected' : ''}>Completed</option>
+                        <option value="cancelled" ${statusFilter === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+                        <option value="no-show" ${statusFilter === 'no-show' ? 'selected' : ''}>No-Show</option>
+                    </select>
+                    <select class="filter-select" id="instructorFilter" onchange="renderTable()">
+                        <option value="">All Instructors</option>
+                        ${Object.entries(instructors).map(([id, inst]) =>
+                            `<option value="${id}" ${instructorFilter === id ? 'selected' : ''}>${inst.firstName} ${inst.lastName}</option>`
+                        ).join('')}
+                    </select>
+                    <select class="filter-select" id="carFilter" onchange="renderTable()">
+                        <option value="">All Cars</option>
+                        <option value="CAR-01" ${carFilter === 'CAR-01' ? 'selected' : ''}>CAR-01</option>
+                        <option value="CAR-02" ${carFilter === 'CAR-02' ? 'selected' : ''}>CAR-02</option>
+                        <option value="CAR-03" ${carFilter === 'CAR-03' ? 'selected' : ''}>CAR-03</option>
+                        <option value="CAR-04" ${carFilter === 'CAR-04' ? 'selected' : ''}>CAR-04</option>
+                        <option value="CAR-05" ${carFilter === 'CAR-05' ? 'selected' : ''}>CAR-05</option>
+                    </select>
+                </div>
+                <div class="table-stats">
+                    <span>Showing ${filtered.length} of ${appointments.length} appointments</span>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('date')" class="${sortColumn === 'date' ? 'sorted' : ''}">Date/Time ${sortColumn === 'date' ? (sortDirection === 'asc' ? '�' : '�') : ''}</th>
+                            <th onclick="sortTable('student')" class="${sortColumn === 'student' ? 'sorted' : ''}">Student ${sortColumn === 'student' ? (sortDirection === 'asc' ? '�' : '�') : ''}</th>
+                            <th onclick="sortTable('instructor')" class="${sortColumn === 'instructor' ? 'sorted' : ''}">Instructor ${sortColumn === 'instructor' ? (sortDirection === 'asc' ? '�' : '�') : ''}</th>
+                            <th>Car</th>
+                            <th onclick="sortTable('type')" class="${sortColumn === 'type' ? 'sorted' : ''}">Type ${sortColumn === 'type' ? (sortDirection === 'asc' ? '�' : '�') : ''}</th>
+                            <th onclick="sortTable('status')" class="${sortColumn === 'status' ? 'sorted' : ''}">Status ${sortColumn === 'status' ? (sortDirection === 'asc' ? '�' : '�') : ''}</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
+
+            filtered.forEach(appt => {
+                const insColor = instructorColors[appt.instructorId] || { border: '#666' };
+                const carColor = carColors[appt.carId] || { border: '#666' };
+
+                html += `<tr onclick="showAppointmentDetails('${appt.id}')" style="cursor: pointer;">
+                    <td>
+                        <div style="font-weight: 500; color: var(--text-primary);">${formatDate(appt.date)}</div>
+                        <div style="font-size: 0.75rem;">${appt.startTime} - ${appt.endTime}</div>
+                    </td>
+                    <td style="color: var(--text-primary);">${getStudentName(appt.studentId)}</td>
+                    <td>
+                        <span class="instructor-badge" style="background: ${insColor.bg}; color: ${insColor.border}; border: 1px solid ${insColor.border};">
+                            ${getInstructorName(appt.instructorId)}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="car-badge" style="background: ${carColor.bg}; color: ${carColor.border}; border: 1px solid ${carColor.border};">
+                            ${appt.carId}
+                        </span>
+                    </td>
+                    <td>${appt.lessonType}</td>
+                    <td><span class="status-badge ${getStatusClass(appt.status)}">${appt.status}</span></td>
+                    <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${appt.notes}">${appt.notes}</td>
+                </tr>`;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        function sortTable(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+            renderTable();
+        }
+
+        // ==========================================
+        // Modal Functions
+        // ==========================================
+        function showAppointmentDetails(appointmentId) {
+            const appt = appointments.find(a => a.id === appointmentId);
+            if (!appt) return;
+
+            const modal = document.getElementById('appointmentModal');
+            const modalBody = document.getElementById('modalBody');
+
+            const student = students[appt.studentId];
+            const instructor = instructors[appt.instructorId];
+            const insColor = instructorColors[appt.instructorId] || { border: '#666' };
+            const carColor = carColors[appt.carId] || { border: '#666' };
+
+            modalBody.innerHTML = `
+                <div class="modal-row">
+                    <div class="modal-field">
+                        <label>Date</label>
+                        <div class="value">${formatDate(appt.date)}</div>
+                    </div>
+                    <div class="modal-field">
+                        <label>Time</label>
+                        <div class="value">${appt.startTime} - ${appt.endTime}</div>
+                    </div>
+                </div>
+                <div class="modal-field">
+                    <label>Student</label>
+                    <div class="value">${getStudentName(appt.studentId)}</div>
+                    ${student ? `<div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">${student.email} � ${student.phone} � ${student.skillLevel}</div>` : ''}
+                </div>
+                <div class="modal-row">
+                    <div class="modal-field">
+                        <label>Instructor</label>
+                        <div class="value">
+                            <span class="instructor-badge" style="background: ${insColor.bg}; color: ${insColor.border}; border: 1px solid ${insColor.border};">
+                                ${getInstructorName(appt.instructorId)}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-field">
+                        <label>Car</label>
+                        <div class="value">
+                            <span class="car-badge" style="background: ${carColor.bg}; color: ${carColor.border}; border: 1px solid ${carColor.border};">
+                                ${appt.carId}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-field">
+                        <label>Lesson Type</label>
+                        <div class="value">${appt.lessonType}</div>
+                    </div>
+                    <div class="modal-field">
+                        <label>Status</label>
+                        <div class="value"><span class="status-badge ${getStatusClass(appt.status)}">${appt.status}</span></div>
+                    </div>
+                </div>
+                <div class="modal-field">
+                    <label>Pickup Location</label>
+                    <div class="value">${appt.pickupLocation}</div>
+                </div>
+                <div class="modal-field">
+                    <label>Instructor Notes</label>
+                    <div class="value" style="background: var(--bg-dark); padding: 0.75rem; border-radius: 6px; font-size: 0.875rem; line-height: 1.5;">
+                        ${appt.notes || 'No notes recorded.'}
+                    </div>
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('appointmentModal').classList.remove('active');
+        }
+
+        // ==========================================
+        // Navigation Functions
+        // ==========================================
+        function navigateCalendar(direction) {
+            if (currentView === 'day') {
+                currentDate.setDate(currentDate.getDate() + direction);
+            } else if (currentView === 'week') {
+                currentDate.setDate(currentDate.getDate() + (direction * 7));
+            } else if (currentView === 'month') {
+                currentDate.setMonth(currentDate.getMonth() + direction);
+            }
+            renderCalendar();
+        }
+
+        function goToToday() {
+            currentDate = new Date(2025, 11, 1); // Set to Dec 1 for the example data
+            renderCalendar();
+        }
+
+        function navigateToDay(year, month, day) {
+            currentDate = new Date(year, month, day);
+            currentView = 'day';
+            document.querySelectorAll('[data-view]').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-view="day"]').classList.add('active');
+            renderCalendar();
+        }
+
+        // ==========================================
+        // Tooltip Functions
+        // ==========================================
+        function showTooltip(event, appointmentId) {
+            const appt = appointments.find(a => a.id === appointmentId);
+            if (!appt) return;
+
+            const tooltip = document.getElementById('tooltip');
+            const student = getStudentName(appt.studentId);
+            const instructor = getInstructorName(appt.instructorId);
+            const color = getColor(appt);
+
+            tooltip.innerHTML = `
+                <div class="tooltip-header" style="color: ${color.border};">${student}</div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Time</span>
+                    <span class="tooltip-value">${appt.startTime} - ${appt.endTime}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Instructor</span>
+                    <span class="tooltip-value">${instructor}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Car</span>
+                    <span class="tooltip-value">${appt.carId}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Type</span>
+                    <span class="tooltip-value">${appt.lessonType}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Status</span>
+                    <span class="tooltip-value">${appt.status}</span>
+                </div>
+            `;
+
+            // Position tooltip near the cursor
+            const rect = event.target.getBoundingClientRect();
+            let left = rect.right + 10;
+            let top = rect.top;
+
+            // Ensure tooltip stays within viewport
+            const tooltipRect = tooltip.getBoundingClientRect();
+            if (left + 280 > window.innerWidth) {
+                left = rect.left - 290;
+            }
+            if (top + 200 > window.innerHeight) {
+                top = window.innerHeight - 210;
+            }
+
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+            tooltip.classList.add('visible');
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('visible');
+        }
+
+        // ==========================================
+        // Event Listeners
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tab switching
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.view-container').forEach(v => v.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    const tabName = tab.dataset.tab;
+                    document.getElementById(`${tabName}View`).classList.add('active');
+
+                    const calendarControls = document.getElementById('calendarControls');
+                    calendarControls.style.display = tabName === 'calendar' ? 'flex' : 'none';
+                });
+            });
+
+            // View toggle
+            document.querySelectorAll('[data-view]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentView = btn.dataset.view;
+                    // Show/hide expand button for week view only
+                    const expandControl = document.getElementById('expandControl');
+                    expandControl.style.display = currentView === 'week' ? 'flex' : 'none';
+                    renderCalendar();
+                });
+            });
+
+            // Expand/collapse toggle for week view
+            document.getElementById('expandBtn').addEventListener('click', () => {
+                weekExpanded = !weekExpanded;
+                const btn = document.getElementById('expandBtn');
+                const icon = document.getElementById('expandIcon');
+                const text = document.getElementById('expandText');
+                if (weekExpanded) {
+                    btn.classList.add('active');
+                    icon.textContent = '⊖';
+                    text.textContent = 'Collapse';
+                } else {
+                    btn.classList.remove('active');
+                    icon.textContent = '⊕';
+                    text.textContent = 'Expand';
+                }
+                renderCalendar();
+            });
+
+            // Group toggle
+            document.querySelectorAll('[data-group]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-group]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentGroupBy = btn.dataset.group;
+                    renderCalendar();
+                });
+            });
+
+            // Calendar navigation
+            document.getElementById('prevBtn').addEventListener('click', () => navigateCalendar(-1));
+            document.getElementById('nextBtn').addEventListener('click', () => navigateCalendar(1));
+            document.getElementById('todayBtn').addEventListener('click', goToToday);
+
+            // Modal close
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            document.getElementById('appointmentModal').addEventListener('click', (e) => {
+                if (e.target.id === 'appointmentModal') closeModal();
+            });
+
+            // Load data button
+            document.getElementById('loadDataBtn').addEventListener('click', loadExampleData);
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft' && appointments.length > 0) navigateCalendar(-1);
+                if (e.key === 'ArrowRight' && appointments.length > 0) navigateCalendar(1);
+            });
+        });
+
+        // ==========================================
+        // Load Data Function
+        // ==========================================
+        function loadExampleData() {
+            // Parse the data
+            instructors = parseInstructors(exampleInstructors);
+            students = parseStudents(exampleStudents);
+            appointments = parseAppointments(exampleAppointments);
+
+            // Update UI
+            document.getElementById('calendarEmptyState').style.display = 'none';
+            document.getElementById('calendarContent').style.display = 'flex';
+            document.getElementById('calendarLegend').style.display = 'flex';
+            document.getElementById('calendarControls').style.display = 'flex';
+
+            document.getElementById('tableEmptyState').style.display = 'none';
+            document.getElementById('tableContent').style.display = 'block';
+
+            // Update button
+            const btn = document.getElementById('loadDataBtn');
+            btn.innerHTML = '<span></span> Data Loaded';
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-secondary');
+            btn.disabled = true;
+
+            // Render views
+            renderCalendar();
+            renderTable();
+        }
+    </script>
+</body>
+</html>
