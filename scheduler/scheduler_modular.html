@@ -1055,12 +1055,19 @@
 
         .form-input.error {
             border-color: var(--danger);
-            background: rgba(239, 68, 68, 0.1);
+            background: var(--bg-dark);
         }
 
         .form-input.error:focus {
             border-color: var(--danger);
             box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+        }
+
+        /* Keep select dropdown readable even when parent has error styles */
+        select.form-input option,
+        select.form-input.error option {
+            background: var(--bg-card);
+            color: var(--text-primary);
         }
 
         textarea.form-input {
@@ -1335,4 +1342,3 @@
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>
-
