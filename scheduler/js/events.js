@@ -14,8 +14,11 @@ export function registerEventHandlers() {
             const tabName = tab.dataset.tab;
             document.getElementById(`${tabName}View`).classList.add('active');
 
-            const calendarControls = document.getElementById('calendarControls');
-            calendarControls.style.display = tabName === 'calendar' ? 'flex' : 'none';
+            // Show footer controls only for calendar view
+            const calendarFooter = document.getElementById('calendarFooter');
+            if (calendarFooter) {
+                calendarFooter.style.display = tabName === 'calendar' ? 'flex' : 'none';
+            }
         });
     });
 
@@ -31,7 +34,6 @@ export function registerEventHandlers() {
 
     document.getElementById('prevBtn').addEventListener('click', () => navigateCalendar(-1));
     document.getElementById('nextBtn').addEventListener('click', () => navigateCalendar(1));
-    document.getElementById('todayBtn').addEventListener('click', goToToday);
 
     document.getElementById('closeModal').addEventListener('click', closeModal);
     document.getElementById('appointmentModal').addEventListener('click', (e) => {

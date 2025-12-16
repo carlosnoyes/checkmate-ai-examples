@@ -1,12 +1,14 @@
 import { renderCalendar } from './calendar.js';
 import { renderTable, sortTable } from './table.js';
-import { showAppointmentDetails } from './modal.js';
+import { showAppointmentDetails, showNewAppointmentForm, closeModal } from './modal.js';
 import { registerEventHandlers } from './events.js';
 
 function exposeGlobals() {
     window.renderTable = renderTable;
     window.sortTable = sortTable;
     window.showAppointmentDetails = showAppointmentDetails;
+    window.showNewAppointmentForm = showNewAppointmentForm;
+    window.closeModal = closeModal;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

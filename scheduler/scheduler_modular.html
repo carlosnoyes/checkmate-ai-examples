@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driving School Scheduler</title>
+    <title>Checkmate AI Scheduler</title>
     <style>
         :root {
             --primary: #6366f1;
@@ -92,6 +92,12 @@
             align-items: center;
         }
 
+
+        .header-tabs {
+            display: flex;
+            gap: 0.5rem;
+        }
+
         .btn {
             padding: 0.625rem 1.25rem;
             border-radius: 8px;
@@ -116,6 +122,18 @@
             box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
         }
 
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-primary:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
         .btn-secondary {
             background: var(--bg-hover);
             color: var(--text-primary);
@@ -131,46 +149,38 @@
             display: flex;
             flex-direction: column;
             height: calc(100vh - 73px);
+            position: relative;
         }
 
         /* Tabs */
-        .tabs-container {
-            background: var(--bg-card);
-            border-bottom: 1px solid var(--border);
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 0;
-        }
-
         .tab {
-            padding: 1rem 1.5rem;
+            padding: 0.625rem 1.25rem;
             font-weight: 500;
+            font-size: 0.875rem;
             color: var(--text-secondary);
             cursor: pointer;
-            border-bottom: 2px solid transparent;
+            border-radius: 8px;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            background: transparent;
+            border: 1px solid transparent;
         }
 
         .tab:hover {
             color: var(--text-primary);
+            background: var(--bg-hover);
         }
 
         .tab.active {
             color: var(--primary-light);
-            border-bottom-color: var(--primary);
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--primary);
         }
 
         .tab-icon {
-            font-size: 1.125rem;
+            font-size: 1rem;
         }
 
         /* Controls */
@@ -440,21 +450,6 @@
             overflow: hidden;
         }
 
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: var(--bg-card);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .calendar-nav {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
         .calendar-nav-btn {
             width: 36px;
             height: 36px;
@@ -473,30 +468,11 @@
             background: var(--border);
         }
 
-        .calendar-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .today-btn {
-            padding: 0.5rem 1rem;
-            background: var(--bg-hover);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-size: 0.875rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .today-btn:hover {
-            background: var(--border);
-        }
-
         .calendar-body {
             flex: 1;
             overflow: auto;
-            padding: 1rem 2rem;
+            padding: 0;
+            position: relative;
         }
 
         /* Day View */
@@ -629,13 +605,14 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            border-radius: 12px 12px 0 0;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .week-time-spacer {
             width: 60px;
             flex-shrink: 0;
+            background: var(--bg-dark);
         }
 
         .week-day-header {
@@ -670,9 +647,9 @@
         .week-body {
             display: flex;
             flex: 1;
-            background: var(--border);
-            border-radius: 0 0 12px 12px;
-            overflow: hidden;
+            background: var(--bg-dark);
+            overflow: visible;
+            gap: 0;
         }
 
         .week-time-column {
@@ -744,7 +721,7 @@
         .week-day-container {
             display: flex;
             flex-direction: column;
-            border-left: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
         .week-day-title {
@@ -781,15 +758,9 @@
         }
 
         .week-group-column {
-            min-width: 140px;
-            width: 140px;
             background: var(--bg-card);
-            border-left: 1px solid var(--border);
             position: relative;
-        }
-
-        .week-group-column:first-child {
-            border-left: none;
+            flex-shrink: 0;
         }
 
         .week-group-header {
@@ -802,6 +773,37 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        /* Compact header styles */
+        .day-header-container {
+            background: var(--bg-dark);
+            flex-shrink: 0;
+        }
+
+        .compact-date-label {
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--text-muted);
+            background: linear-gradient(180deg, var(--bg-hover) 0%, var(--bg-card) 100%);
+            color: var(--text-primary);
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .compact-date-label.today {
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.1) 100%);
+            color: var(--primary-light);
+            border-bottom-color: var(--primary);
+        }
+
+        .compact-day-label {
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
         .week-group-body {
@@ -1028,14 +1030,155 @@
             gap: 1rem;
         }
 
+        .form-input {
+            width: 100%;
+            padding: 0.625rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .form-input:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-input.error {
+            border-color: var(--danger);
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .form-input.error:focus {
+            border-color: var(--danger);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            min-height: 1rem;
+            display: block;
+        }
+
+        .autocomplete-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--primary);
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .autocomplete-item {
+            padding: 0.625rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .autocomplete-item:last-child {
+            border-bottom: none;
+        }
+
+        .autocomplete-item:hover,
+        .autocomplete-item.active {
+            background: var(--bg-hover);
+        }
+
+        .autocomplete-item.autocomplete-no-results {
+            cursor: default;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .autocomplete-item.autocomplete-no-results:hover {
+            background: transparent;
+        }
+
+        .autocomplete-name {
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .autocomplete-email {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .footer-controls {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .footer-nav .calendar-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0;
+            min-width: 160px;
+            text-align: center;
+        }
+
+        .footer-nav .calendar-nav-btn {
+            width: 32px;
+            height: 32px;
+            font-size: 0.875rem;
+        }
+
         /* Legend */
         .legend {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
-            padding: 0.75rem 2rem;
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
+            flex-wrap: nowrap;
+            padding: 0;
+            overflow-x: auto;
+            flex: 1;
         }
 
         .legend-item {
@@ -1107,75 +1250,75 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <div class="logo-icon">=�</div>
-            <h1>DrivePro Scheduler</h1>
+            <div class="logo-icon">📅</div>
+            <h1>Checkmate AI Scheduler</h1>
         </div>
+
+        <!-- Tabs and Load Button (right) -->
         <div class="header-actions">
             <button class="btn btn-primary" id="loadDataBtn">
-                <span>=�</span>
+                <span>📥</span>
                 Load Example Data
             </button>
+            <div class="header-tabs" id="headerTabs" style="display: none;">
+                <div class="tab active" data-tab="calendar">
+                    <span class="tab-icon">📅</span>
+                    Calendar
+                </div>
+                <div class="tab" data-tab="table">
+                    <span class="tab-icon">📊</span>
+                    Table
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Container -->
     <main class="main-container">
-        <!-- Tabs -->
-        <div class="tabs-container">
-            <div class="tabs">
-                <div class="tab active" data-tab="calendar">
-                    <span class="tab-icon">=�</span>
-                    Calendar
-                </div>
-                <div class="tab" data-tab="table">
-                    <span class="tab-icon">=�</span>
-                    Table
-                </div>
-            </div>
-            <div class="controls" id="calendarControls" style="display: none;">
-                <div class="control-group">
-                    <span class="control-label">Group By</span>
-                    <div class="toggle-group">
-                        <button class="toggle-btn active" data-group="instructor">Instructor</button>
-                        <button class="toggle-btn" data-group="car">Car</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Content -->
         <div class="content">
             <!-- Calendar View -->
             <div class="view-container active" id="calendarView">
                 <div class="empty-state" id="calendarEmptyState">
-                    <div class="empty-state-icon">=�</div>
+                    <div class="empty-state-icon">📅</div>
                     <h2>No Appointments</h2>
                     <p>Click "Load Example Data" to populate the scheduler with sample driving lesson appointments.</p>
                 </div>
                 <div class="calendar-container" id="calendarContent" style="display: none;">
-                    <div class="calendar-header">
-                        <div class="calendar-nav">
-                            <button class="calendar-nav-btn" id="prevBtn">�</button>
-                            <h2 class="calendar-title" id="calendarTitle">December 2025</h2>
-                            <button class="calendar-nav-btn" id="nextBtn">�</button>
-                        </div>
-                        <button class="today-btn" id="todayBtn">Today</button>
-                    </div>
                     <div class="calendar-body" id="calendarBody"></div>
                 </div>
-                <div class="legend" id="calendarLegend" style="display: none;"></div>
             </div>
 
             <!-- Table View -->
             <div class="view-container" id="tableView">
                 <div class="empty-state" id="tableEmptyState">
-                    <div class="empty-state-icon">=�</div>
+                    <div class="empty-state-icon">📊</div>
                     <h2>No Data</h2>
                     <p>Click "Load Example Data" to populate the table with appointment records.</p>
                 </div>
                 <div class="table-container" id="tableContent" style="display: none;"></div>
             </div>
         </div>
+
+        <!-- Combined Footer with Legend and Group By Controls -->
+        <footer class="footer" id="calendarFooter" style="display: none;">
+            <!-- Week Navigation -->
+            <div class="footer-nav" id="headerNav" style="display: none;">
+                <button class="calendar-nav-btn" id="prevBtn">◀</button>
+                <h2 class="calendar-title" id="calendarTitle">December 2025</h2>
+                <button class="calendar-nav-btn" id="nextBtn">▶</button>
+            </div>
+
+            <div class="legend" id="calendarLegend"></div>
+
+            <div class="footer-controls">
+                <span class="control-label">Group By:</span>
+                <div class="toggle-group">
+                    <button class="toggle-btn active" data-group="instructor">Instructor</button>
+                    <button class="toggle-btn" data-group="car">Car</button>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <!-- Appointment Detail Modal -->
@@ -1183,7 +1326,7 @@
         <div class="modal">
             <div class="modal-header">
                 <h2>Appointment Details</h2>
-                <button class="modal-close" id="closeModal"></button>
+                <button class="modal-close" id="closeModal">✕</button>
             </div>
             <div class="modal-body" id="modalBody"></div>
         </div>

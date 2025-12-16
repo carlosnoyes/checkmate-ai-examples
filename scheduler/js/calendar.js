@@ -1,5 +1,5 @@
 import { carColors, instructorColors, state } from './state.js';
-import { showAppointmentDetails } from './modal.js';
+import { showAppointmentDetails, showNewAppointmentForm } from './modal.js';
 import {
     formatDate,
     getAppointmentsForDate,
@@ -58,32 +58,40 @@ function renderWeekViewExpanded(container) {
 
     let html = '<div class="week-view expanded">';
 
+    // Single compact header row with date above each group
     html += '<div class="week-header">';
     html += '<div class="week-time-spacer"></div>';
-    days.forEach((day, i) => {
-        const isToday = isSameDay(day, today);
-        const numGroups = groupKeys.length || 1;
-        html += `<div class="week-day-header ${isToday ? 'today' : ''}" style="min-width: ${numGroups * 140}px; flex: 0 0 ${numGroups * 140}px;">
-            <div class="day-name">${dayNames[i]}</div>
-            <div class="day-number">${day.getDate()}</div>
-        </div>`;
-    });
-    html += '</div>';
 
-    if (groupKeys.length > 0) {
-        html += '<div class="week-header" style="border-radius: 0;">';
-        html += '<div class="week-time-spacer"></div>';
-        days.forEach(day => {
-            html += '<div style="display: flex; border-left: 1px solid var(--border);">';
+    days.forEach((day, dayIdx) => {
+        const isToday = isSameDay(day, today);
+        const dayOfWeek = dayNames[day.getDay()];
+        const dateNum = day.getDate();
+
+        if (groupKeys.length === 0) {
+            // No groups, just show the day
+            html += `<div class="week-day-header ${isToday ? 'today' : ''}" style="width: 140px; min-width: 140px; flex: 0 0 140px;">
+                <div class="compact-day-label">${dayOfWeek} ${dateNum}</div>
+            </div>`;
+        } else {
+            // Create a container for this day's columns
+            html += `<div class="day-header-container" style="display: flex; flex-direction: column; width: ${groupKeys.length * 140}px; min-width: ${groupKeys.length * 140}px; ${dayIdx > 0 ? 'border-left: 2px solid var(--text-muted);' : ''}">`;
+
+            // Date label spanning all groups for this day
+            html += `<div class="compact-date-label ${isToday ? 'today' : ''}">${dayOfWeek} ${dateNum}</div>`;
+
+            // Group labels below the date
+            html += '<div style="display: flex;">';
             groupKeys.forEach((key, idx) => {
                 const label = state.currentGroupBy === 'instructor' ? getInstructorName(key) : key;
                 const colorSet = state.currentGroupBy === 'instructor' ? instructorColors[key] : carColors[key];
-                html += `<div class="week-group-header" style="width: 140px; min-width: 140px; border-left-color: ${colorSet?.border || '#666'}; ${idx > 0 ? 'border-left: 1px solid var(--border);' : ''}">${label}</div>`;
+                html += `<div class="week-group-header" style="width: 140px; min-width: 140px; flex: 0 0 140px; ${idx > 0 ? 'border-left: 1px solid var(--border);' : ''} background: ${colorSet?.border || 'var(--bg-dark)'}22;">${label}</div>`;
             });
             html += '</div>';
-        });
-        html += '</div>';
-    }
+
+            html += '</div>';
+        }
+    });
+    html += '</div>';
 
     html += '<div class="week-body">';
 
@@ -93,7 +101,7 @@ function renderWeekViewExpanded(container) {
     }
     html += '</div>';
 
-    days.forEach(day => {
+    days.forEach((day, dayIdx) => {
         const dayAppts = getAppointmentsForDate(day);
 
         const groupedAppts = {};
@@ -105,23 +113,34 @@ function renderWeekViewExpanded(container) {
             }
         });
 
-        html += '<div class="week-day-container">';
+        html += `<div class="week-day-container" style="width: ${groupKeys.length * 140}px; min-width: ${groupKeys.length * 140}px; flex: 0 0 ${groupKeys.length * 140}px;">`;
         html += '<div class="week-day-groups">';
 
         if (groupKeys.length === 0) {
-            html += '<div class="week-group-column" style="min-width: 140px;">';
+            html += `<div class="week-group-column" style="width: 140px; min-width: 140px; flex: 0 0 140px; ${dayIdx > 0 ? 'border-left: 2px solid var(--text-muted);' : ''}">`;
             for (let hour = 8; hour <= 20; hour++) {
-                html += '<div class="week-hour-row"></div>';
+                const timeStr = `${hour.toString().padStart(2, '0')}:00`;
+                const dateStr = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`;
+                html += `<div class="week-hour-row" onclick="showNewAppointmentForm('${dateStr}', '${timeStr}', null)" style="cursor: pointer;" title="Click to create appointment"></div>`;
             }
             html += '</div>';
         } else {
-            groupKeys.forEach(key => {
-                const colorSet = state.currentGroupBy === 'instructor' ? instructorColors[key] : carColors[key];
+            groupKeys.forEach((key, idx) => {
+                // First column of each day (idx === 0) gets the thick day border if it's not Sunday (dayIdx > 0)
+                // Subsequent columns get the thin instructor separator
+                let columnBorder = '';
+                if (idx === 0 && dayIdx > 0) {
+                    columnBorder = 'border-left: 2px solid var(--text-muted);';
+                } else if (idx > 0) {
+                    columnBorder = 'border-left: 1px solid var(--border);';
+                }
 
-                html += '<div class="week-group-column">';
+                html += `<div class="week-group-column" style="width: 140px; min-width: 140px; flex: 0 0 140px; ${columnBorder}">`;
                 html += '<div class="week-group-body">';
                 for (let hour = 8; hour <= 20; hour++) {
-                    html += '<div class="week-hour-row"></div>';
+                    const timeStr = `${hour.toString().padStart(2, '0')}:00`;
+                    const dateStr = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`;
+                    html += `<div class="week-hour-row" onclick="showNewAppointmentForm('${dateStr}', '${timeStr}', '${key}')" style="cursor: pointer;" title="Click to create appointment"></div>`;
                 }
 
                 groupedAppts[key].forEach(appt => {

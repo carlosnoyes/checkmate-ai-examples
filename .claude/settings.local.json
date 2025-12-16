@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python:*)",
       "Bash(cat:*)",
-      "Bash(start scheduler.html)"
+      "Bash(start scheduler.html)",
+      "Bash(start scheduler_modular.html)"
     ]
   }
 }

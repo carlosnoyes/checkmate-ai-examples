@@ -2,13 +2,13 @@ export function parseInstructors(csv) {
     const lines = csv.trim().split('\n');
     const result = {};
     for (let i = 1; i < lines.length; i++) {
-        const cols = lines[i].split('\t');
+        const cols = lines[i].split(',');
         if (cols.length >= 3) {
             result[cols[0]] = {
                 id: cols[0],
                 firstName: cols[1],
                 lastName: cols[2],
-                type: cols[3] || '',
+                employment: cols[3] || '',
                 targetHours: parseInt(cols[4]) || 0
             };
         }

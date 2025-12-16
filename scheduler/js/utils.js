@@ -55,3 +55,58 @@ export function getStatusClass(status) {
     if (status.toLowerCase().includes('cancelled') || status.toLowerCase().includes('no-show')) return 'status-cancelled';
     return 'status-scheduled';
 }
+
+export function checkTimeOverlap(start1, end1, start2, end2) {
+    const start1Mins = timeToMinutes(start1);
+    const end1Mins = timeToMinutes(end1);
+    const start2Mins = timeToMinutes(start2);
+    const end2Mins = timeToMinutes(end2);
+
+    return start1Mins < end2Mins && end1Mins > start2Mins;
+}
+
+export function findConflicts(date, startTime, endTime, instructorId, carId, studentId, excludeApptId = null) {
+    const conflicts = {
+        instructor: null,
+        car: null,
+        student: null
+    };
+
+    // Use the date string directly to avoid timezone issues with new Date() parsing
+    const dateAppts = state.appointments.filter(a => a.date === date);
+
+    for (const appt of dateAppts) {
+        // Skip the appointment we're editing (if any)
+        if (excludeApptId && appt.id === excludeApptId) continue;
+
+        const hasTimeOverlap = checkTimeOverlap(startTime, endTime, appt.startTime, appt.endTime);
+
+        if (!hasTimeOverlap) continue;
+
+        // Check instructor conflict
+        if (instructorId && appt.instructorId === instructorId && !conflicts.instructor) {
+            conflicts.instructor = {
+                time: `${appt.startTime} - ${appt.endTime}`,
+                student: getStudentName(appt.studentId)
+            };
+        }
+
+        // Check car conflict
+        if (carId && appt.carId === carId && !conflicts.car) {
+            conflicts.car = {
+                time: `${appt.startTime} - ${appt.endTime}`,
+                student: getStudentName(appt.studentId)
+            };
+        }
+
+        // Check student conflict
+        if (studentId && appt.studentId === studentId && !conflicts.student) {
+            conflicts.student = {
+                time: `${appt.startTime} - ${appt.endTime}`,
+                instructor: getInstructorName(appt.instructorId)
+            };
+        }
+    }
+
+    return conflicts;
+}
