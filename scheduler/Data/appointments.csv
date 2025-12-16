@@ -1,201 +1,116 @@
 appointment_id,date,start_time,end_time,student_id,instructor_id,car_id,lesson_type,pickup_location,status,instructor_notes
-APPT-2001,2025-12-01,08:00,10:00,ST-001,INS-001,CAR-01,Standard,Home,Completed,Student is hesitant on left turns. Needs more scanning.
-APPT-2002,2025-12-01,08:00,10:00,ST-002,INS-002,CAR-02,Highway,Home,Completed,Merged well at 65mph. Good lane discipline.
-APPT-2012,2025-12-01,08:00,10:00,ST-012,INS-003,CAR-03,Standard,Home,Completed,Basics. Steering is jerky.
-APPT-2003,2025-12-01,10:00,12:00,ST-003,INS-001,CAR-01,Standard,Home,Completed,Worked on smooth braking. Much improved.
-APPT-2004,2025-12-01,10:00,12:00,ST-004,INS-002,CAR-02,Parking,Home,Completed,Parallel parking needs work. Hits curb often.
-APPT-2013,2025-12-01,10:00,12:00,ST-013,INS-003,CAR-03,Test Prep,Home,Completed,Perfect drive.
-APPT-2014,2025-12-01,12:00,14:00,ST-014,INS-001,CAR-01,Standard,School,Completed,Distracted easily.
-APPT-2006,2025-12-01,13:00,15:00,ST-006,INS-001,CAR-01,Standard,School,Completed,Nervous in traffic. Kept stalling manual transmission.
-APPT-2005,2025-12-01,13:00,15:00,ST-005,INS-003,CAR-02,Test Prep,Home,Completed,Ready for test. 100% on mock score.
-APPT-2008,2025-12-01,15:00,17:00,ST-008,INS-001,CAR-01,Test Prep,Home,Completed,Review 3-point turn. ready.
-APPT-2007,2025-12-01,15:00,17:00,ST-007,INS-003,CAR-02,Standard,Home,Completed,Good observation at intersections.
-APPT-2009,2025-12-01,17:00,19:00,ST-009,INS-003,CAR-01,Standard,Home,No-Show,Student not home. Waited 15 mins.
-APPT-2010,2025-12-01,17:00,19:00,ST-010,INS-004,CAR-02,Highway,Home,Completed,Night driving practice.
-APPT-2011,2025-12-01,18:00,20:00,ST-011,INS-003,CAR-01,Standard,Home,Completed,Struggles with glare.
-APPT-2015,2025-12-02,08:00,10:00,ST-015,INS-001,CAR-01,Standard,Home,Completed,Steering control improved.
-APPT-2016,2025-12-02,08:00,10:00,ST-016,INS-002,CAR-02,Highway,Home,Completed,Speed maintenance is good.
-APPT-2018,2025-12-02,10:00,12:00,ST-018,INS-001,CAR-01,Standard,Home,Completed,Wide right turns. Corrected twice.
-APPT-2017,2025-12-02,10:00,12:00,ST-017,INS-002,CAR-02,Test Prep,Home,Completed,Mock test passed.
-APPT-2026,2025-12-02,12:00,14:00,ST-026,INS-001,CAR-01,Standard,Home,Completed,Cornering too fast.
-APPT-2019,2025-12-02,13:00,15:00,ST-019,INS-001,CAR-01,Standard,Home,Completed,Smooth acceleration.
-APPT-2020,2025-12-02,13:00,15:00,ST-020,INS-002,CAR-02,Highway,School,Completed,Merge anxiety.
-APPT-2027,2025-12-02,14:00,16:00,ST-027,INS-001,CAR-01,Standard,Home,Completed,Solid drive.
-APPT-2021,2025-12-02,15:00,17:00,ST-021,INS-001,CAR-01,Standard,Home,Cancelled-Student,Sick.
-APPT-2022,2025-12-02,15:00,17:00,ST-022,INS-002,CAR-02,Standard,Home,Completed,Good mirror checks.
-APPT-2028,2025-12-02,16:00,18:00,ST-028,INS-003,CAR-01,Test Prep,Home,Completed,Test ready.
-APPT-2023,2025-12-02,17:00,19:00,ST-023,INS-003,CAR-01,Test Prep,Home,Completed,Needs to stop fully at stop signs.
-APPT-2024,2025-12-02,17:00,19:00,ST-024,INS-004,CAR-02,Standard,Home,Completed,Parking lot practice.
-APPT-2025,2025-12-02,18:00,20:00,ST-025,INS-003,CAR-01,Standard,Home,Completed,Night drive. Good high beam use.
-APPT-2029,2025-12-03,08:00,10:00,ST-029,INS-001,CAR-01,Standard,Home,Completed,Confused by roundabouts.
-APPT-2030,2025-12-03,08:00,10:00,ST-030,INS-002,CAR-02,Parking,Home,Completed,Reverse parking is solid.
-APPT-2041,2025-12-03,08:00,10:00,ST-041,INS-003,CAR-03,Standard,Home,Completed,Learning pedals.
-APPT-2031,2025-12-03,10:00,12:00,ST-031,INS-001,CAR-01,Standard,Home,Completed,Drifting in lane.
-APPT-2032,2025-12-03,10:00,12:00,ST-032,INS-002,CAR-02,Standard,Home,Completed,Good defensive driving.
-APPT-2042,2025-12-03,10:00,12:00,ST-042,INS-003,CAR-03,Standard,Home,Completed,Improving turns.
-APPT-2033,2025-12-03,12:00,14:00,ST-033,INS-001,CAR-01,Test Prep,Home,Completed,Review parallel park.
-APPT-2034,2025-12-03,12:00,14:00,ST-034,INS-002,CAR-02,Standard,School,Completed,Scared of trucks.
-APPT-2035,2025-12-03,14:00,16:00,ST-035,INS-001,CAR-01,Highway,Home,Completed,Lane changes smooth.
-APPT-2036,2025-12-03,14:00,16:00,ST-036,INS-002,CAR-02,Standard,Home,Completed,First lesson. Overview of controls.
-APPT-2037,2025-12-03,16:00,18:00,ST-037,INS-003,CAR-01,Standard,Home,Completed,Following distance too close.
-APPT-2038,2025-12-03,16:00,18:00,ST-038,INS-005,CAR-02,Test Prep,Home,Completed,Ready.
-APPT-2039,2025-12-03,18:00,20:00,ST-039,INS-003,CAR-01,Standard,Home,Completed,Rain driving practice.
-APPT-2040,2025-12-03,18:00,20:00,ST-040,INS-005,CAR-02,Highway,Home,Completed,Exit ramp speed good.
-APPT-2043,2025-12-04,08:00,10:00,ST-043,INS-001,CAR-01,Test Prep,Home,Completed,Watch speed zones.
-APPT-2044,2025-12-04,08:00,10:00,ST-044,INS-002,CAR-02,Standard,Home,Completed,Hands crossing on wheel.
-APPT-2055,2025-12-04,08:00,10:00,ST-055,INS-003,CAR-03,Highway,Home,Completed,Speed varies too much.
-APPT-2056,2025-12-04,10:00,12:00,ST-056,INS-001,CAR-01,Standard,Home,Completed,Starting from stop is jerky.
-APPT-2045,2025-12-04,10:00,12:00,ST-045,INS-002,CAR-02,Highway,Home,Completed,Merging is safe.
-APPT-2046,2025-12-04,10:00,12:00,ST-046,INS-003,CAR-03,Standard,Home,Completed,Very nervous.
-APPT-2047,2025-12-04,12:00,14:00,ST-047,INS-001,CAR-01,Standard,School,Completed,Right of way confusion.
-APPT-2048,2025-12-04,12:00,14:00,ST-048,INS-002,CAR-02,Test Prep,Home,Completed,Excellent driver.
-APPT-2050,2025-12-04,14:00,16:00,ST-050,INS-001,CAR-01,Highway,Home,Completed,Traffic handling good.
-APPT-2049,2025-12-04,14:00,16:00,ST-049,INS-002,CAR-02,Standard,Home,Cancelled-School,Car issue (tire).
-APPT-2052,2025-12-04,16:00,18:00,ST-052,INS-003,CAR-01,Standard,Home,Completed,Checking blind spots well.
-APPT-2051,2025-12-04,16:00,18:00,ST-051,INS-005,CAR-02,Standard,Home,Completed,Basic steering.
-APPT-2053,2025-12-04,18:00,20:00,ST-053,INS-003,CAR-01,Test Prep,Home,Completed,Mock test pass.
-APPT-2054,2025-12-04,18:00,20:00,ST-054,INS-005,CAR-02,Standard,Home,Completed,Needs more practice.
-APPT-2057,2025-12-05,08:00,10:00,ST-057,INS-001,CAR-01,Standard,Home,Completed,Traffic circles.
-APPT-2058,2025-12-05,08:00,10:00,ST-058,INS-002,CAR-02,Test Prep,Home,Completed,Ready.
-APPT-2069,2025-12-05,08:00,10:00,ST-069,INS-003,CAR-03,Standard,Home,Completed,Braking too hard.
-APPT-2059,2025-12-05,10:00,12:00,ST-059,INS-001,CAR-01,Standard,Home,No-Show,Forgot appointment.
-APPT-2060,2025-12-05,10:00,12:00,ST-060,INS-002,CAR-02,Highway,Home,Completed,Great focus.
-APPT-2070,2025-12-05,10:00,12:00,ST-070,INS-003,CAR-03,Parking,Home,Completed,Needs reference points.
-APPT-2061,2025-12-05,12:00,14:00,ST-061,INS-001,CAR-01,Standard,School,Completed,Needs basics.
-APPT-2062,2025-12-05,12:00,14:00,ST-062,INS-002,CAR-02,Standard,Home,Completed,Signaling late.
-APPT-2063,2025-12-05,14:00,16:00,ST-063,INS-001,CAR-01,Test Prep,Home,Completed,Parking needs polish.
-APPT-2064,2025-12-05,14:00,16:00,ST-064,INS-002,CAR-02,Standard,Home,Completed,Scared of speed.
-APPT-2066,2025-12-05,16:00,18:00,ST-066,INS-004,CAR-01,Standard,Home,Completed,Parking lot turns.
-APPT-2065,2025-12-05,16:00,18:00,ST-065,INS-005,CAR-02,Highway,Home,Completed,Confident.
-APPT-2067,2025-12-05,18:00,20:00,ST-067,INS-004,CAR-01,Standard,Home,Completed,Urban driving.
-APPT-2068,2025-12-05,18:00,20:00,ST-068,INS-005,CAR-02,Test Prep,Home,Completed,Ready for DMV.
-APPT-2073,2025-12-06,08:00,10:00,ST-073,INS-002,CAR-01,Test Prep,Home,Completed,Check mirrors more.
-APPT-2071,2025-12-06,08:00,10:00,ST-071,INS-004,CAR-02,Standard,Home,Completed,First time.
-APPT-2072,2025-12-06,08:00,10:00,ST-072,INS-001,CAR-03,Standard,Home,Completed,Good progress.
-APPT-2075,2025-12-06,10:00,12:00,ST-075,INS-002,CAR-01,Highway,Home,Completed,Smooth lane change.
-APPT-2076,2025-12-06,10:00,12:00,ST-076,INS-004,CAR-02,Standard,Home,Completed,Needs confidence.
-APPT-2074,2025-12-06,10:00,12:00,ST-074,INS-001,CAR-03,Standard,Home,Completed,Jerky steering.
-APPT-2077,2025-12-06,12:00,14:00,ST-077,INS-002,CAR-01,Standard,Home,Completed,Rolling stops.
-APPT-2078,2025-12-06,12:00,14:00,ST-078,INS-004,CAR-02,Test Prep,Home,Completed,Good.
-APPT-2079,2025-12-06,12:00,14:00,ST-079,INS-005,CAR-03,Standard,Home,Completed,Parking lot only.
-APPT-2080,2025-12-06,14:00,16:00,ST-080,INS-002,CAR-01,Highway,Home,Completed,Good speed.
-APPT-2081,2025-12-06,14:00,16:00,ST-081,INS-004,CAR-02,Standard,Home,Completed,Stalled engine.
-APPT-2082,2025-12-06,14:00,16:00,ST-082,INS-005,CAR-03,Standard,Home,Completed,Drifting right.
-APPT-2083,2025-12-06,16:00,18:00,ST-083,INS-005,CAR-01,Test Prep,Home,Cancelled-Student,Family emergency.
-APPT-2084,2025-12-06,16:00,18:00,ST-084,INS-001,CAR-02,Standard,Home,Completed,Turning wide.
-APPT-2085,2025-12-06,18:00,20:00,ST-085,INS-005,CAR-01,Highway,Home,Completed,Night drive intro.
-APPT-2088,2025-12-07,08:00,10:00,ST-088,INS-004,CAR-01,Test Prep,Home,Completed,Parallel park perfect.
-APPT-2086,2025-12-07,08:00,10:00,ST-086,INS-005,CAR-02,Standard,Home,Completed,Learning pedals.
-APPT-2087,2025-12-07,08:00,10:00,ST-087,INS-001,CAR-03,Standard,Home,Completed,Intersections good.
-APPT-2089,2025-12-07,10:00,12:00,ST-089,INS-004,CAR-01,Standard,Home,Completed,Unsure of self.
-APPT-2090,2025-12-07,10:00,12:00,ST-090,INS-005,CAR-02,Highway,Home,Completed,Merging fine.
-APPT-2091,2025-12-07,10:00,12:00,ST-091,INS-001,CAR-03,Standard,Home,Completed,Struggles with turn signals.
-APPT-2092,2025-12-07,12:00,14:00,ST-092,INS-003,CAR-01,Standard,Home,Completed,Four way stops confused.
-APPT-2093,2025-12-07,12:00,14:00,ST-093,INS-004,CAR-02,Test Prep,Home,Completed,Passed mock.
-APPT-2094,2025-12-07,12:00,14:00,ST-094,INS-005,CAR-03,Standard,Home,Completed,Very timid.
-APPT-2096,2025-12-07,14:00,16:00,ST-096,INS-003,CAR-01,Standard,Home,Completed,Steering needs work.
-APPT-2095,2025-12-07,14:00,16:00,ST-095,INS-004,CAR-02,Highway,Home,Completed,Cruising speed steady.
-APPT-2097,2025-12-07,14:00,16:00,ST-097,INS-005,CAR-03,Standard,Home,Completed,Lane position good.
-APPT-2099,2025-12-07,16:00,18:00,ST-099,INS-003,CAR-01,Standard,Home,Completed,Starts and stops good.
-APPT-2098,2025-12-07,16:00,18:00,ST-098,INS-001,CAR-02,Test Prep,Home,Completed,Ready.
-APPT-2100,2025-12-07,18:00,20:00,ST-100,INS-003,CAR-01,Highway,Home,Completed,Night highway driving.
-APPT-2101,2025-12-08,08:00,10:00,ST-001,INS-001,CAR-01,Standard,Home,Completed,Good improvement on speed control.
-APPT-2102,2025-12-08,10:00,12:00,ST-002,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2103,2025-12-08,12:00,14:00,ST-003,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2104,2025-12-08,12:00,14:00,ST-004,INS-003,CAR-02,Highway,Home,Completed,Good improvement on 3-point turns.
-APPT-2105,2025-12-08,12:00,14:00,ST-005,INS-004,CAR-03,Highway,Home,Completed,Needs more practice with checking blind spots.
-APPT-2106,2025-12-08,14:00,16:00,ST-006,INS-004,CAR-01,Parking,Home,Completed,Still struggling with parallel parking.
-APPT-2107,2025-12-08,14:00,16:00,ST-007,INS-003,CAR-02,Highway,Home,Completed,Excellent focus during lane changes.
-APPT-2108,2025-12-08,14:00,16:00,ST-008,INS-001,CAR-03,Parking,Home,Completed,Still struggling with highway merging.
-APPT-2109,2025-12-08,16:00,18:00,ST-009,INS-003,CAR-01,Standard,Home,Completed,Still struggling with highway merging.
-APPT-2110,2025-12-08,16:00,18:00,ST-010,INS-004,CAR-02,Test Prep,Home,Completed,Good improvement on lane changes.
-APPT-2111,2025-12-08,18:00,20:00,ST-011,INS-004,CAR-01,Highway,Home,No-Show,Needs more practice with speed control.
-APPT-2112,2025-12-08,18:00,20:00,ST-012,INS-003,CAR-02,Standard,Home,Completed,Needs more practice with parallel parking.
-APPT-2113,2025-12-09,08:00,10:00,ST-013,INS-001,CAR-01,Standard,Home,Completed,Excellent focus during 3-point turns.
-APPT-2114,2025-12-09,08:00,10:00,ST-014,INS-002,CAR-02,Standard,Home,Cancelled-School,Needs more practice with 3-point turns.
-APPT-2115,2025-12-09,10:00,12:00,ST-015,INS-002,CAR-01,Standard,Home,Completed,Needs more practice with lane changes.
-APPT-2116,2025-12-09,10:00,12:00,ST-016,INS-001,CAR-02,Test Prep,Home,Completed,Good improvement on speed control.
-APPT-2117,2025-12-09,12:00,14:00,ST-017,INS-003,CAR-01,Standard,Home,Completed,Much better this week. 3-point turns.
-APPT-2118,2025-12-09,12:00,14:00,ST-018,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2119,2025-12-09,12:00,14:00,ST-019,INS-002,CAR-03,Parking,Home,Completed,Much better this week. lane changes.
-APPT-2120,2025-12-09,14:00,16:00,ST-020,INS-001,CAR-01,Highway,Home,Completed,Much better this week. speed control.
-APPT-2121,2025-12-09,14:00,16:00,ST-021,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2122,2025-12-09,14:00,16:00,ST-022,INS-002,CAR-03,Highway,Home,Completed,Much better this week. speed control.
-APPT-2123,2025-12-09,16:00,18:00,ST-023,INS-003,CAR-01,Standard,Home,Completed,Excellent focus during parallel parking.
-APPT-2124,2025-12-09,16:00,18:00,ST-024,INS-004,CAR-02,Standard,Home,Completed,Excellent focus during highway merging.
-APPT-2125,2025-12-09,18:00,20:00,ST-025,INS-004,CAR-01,Standard,Home,Completed,Good improvement on 3-point turns.
-APPT-2126,2025-12-09,18:00,20:00,ST-026,INS-003,CAR-02,Highway,Home,Completed,Needs more practice with checking blind spots.
-APPT-2127,2025-12-10,08:00,10:00,ST-027,INS-002,CAR-01,Standard,Home,Completed,Excellent focus during checking blind spots.
-APPT-2128,2025-12-10,08:00,10:00,ST-028,INS-001,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
-APPT-2129,2025-12-10,10:00,12:00,ST-029,INS-001,CAR-01,Standard,Home,Completed,Needs more practice with highway merging.
-APPT-2130,2025-12-10,10:00,12:00,ST-030,INS-002,CAR-02,Parking,Home,Completed,Needs more practice with 3-point turns.
-APPT-2131,2025-12-10,12:00,14:00,ST-031,INS-002,CAR-01,Standard,Home,Completed,Much better this week. highway merging.
-APPT-2132,2025-12-10,12:00,14:00,ST-032,INS-001,CAR-02,Parking,Home,Completed,Good improvement on parallel parking.
-APPT-2133,2025-12-10,12:00,14:00,ST-033,INS-003,CAR-03,Parking,Home,Completed,Excellent focus during highway merging.
-APPT-2134,2025-12-10,14:00,16:00,ST-034,INS-003,CAR-01,Standard,Home,Completed,Still struggling with speed control.
-APPT-2135,2025-12-10,14:00,16:00,ST-035,INS-001,CAR-02,Highway,Home,Completed,Much better this week. 3-point turns.
-APPT-2136,2025-12-10,14:00,16:00,ST-036,INS-005,CAR-03,Standard,Home,Completed,Needs more practice with parallel parking.
-APPT-2137,2025-12-10,16:00,18:00,ST-037,INS-005,CAR-01,Parking,Home,Completed,Much better this week. speed control.
-APPT-2138,2025-12-10,16:00,18:00,ST-038,INS-003,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
-APPT-2139,2025-12-10,18:00,20:00,ST-039,INS-003,CAR-01,Test Prep,Home,Completed,Excellent focus during 3-point turns.
-APPT-2140,2025-12-10,18:00,20:00,ST-040,INS-005,CAR-02,Parking,Home,Completed,Excellent focus during speed control.
-APPT-2141,2025-12-11,08:00,10:00,ST-041,INS-001,CAR-01,Standard,Home,Completed,Still struggling with 3-point turns.
-APPT-2142,2025-12-11,08:00,10:00,ST-042,INS-002,CAR-02,Parking,Home,Completed,Still struggling with parallel parking.
-APPT-2143,2025-12-11,10:00,12:00,ST-043,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2144,2025-12-11,10:00,12:00,ST-044,INS-002,CAR-02,Highway,Home,Completed,Still struggling with lane changes.
-APPT-2145,2025-12-11,12:00,14:00,ST-045,INS-003,CAR-01,Highway,Home,No-Show,Needs more practice with speed control.
-APPT-2146,2025-12-11,12:00,14:00,ST-046,INS-002,CAR-02,Test Prep,Home,Completed,Still struggling with lane changes.
-APPT-2147,2025-12-11,12:00,14:00,ST-047,INS-001,CAR-03,Standard,Home,Cancelled-Student,Still struggling with checking blind spots.
-APPT-2148,2025-12-11,14:00,16:00,ST-048,INS-005,CAR-01,Highway,Home,Completed,Needs more practice with lane changes.
-APPT-2149,2025-12-11,14:00,16:00,ST-049,INS-003,CAR-02,Test Prep,Home,No-Show,Needs more practice with highway merging.
-APPT-2150,2025-12-11,14:00,16:00,ST-050,INS-001,CAR-03,Standard,Home,Completed,Much better this week. checking blind spots.
-APPT-2151,2025-12-11,16:00,18:00,ST-051,INS-005,CAR-01,Standard,Home,Cancelled-School,Needs more practice with checking blind spots.
-APPT-2152,2025-12-11,16:00,18:00,ST-052,INS-003,CAR-02,Standard,Home,Completed,Good improvement on lane changes.
-APPT-2153,2025-12-11,18:00,20:00,ST-053,INS-005,CAR-01,Standard,Home,Completed,Good improvement on highway merging.
-APPT-2154,2025-12-11,18:00,20:00,ST-054,INS-003,CAR-02,Standard,Home,Completed,Excellent focus during parallel parking.
-APPT-2155,2025-12-12,08:00,10:00,ST-055,INS-001,CAR-01,Parking,Home,Completed,Much better this week. checking blind spots.
-APPT-2156,2025-12-12,08:00,10:00,ST-056,INS-002,CAR-02,Test Prep,Home,Completed,Needs more practice with highway merging.
-APPT-2157,2025-12-12,10:00,12:00,ST-057,INS-002,CAR-01,Parking,Home,Completed,Good improvement on speed control.
-APPT-2158,2025-12-12,10:00,12:00,ST-058,INS-001,CAR-02,Test Prep,Home,Completed,Excellent focus during checking blind spots.
-APPT-2159,2025-12-12,12:00,14:00,ST-059,INS-001,CAR-01,Standard,Home,Completed,Excellent focus during speed control.
-APPT-2160,2025-12-12,12:00,14:00,ST-060,INS-004,CAR-02,Highway,Home,Completed,Needs more practice with parallel parking.
-APPT-2161,2025-12-12,12:00,14:00,ST-061,INS-005,CAR-03,Standard,Home,Completed,Excellent focus during parallel parking.
-APPT-2162,2025-12-12,14:00,16:00,ST-062,INS-001,CAR-01,Standard,Home,Completed,Needs more practice with lane changes.
-APPT-2163,2025-12-12,14:00,16:00,ST-063,INS-002,CAR-02,Parking,Home,No-Show,Much better this week. speed control.
-APPT-2164,2025-12-12,14:00,16:00,ST-064,INS-005,CAR-03,Standard,Home,Completed,Needs more practice with parallel parking.
-APPT-2165,2025-12-12,16:00,18:00,ST-065,INS-004,CAR-01,Standard,Home,Completed,Excellent focus during parallel parking.
-APPT-2166,2025-12-12,16:00,18:00,ST-066,INS-005,CAR-02,Standard,Home,Completed,Needs more practice with lane changes.
-APPT-2167,2025-12-12,18:00,20:00,ST-067,INS-004,CAR-01,Parking,Home,Completed,Excellent focus during parallel parking.
-APPT-2168,2025-12-12,18:00,20:00,ST-068,INS-005,CAR-02,Standard,Home,Completed,Good improvement on lane changes.
-APPT-2169,2025-12-13,08:00,10:00,ST-069,INS-002,CAR-01,Standard,Home,Completed,Much better this week. 3-point turns.
-APPT-2170,2025-12-13,08:00,10:00,ST-070,INS-004,CAR-02,Standard,Home,Completed,Needs more practice with lane changes.
-APPT-2171,2025-12-13,10:00,12:00,ST-071,INS-002,CAR-01,Standard,Home,Completed,Good improvement on speed control.
-APPT-2172,2025-12-13,10:00,12:00,ST-072,INS-004,CAR-02,Highway,Home,Completed,Good improvement on speed control.
-APPT-2173,2025-12-13,12:00,14:00,ST-073,INS-004,CAR-01,Parking,Home,Completed,Needs more practice with parallel parking.
-APPT-2174,2025-12-13,12:00,14:00,ST-074,INS-002,CAR-02,Parking,Home,Completed,Needs more practice with parallel parking.
-APPT-2175,2025-12-13,12:00,14:00,ST-075,INS-005,CAR-03,Parking,Home,Completed,Still struggling with checking blind spots.
-APPT-2176,2025-12-13,14:00,16:00,ST-076,INS-004,CAR-01,Standard,Home,Completed,Still struggling with parallel parking.
-APPT-2177,2025-12-13,14:00,16:00,ST-077,INS-005,CAR-02,Standard,Home,Completed,Still struggling with highway merging.
-APPT-2178,2025-12-13,14:00,16:00,ST-078,INS-002,CAR-03,Test Prep,Home,Completed,Needs more practice with checking blind spots.
-APPT-2179,2025-12-13,16:00,18:00,ST-079,INS-005,CAR-01,Parking,Home,Completed,Excellent focus during lane changes.
-APPT-2180,2025-12-13,18:00,20:00,ST-080,INS-005,CAR-01,Parking,Home,Completed,Much better this week. speed control.
-APPT-2181,2025-12-14,08:00,10:00,ST-081,INS-004,CAR-01,Parking,Home,Completed,Needs more practice with checking blind spots.
-APPT-2182,2025-12-14,08:00,10:00,ST-082,INS-005,CAR-02,Parking,Home,Completed,Excellent focus during 3-point turns.
-APPT-2183,2025-12-14,10:00,12:00,ST-083,INS-004,CAR-01,Test Prep,Home,Completed,Excellent focus during 3-point turns.
-APPT-2184,2025-12-14,10:00,12:00,ST-084,INS-005,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
-APPT-2185,2025-12-14,12:00,14:00,ST-085,INS-005,CAR-01,Test Prep,Home,Completed,Needs more practice with lane changes.
-APPT-2186,2025-12-14,12:00,14:00,ST-086,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
-APPT-2187,2025-12-14,12:00,14:00,ST-087,INS-003,CAR-03,Highway,Home,Completed,Much better this week. highway merging.
-APPT-2188,2025-12-14,14:00,16:00,ST-088,INS-005,CAR-01,Parking,Home,Completed,Excellent focus during lane changes.
-APPT-2189,2025-12-14,14:00,16:00,ST-089,INS-004,CAR-02,Standard,Home,Completed,Much better this week. checking blind spots.
-APPT-2190,2025-12-14,14:00,16:00,ST-090,INS-003,CAR-03,Standard,Home,Completed,Needs more practice with speed control.
-APPT-2191,2025-12-14,16:00,18:00,ST-091,INS-003,CAR-01,Highway,Home,Completed,Excellent focus during checking blind spots.
-APPT-2192,2025-12-14,18:00,20:00,ST-092,INS-003,CAR-01,Highway,Home,Completed,Good improvement on checking blind spots.
-APPT-2193,2025-12-13,16:00,18:00,ST-093,INS-005,CAR-02,Standard,Home,Completed,Turning is still too wide.
-APPT-2194,2025-12-13,18:00,20:00,ST-094,INS-005,CAR-02,Highway,Home,Completed,Night drive went well.
-APPT-2195,2025-12-14,08:00,10:00,ST-095,INS-005,CAR-03,Test Prep,Home,Completed,Ready for test.
-APPT-2196,2025-12-14,10:00,12:00,ST-096,INS-005,CAR-03,Standard,Home,Completed,Needs confidence merging.
-APPT-2197,2025-12-14,12:00,14:00,ST-097,INS-003,CAR-02,Parking,Home,Completed,Parallel parking improved.
-APPT-2198,2025-12-14,14:00,16:00,ST-098,INS-005,CAR-03,Standard,Home,Completed,Good defensive driving.
-APPT-2199,2025-12-14,16:00,18:00,ST-099,INS-003,CAR-02,Standard,Home,Completed,Speed control better.
-APPT-2200,2025-12-14,18:00,20:00,ST-100,INS-003,CAR-02,Standard,Home,Completed,Excellent stop sign etiquette.
+APPT-2086,2025-11-30,08:00,10:00,ST-086,INS-005,CAR-02,Standard,Home,Completed,Learning pedals.
+APPT-2087,2025-11-30,08:00,10:00,ST-087,INS-001,CAR-03,Standard,Home,Completed,Intersections good.
+APPT-2088,2025-11-30,08:00,10:00,ST-088,INS-004,CAR-01,Test Prep,Home,Completed,Parallel park perfect.
+APPT-2089,2025-11-30,10:00,12:00,ST-089,INS-004,CAR-01,Standard,Home,Completed,Unsure of self.
+APPT-2090,2025-11-30,10:00,12:00,ST-090,INS-005,CAR-02,Highway,Home,Completed,Merging fine.
+APPT-2091,2025-11-30,10:00,12:00,ST-091,INS-001,CAR-03,Standard,Home,Completed,Struggles with turn signals.
+APPT-2092,2025-11-30,12:00,14:00,ST-092,INS-003,CAR-01,Standard,Home,Completed,Four way stops confused.
+APPT-2093,2025-11-30,12:00,14:00,ST-093,INS-004,CAR-02,Test Prep,Home,Completed,Passed mock.
+APPT-2094,2025-11-30,12:00,14:00,ST-094,INS-005,CAR-03,Standard,Home,Completed,Very timid.
+APPT-2096,2025-11-30,14:00,16:00,ST-096,INS-003,CAR-01,Standard,Home,Completed,Steering needs work.
+APPT-2095,2025-11-30,14:00,16:00,ST-095,INS-004,CAR-02,Highway,Home,Completed,Cruising speed steady.
+APPT-2097,2025-11-30,14:00,16:00,ST-097,INS-005,CAR-03,Standard,Home,Completed,Lane position good.
+APPT-2099,2025-11-30,16:00,18:00,ST-099,INS-003,CAR-01,Standard,Home,Completed,Starts and stops good.
+APPT-2098,2025-11-30,16:00,18:00,ST-098,INS-001,CAR-02,Test Prep,Home,Completed,Ready.
+APPT-2100,2025-11-30,18:00,20:00,ST-100,INS-003,CAR-01,Highway,Home,Completed,Night highway driving.
+APPT-2101,2025-12-01,08:00,10:00,ST-001,INS-001,CAR-01,Standard,Home,Completed,Good improvement on speed control.
+APPT-2102,2025-12-01,10:00,12:00,ST-002,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2103,2025-12-01,12:00,14:00,ST-003,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2104,2025-12-01,12:00,14:00,ST-004,INS-003,CAR-02,Highway,Home,Completed,Good improvement on 3-point turns.
+APPT-2105,2025-12-01,12:00,14:00,ST-005,INS-004,CAR-03,Highway,Home,Completed,Needs more practice with checking blind spots.
+APPT-2106,2025-12-01,14:00,16:00,ST-006,INS-004,CAR-01,Parking,Home,Completed,Still struggling with parallel parking.
+APPT-2107,2025-12-01,14:00,16:00,ST-007,INS-003,CAR-02,Highway,Home,Completed,Excellent focus during lane changes.
+APPT-2108,2025-12-01,14:00,16:00,ST-008,INS-001,CAR-03,Parking,Home,Completed,Still struggling with highway merging.
+APPT-2109,2025-12-01,16:00,18:00,ST-009,INS-003,CAR-01,Standard,Home,Completed,Still struggling with highway merging.
+APPT-2110,2025-12-01,16:00,18:00,ST-010,INS-004,CAR-02,Test Prep,Home,Completed,Good improvement on lane changes.
+APPT-2111,2025-12-01,18:00,20:00,ST-011,INS-004,CAR-01,Highway,Home,No-Show,Needs more practice with speed control.
+APPT-2112,2025-12-01,18:00,20:00,ST-012,INS-003,CAR-02,Standard,Home,Completed,Needs more practice with parallel parking.
+APPT-2113,2025-12-02,08:00,10:00,ST-013,INS-001,CAR-01,Standard,Home,Completed,Excellent focus during 3-point turns.
+APPT-2114,2025-12-02,08:00,10:00,ST-014,INS-002,CAR-02,Standard,Home,Cancelled-School,Needs more practice with 3-point turns.
+APPT-2115,2025-12-02,10:00,12:00,ST-015,INS-002,CAR-01,Standard,Home,Completed,Needs more practice with lane changes.
+APPT-2116,2025-12-02,10:00,12:00,ST-016,INS-001,CAR-02,Test Prep,Home,Completed,Good improvement on speed control.
+APPT-2117,2025-12-02,12:00,14:00,ST-017,INS-003,CAR-01,Standard,Home,Completed,Much better this week. 3-point turns.
+APPT-2118,2025-12-02,12:00,14:00,ST-018,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2119,2025-12-02,12:00,14:00,ST-019,INS-002,CAR-03,Parking,Home,Completed,Much better this week. lane changes.
+APPT-2120,2025-12-02,14:00,16:00,ST-020,INS-001,CAR-01,Highway,Home,Completed,Much better this week. speed control.
+APPT-2121,2025-12-02,14:00,16:00,ST-021,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2122,2025-12-02,14:00,16:00,ST-022,INS-002,CAR-03,Highway,Home,Completed,Much better this week. speed control.
+APPT-2123,2025-12-02,16:00,18:00,ST-023,INS-003,CAR-01,Standard,Home,Completed,Excellent focus during parallel parking.
+APPT-2124,2025-12-02,16:00,18:00,ST-024,INS-004,CAR-02,Standard,Home,Completed,Excellent focus during highway merging.
+APPT-2125,2025-12-02,18:00,20:00,ST-025,INS-004,CAR-01,Standard,Home,Completed,Good improvement on 3-point turns.
+APPT-2126,2025-12-02,18:00,20:00,ST-026,INS-003,CAR-02,Highway,Home,Completed,Needs more practice with checking blind spots.
+APPT-2127,2025-12-03,08:00,10:00,ST-027,INS-002,CAR-01,Standard,Home,Completed,Excellent focus during checking blind spots.
+APPT-2128,2025-12-03,08:00,10:00,ST-028,INS-001,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
+APPT-2129,2025-12-03,10:00,12:00,ST-029,INS-001,CAR-01,Standard,Home,Completed,Needs more practice with highway merging.
+APPT-2130,2025-12-03,10:00,12:00,ST-030,INS-002,CAR-02,Parking,Home,Completed,Needs more practice with 3-point turns.
+APPT-2131,2025-12-03,12:00,14:00,ST-031,INS-002,CAR-01,Standard,Home,Completed,Much better this week. highway merging.
+APPT-2132,2025-12-03,12:00,14:00,ST-032,INS-001,CAR-02,Parking,Home,Completed,Good improvement on parallel parking.
+APPT-2133,2025-12-03,12:00,14:00,ST-033,INS-003,CAR-03,Parking,Home,Completed,Excellent focus during highway merging.
+APPT-2134,2025-12-03,14:00,16:00,ST-034,INS-003,CAR-01,Standard,Home,Completed,Still struggling with speed control.
+APPT-2135,2025-12-03,14:00,16:00,ST-035,INS-001,CAR-02,Highway,Home,Completed,Much better this week. 3-point turns.
+APPT-2136,2025-12-03,14:00,16:00,ST-036,INS-005,CAR-03,Standard,Home,Completed,Needs more practice with parallel parking.
+APPT-2137,2025-12-03,16:00,18:00,ST-037,INS-005,CAR-01,Parking,Home,Completed,Much better this week. speed control.
+APPT-2138,2025-12-03,16:00,18:00,ST-038,INS-003,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
+APPT-2139,2025-12-03,18:00,20:00,ST-039,INS-003,CAR-01,Test Prep,Home,Completed,Excellent focus during 3-point turns.
+APPT-2140,2025-12-03,18:00,20:00,ST-040,INS-005,CAR-02,Parking,Home,Completed,Excellent focus during speed control.
+APPT-2141,2025-12-04,08:00,10:00,ST-041,INS-001,CAR-01,Standard,Home,Completed,Still struggling with 3-point turns.
+APPT-2142,2025-12-04,08:00,10:00,ST-042,INS-002,CAR-02,Parking,Home,Completed,Still struggling with parallel parking.
+APPT-2143,2025-12-04,10:00,12:00,ST-043,INS-001,CAR-01,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2144,2025-12-04,10:00,12:00,ST-044,INS-002,CAR-02,Highway,Home,Completed,Still struggling with lane changes.
+APPT-2145,2025-12-04,12:00,14:00,ST-045,INS-003,CAR-01,Highway,Home,No-Show,Needs more practice with speed control.
+APPT-2146,2025-12-04,12:00,14:00,ST-046,INS-002,CAR-02,Test Prep,Home,Completed,Still struggling with lane changes.
+APPT-2147,2025-12-04,12:00,14:00,ST-047,INS-001,CAR-03,Standard,Home,Cancelled-Student,Still struggling with checking blind spots.
+APPT-2148,2025-12-04,14:00,16:00,ST-048,INS-005,CAR-01,Highway,Home,Completed,Needs more practice with lane changes.
+APPT-2149,2025-12-04,14:00,16:00,ST-049,INS-003,CAR-02,Test Prep,Home,No-Show,Needs more practice with highway merging.
+APPT-2150,2025-12-04,14:00,16:00,ST-050,INS-001,CAR-03,Standard,Home,Completed,Much better this week. checking blind spots.
+APPT-2151,2025-12-04,16:00,18:00,ST-051,INS-005,CAR-01,Standard,Home,Cancelled-School,Needs more practice with checking blind spots.
+APPT-2152,2025-12-04,16:00,18:00,ST-052,INS-003,CAR-02,Standard,Home,Completed,Good improvement on lane changes.
+APPT-2153,2025-12-04,18:00,20:00,ST-053,INS-005,CAR-01,Standard,Home,Completed,Good improvement on highway merging.
+APPT-2154,2025-12-04,18:00,20:00,ST-054,INS-003,CAR-02,Standard,Home,Completed,Excellent focus during parallel parking.
+APPT-2155,2025-12-05,08:00,10:00,ST-055,INS-001,CAR-01,Parking,Home,Completed,Much better this week. checking blind spots.
+APPT-2156,2025-12-05,08:00,10:00,ST-056,INS-002,CAR-02,Test Prep,Home,Completed,Needs more practice with highway merging.
+APPT-2157,2025-12-05,10:00,12:00,ST-057,INS-002,CAR-01,Parking,Home,Completed,Good improvement on speed control.
+APPT-2158,2025-12-05,10:00,12:00,ST-058,INS-001,CAR-02,Test Prep,Home,Completed,Excellent focus during checking blind spots.
+APPT-2159,2025-12-05,12:00,14:00,ST-059,INS-001,CAR-01,Standard,Home,Completed,Excellent focus during speed control.
+APPT-2160,2025-12-05,12:00,14:00,ST-060,INS-004,CAR-02,Highway,Home,Completed,Needs more practice with parallel parking.
+APPT-2161,2025-12-05,12:00,14:00,ST-061,INS-005,CAR-03,Standard,Home,Completed,Excellent focus during parallel parking.
+APPT-2162,2025-12-05,14:00,16:00,ST-062,INS-001,CAR-01,Standard,Home,Completed,Needs more practice with lane changes.
+APPT-2163,2025-12-05,14:00,16:00,ST-063,INS-002,CAR-02,Parking,Home,No-Show,Much better this week. speed control.
+APPT-2164,2025-12-05,14:00,16:00,ST-064,INS-005,CAR-03,Standard,Home,Completed,Needs more practice with parallel parking.
+APPT-2165,2025-12-05,16:00,18:00,ST-065,INS-004,CAR-01,Standard,Home,Completed,Excellent focus during parallel parking.
+APPT-2166,2025-12-05,16:00,18:00,ST-066,INS-005,CAR-02,Standard,Home,Completed,Needs more practice with lane changes.
+APPT-2167,2025-12-05,18:00,20:00,ST-067,INS-004,CAR-01,Parking,Home,Completed,Excellent focus during parallel parking.
+APPT-2168,2025-12-05,18:00,20:00,ST-068,INS-005,CAR-02,Standard,Home,Completed,Good improvement on lane changes.
+APPT-2169,2025-12-06,08:00,10:00,ST-069,INS-002,CAR-01,Standard,Home,Completed,Much better this week. 3-point turns.
+APPT-2170,2025-12-06,08:00,10:00,ST-070,INS-004,CAR-02,Standard,Home,Completed,Needs more practice with lane changes.
+APPT-2171,2025-12-06,10:00,12:00,ST-071,INS-002,CAR-01,Standard,Home,Completed,Good improvement on speed control.
+APPT-2172,2025-12-06,10:00,12:00,ST-072,INS-004,CAR-02,Highway,Home,Completed,Good improvement on speed control.
+APPT-2173,2025-12-06,12:00,14:00,ST-073,INS-004,CAR-01,Parking,Home,Completed,Needs more practice with parallel parking.
+APPT-2174,2025-12-06,12:00,14:00,ST-074,INS-002,CAR-02,Parking,Home,Completed,Needs more practice with parallel parking.
+APPT-2175,2025-12-06,12:00,14:00,ST-075,INS-005,CAR-03,Parking,Home,Completed,Still struggling with checking blind spots.
+APPT-2176,2025-12-06,14:00,16:00,ST-076,INS-004,CAR-01,Standard,Home,Completed,Still struggling with parallel parking.
+APPT-2177,2025-12-06,14:00,16:00,ST-077,INS-005,CAR-02,Standard,Home,Completed,Still struggling with highway merging.
+APPT-2178,2025-12-06,14:00,16:00,ST-078,INS-002,CAR-03,Test Prep,Home,Completed,Needs more practice with checking blind spots.
+APPT-2179,2025-12-06,16:00,18:00,ST-079,INS-005,CAR-01,Parking,Home,Completed,Excellent focus during lane changes.
+APPT-2193,2025-12-06,16:00,18:00,ST-093,INS-001,CAR-02,Standard,Home,Completed,Turning is still too wide.
+APPT-2180,2025-12-06,18:00,20:00,ST-080,INS-005,CAR-01,Parking,Home,Completed,Much better this week. speed control.
+APPT-2194,2025-12-06,18:00,20:00,ST-094,INS-001,CAR-02,Highway,Home,Completed,Night drive went well.
+APPT-2181,2025-12-07,08:00,10:00,ST-081,INS-004,CAR-01,Parking,Home,Completed,Needs more practice with checking blind spots.
+APPT-2182,2025-12-07,08:00,10:00,ST-082,INS-005,CAR-02,Parking,Home,Completed,Excellent focus during 3-point turns.
+APPT-2195,2025-12-07,08:00,10:00,ST-095,INS-001,CAR-03,Test Prep,Home,Completed,Ready for test.
+APPT-2183,2025-12-07,10:00,12:00,ST-083,INS-004,CAR-01,Test Prep,Home,Completed,Excellent focus during 3-point turns.
+APPT-2184,2025-12-07,10:00,12:00,ST-084,INS-005,CAR-02,Standard,Home,Completed,Needs more practice with 3-point turns.
+APPT-2196,2025-12-07,10:00,12:00,ST-096,INS-001,CAR-03,Standard,Home,Completed,Needs confidence merging.
+APPT-2185,2025-12-07,12:00,14:00,ST-085,INS-005,CAR-01,Test Prep,Home,Completed,Needs more practice with lane changes.
+APPT-2186,2025-12-07,12:00,14:00,ST-086,INS-004,CAR-02,Standard,Home,Completed,Much better this week. parallel parking.
+APPT-2187,2025-12-07,12:00,14:00,ST-087,INS-003,CAR-03,Highway,Home,Completed,Much better this week. highway merging.
+APPT-2188,2025-12-07,14:00,16:00,ST-088,INS-005,CAR-01,Parking,Home,Completed,Excellent focus during lane changes.
+APPT-2189,2025-12-07,14:00,16:00,ST-089,INS-004,CAR-02,Standard,Home,Completed,Much better this week. checking blind spots.
+APPT-2190,2025-12-07,14:00,16:00,ST-090,INS-003,CAR-03,Standard,Home,Completed,Needs more practice with speed control.
+APPT-2191,2025-12-07,16:00,18:00,ST-091,INS-003,CAR-01,Highway,Home,Completed,Excellent focus during checking blind spots.
+APPT-2199,2025-12-07,16:00,18:00,ST-099,INS-002,CAR-02,Standard,Home,Completed,Speed control better.
+APPT-2197,2025-12-07,16:00,18:00,ST-097,INS-005,CAR-03,Parking,Home,Completed,Parallel parking improved.
+APPT-2192,2025-12-07,18:00,20:00,ST-092,INS-003,CAR-01,Highway,Home,Completed,Good improvement on checking blind spots.
+APPT-2200,2025-12-07,18:00,20:00,ST-100,INS-002,CAR-02,Standard,Home,Completed,Excellent stop sign etiquette.
+APPT-2198,2025-12-07,18:00,20:00,ST-098,INS-005,CAR-03,Standard,Home,Completed,Good defensive driving.
